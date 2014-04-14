@@ -85,19 +85,19 @@ $(document).ready(function () {
       // });
   //}));
 
-  $filters.on('click', 'a', function () {
+  $filters.on('click', 'dd', function () {
     var $this = $(this),                   // clicked object
       $group = $this.parents('dl'),             // clicked object group
-      $parent = $this.parents('dd'),
-      selector = $parent.attr('data-filter'),
+      //$parent = $this.parents('dd'),
+      selector = $this.attr('data-filter'),
       group = $group.attr('data-filter-group'), // clicked object group name
       isofilter = '',                           // collects filter classnames
       filter = '';                              // iterator for groups
 
     // If clicking an active filter, disable it and clear out it's group
-    if ($parent.hasClass('active')) {
+    if ($this.hasClass('active')) {
 
-      $parent.removeClass('active');
+      $this.removeClass('active');
 
       filters[group] = '';
 
@@ -105,7 +105,7 @@ $(document).ready(function () {
              // clicked filter, and replace group filter
 
       $group.find('.active').removeClass('active');
-      $parent.addClass('active');
+      $this.addClass('active');
 
       filters[group] = selector;
 
@@ -115,7 +115,7 @@ $(document).ready(function () {
     for (filter in filters) {
       isofilter += filters[filter];
     }
-
+    console.log(isofilter);
     $container.isotope({ filter: isofilter });
 
     // Don't propagate the click event

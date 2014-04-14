@@ -1,4 +1,6 @@
-%article#post-id.engagement-ring
+- diamond = ring['center stone']
+- style = tagify(ring['type'])
+%article#post-id.engagement-ring{ class: [diamond, style] }
 
   %header.entry-header.float-text
     %h2.entry-title
@@ -8,6 +10,7 @@
       = "From #{to_price(ring['price']['14kt'])}"
 
   .entry-summary
+    / TODO: Add lazy images (and get layout working)
     %img{ src: "img/sareen/royal-cup/thumb/#{ring['views'].last}" }
 
   %footer.entry-footer.float-text

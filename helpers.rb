@@ -46,5 +46,9 @@ module GDC
     def to_price(number)
       '$' + number.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse
     end
+
+    def tagify(item)
+      item.downcase.strip.gsub(' ', '-')
+    end
   end
 end
