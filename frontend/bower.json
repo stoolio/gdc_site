@@ -1,0 +1,10 @@
+{
+  "name": "gdc_site",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation",
+    "isotope": "~2.0.0",
+    "jquery.lazyload": "~1.9.3",
+    "isotope-cells-by-row": "metafizzy/isotope-cells-by-row#~0.1.2",
+    "imagesloaded": "~3.1.4"
+  }
+}

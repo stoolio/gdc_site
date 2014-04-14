@@ -1,0 +1,28 @@
+.row
+  .large-12.columns
+    .sticky
+      %nav.top-bar{ data: { topbar: true } }
+        %ul.title-area
+          %li.name
+            %h1
+              %a{ href: '#' } Home
+          %li.toggle-topbar.menu-icon
+            %a{ href: '#' } Menu
+
+        %section.top-bar-section
+          -# Right Nav Section
+          %ul.right
+            %li.active
+              %a{ href: '/engagement-rings' } Engagement Rings
+            %li.has-dropdown
+              %a{ href: '#' } Get a quote now!
+              %ul.dropdown
+                %li
+                  %a{ href: '#' } Diamond Quote
+                %li
+                  %a{ href: '#' } Engagement Ring Quote
+
+          -# Left Nav Section
+          %ul.left
+            %li
+              %a{ href: '/about' } About

@@ -1,0 +1,16 @@
+%article#post-id.engagement-ring
+
+  %header.entry-header.float-text
+    %h2.entry-title
+    - if ring['price']['14kt'] == 'N/A'
+      = "From #{to_price(ring['price']['18kt'])}"
+    - else
+      = "From #{to_price(ring['price']['14kt'])}"
+
+  .entry-summary
+    %img{ src: "img/sareen/royal-cup/thumb/#{ring['views'].last}" }
+
+  %footer.entry-footer.float-text
+    %p.entry-meta
+      = "#{ring['center diamond']} diamond"
+      = "Set in 14kt White Gold #{ring['type']} setting"

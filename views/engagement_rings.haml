@@ -1,0 +1,39 @@
+-# Frontmatter for layout
+- @title = 'Engagement Rings'
+- @crumbs = breadcrumbs
+- @crumbs.add(:'Engagement Rings' => 'engagement-rings')
+-# End Frontmatter
+
+.row
+  .large-12.columns.filters
+    %dl.sub-nav{ data: {filter_group: 'style'} }
+      %dt Style
+      %dd{ data: {filter: 'halo'} }
+        %a{ src: '#' } Halo
+      %dd{ data: {filter: 'solitaire'} }
+        %a{ src: '#' } Solitaire
+      %dd{ data: {filter: 'antique'} }
+        %a{ src: '#' } Antique
+      %dd{ data: {filter: 'bezel'} }
+        %a{ src: '#' } Bezel Set
+    %dl.sub-nav{ data: {filter_group: 'shape'} }
+      %dt{ data: {filter_group: 'shape'} } Shape
+      %dd{ data: {filter: 'round'} }
+        %a{ src: '#' } Round
+      %dd{ data: {filter: 'princess'} }
+        %a{ src: '#' } Princess
+      %dd{ data: {filter: 'radiant'} }
+        %a{ src: '#' } Radiant
+      %dd{ data: {filter: 'cushion'} }
+        %a{ src: '#' } Cushion
+%hr
+.engagement-ring-archive
+  - rings.keys.each do |model|
+    = partial 'ring', locals: { ring: rings[model] }
+
+- content_for :scripts do
+  %script{ src: 'bower_components/jquery.lazyload/jquery.lazyload.min.js' }
+  %script{ src: 'bower_components/isotope/dist/isotope.pkgd.min.js' }
+  %script{ src: 'bower_components/isotope-cells-by-row/cells-by-row.js' }
+  %script{ src: 'bower_components/imagesloaded/imagesloaded.js' } 
+  %script{ src: 'js/ering.js' } 
