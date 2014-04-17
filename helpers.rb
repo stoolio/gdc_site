@@ -18,12 +18,34 @@ module GDC
         partial(template, locals: { template.to_sym => collection[i] })
       end
     end
+  end
+  # Helpers for engagement ring pages
+  module RingHelpers
+    def to_price(number)
+      '$' + number.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse
+    end
 
+    def tagify(item)
+      item.downcase.strip.gsub("'", '').gsub(' ', '-')
+    end
+
+    def classify(items)
+      Array(items).map(&:downcase).map(&:strip)
+        .reduce([]) { |a, e| a << e.gsub("'", '').gsub(' ', '-') }
+    end
+
+    def titlecase(string)
+      String(string).split(' ').map(&:capitalize).join(' ')
+    end
+  end
+
+  # Generates breadcrumbs
+  module Breadcrumbs
     def breadcrumbs(base = { Home: '/' })
       Breadcrumbs.new(base)
     end
 
-    # Generates breadcrumbs
+    # class to save state for breadcrumbs
     class Breadcrumbs
       def initialize(base)
         @crumbs = {}
@@ -39,16 +61,6 @@ module GDC
           s + "<a href='#{v}' >#{k}</a>"
         end + '</nav>'
       end
-    end
-  end
-  # Helpers for engagement ring pages
-  module RingHelpers
-    def to_price(number)
-      '$' + number.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse
-    end
-
-    def tagify(item)
-      item.downcase.strip.gsub(' ', '-')
     end
   end
 end

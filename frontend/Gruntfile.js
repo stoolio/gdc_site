@@ -28,10 +28,12 @@ module.exports = function(grunt) {
       },
       dist: {
         options: {
-          outputStyle: 'compressed'
+          outputStyle: 'compressed',
+          sourceComments: 'map'
         },
         files: {
-          '../public/css/app.css': 'scss/app.scss'
+          '../public/css/app.css': 'scss/app.scss',
+          '../public/css/app2.css': 'scss/app2.scss'
         }        
       }
     },
@@ -54,6 +56,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
 
-  grunt.registerTask('build', ['newer:sass','newer:copy']);
+  grunt.registerTask('build', ['newer:sass','newer:copy:vendor','newer:copy:app']);
   grunt.registerTask('default', ['build','watch']);
 }

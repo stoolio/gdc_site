@@ -1,19 +1,15 @@
-- diamond = ring['center stone']
-- style = tagify(ring['type'])
-%article#post-id.engagement-ring{ class: [diamond, style] }
+%article#post-id.engagement-ring{ class: [@ring.diamond, @ring.style], data: { price: @ring.raw_price } }
 
   %header.entry-header.float-text
     %h2.entry-title
-    - if ring['price']['14kt'] == 'N/A'
-      = "From #{to_price(ring['price']['18kt'])}"
-    - else
-      = "From #{to_price(ring['price']['14kt'])}"
+      = "From #{@ring.price}"
 
   .entry-summary
     / TODO: Add lazy images (and get layout working)
-    %img{ src: "img/sareen/royal-cup/thumb/#{ring['views'].last}" }
+    %img{ src: "img/sareen/thumb/#{@ring.view}" }
 
   %footer.entry-footer.float-text
     %p.entry-meta
-      = "#{ring['center diamond']} diamond"
-      = "Set in 14kt White Gold #{ring['type']} setting"
+      = "#{diamond} diamond"
+      %br
+      = "Set in 14kt White Gold #{@ring.style} setting"

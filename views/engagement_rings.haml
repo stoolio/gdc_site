@@ -6,30 +6,41 @@
 
 .row
   .large-12.columns.filters
-    %dl.sub-nav{ data: {filter_group: 'style'} }
-      %dt Style
-      %dd{ data: {filter: '.halo'} }
-        %a{ src: '#' } Halo
-      %dd{ data: {filter: '.solitaire'} }
-        %a{ src: '#' } Solitaire
-      %dd{ data: {filter: '.antique'} }
-        %a{ src: '#' } Antique
-      %dd{ data: {filter: '.bezel'} }
-        %a{ src: '#' } Bezel Set
-    %dl.sub-nav{ data: {filter_group: 'shape'} }
-      %dt{ data: {filter_group: 'shape'} } Shape
-      %dd{ data: {filter: '.round'} }
-        %a{ src: '#' } Round
-      %dd{ data: {filter: '.princess'} }
-        %a{ src: '#' } Princess
-      %dd{ data: {filter: '.radiant'} }
-        %a{ src: '#' } Radiant
-      %dd{ data: {filter: '.cushion'} }
-        %a{ src: '#' } Cushion
+    .large-6.columns
+      %h3 Filter
+      %dl.sub-nav{ data: {filter_group: 'style'} }
+        %dt Style
+        %dd{ data: {filter: '.Tension'} }
+          %a{ src: '#' } Tension Setting
+        %dd{ data: {filter: '.solitaire'} }
+          %a{ src: '#' } Solitaire
+        %dd{ data: {filter: '.antique'} }
+          %a{ src: '#' } Antique
+        %dd{ data: {filter: '.bezel'} }
+          %a{ src: '#' } Bezel Set
+      %dl.sub-nav{ data: {filter_group: 'shape'} }
+        %dt{ data: {filter_group: 'shape'} } Shape
+        %dd{ data: {filter: '.round'} }
+          %a{ src: '#' } Round
+        %dd{ data: {filter: '.princess'} }
+          %a{ src: '#' } Princess
+        %dd{ data: {filter: '.radiant'} }
+          %a{ src: '#' } Radiant
+        %dd{ data: {filter: '.cushion'} }
+          %a{ src: '#' } Cushion
+    .large-6.columns
+      %h3 Sort
+      %dl.sub-nav{ data: {sort_group: 'price'} }
+        %dt Price
+        %dd{ data: {sort: '<500'} }
+
 %hr
+
 .engagement-ring-archive
   - rings.keys.each do |model|
-    = partial 'ring', locals: { ring: rings[model] }
+    /= partial 'ring', locals: { ring: rings[model] }
+    - @ring = rings[model]
+    = partial 'ring'
 
 - content_for :scripts do
   %script{ src: 'bower_components/jquery.lazyload/jquery.lazyload.min.js' }

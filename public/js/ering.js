@@ -6,63 +6,62 @@
 $(document).ready(function () {
   "use strict";
 
-  var $win = $(window),         // window object
-    $imgs = $('img.lazy'),      // images for lazy loading
-    $container = $('.engagement-ring-archive'), // isotope container
-    $filters = $('.filters'),   // filter menu
-    filters = {},                    // filter classes isotope
+  var $win = $(window),
+      $imgs = $('img.lazy'),                      // images for lazy loading
+      $container = $('.engagement-ring-archive'), // isotope container
+      $filters = $('.filters'),                   // filter container
+      filters = {},                               // saves selected filters
+      setCellSize,
+      cellSize,
+      $sorts = $('.sorts');
+
+  // Sets cellSize variable and creates a function for use later
+  (setCellSize = function () {
     cellSize = $win.width() < 720 ? 210 : 310;
+  })();
+
+  $.fn.trueData = function (dataAttrib) {
+    return $(this).data(dataAttrib) == '';
+  };
 
   $win.resize(Foundation.utils.debounce(function () {
-    // Debounced to fire on window resize. A standard function would run
-    // mutliple times while a user is scrolling. This ensures it runs no
-    // more than once every 250ms
-    if ($win.width() < 720) {
-      cellSize = 210;
-    } else {
-      cellSize = 310;
-    }
+    setCellSize();
 
     $container.isotope({
       cellsByRow: {
-        columnWidth : cellSize,
-        rowHeight   : cellSize
+        columnWidth : cellSize + 20,
+        rowHeight   : cellSize + 40
       }
-    });
+    }).isotope('layout');
 
-    // Relayout due to changed cellSize
-    $container.isotope('layout');
   }, 300));
 
-  // The lazy images are hidden via CSS and a standard image is provided via a
-  // noscript tag.
-  // If js is active, it shows the images and lazy loads them.
-  // If js is not active, images stay hidden, and noscript is shown.
+
   $imgs.show().lazyload({
     effect : 'fadeIn',
-    // Filtering may cause images to be displayed non-sequentially. We need
-    // lazyload to iterate through all images to ensure all images are loaded.
+    // Images may not appear in their html order, so we must check them all
     failure_limit : Math.max($imgs.length - 1, 0),
-    // This loads images when they are 50px outside of viewport.
-    // It is mainly necessary because of the isotope layout
+    // Loads images 50px outside of viewport
     threshold : 50,
   });
 
   $container.isotope({
     itemSelector: '.engagement-ring',
+    getSortData: {
+      price: '[data-price]'
+    },
     layoutMode: 'cellsByRow',
     cellsByRow: {
-      columnWidth : cellSize,
-      rowHeight   : cellSize
+      columnWidth : cellSize + 20,
+      rowHeight   : cellSize + 40
     }
+  }).imagesLoaded( function () {
+    $container.isotope('layout');
   });
 
-  // layoutComplete is triggered upon the first and all subsequent layouts.
-  // Filtering shuffles images around, and lazyload won't know about it. The
-  // scroll event activates lazyload to check for new images 
   $container.isotope('on', 'layoutComplete', function () {
+    // Scroll event triggers lazyload check
     $win.trigger('scroll');
-    console.log('layoutComplete');
   });
 
   // The appear event is fired whenever lazyload loads a new image. Since:
@@ -74,35 +73,51 @@ $(document).ready(function () {
   // To solve our problem we debounce this function.
   // In short, this ensures the browser doesn't go crazy (infinite recursion),
   // all visible images are loaded, and the layout is clean.
-  //$container.on('appear', $.debounce(250, function () {
-    // $container.imagesLoaded()
-    //   .always(function () {
-    //     $container.isotope('layout');
-    //     //console.log('Debounced appear on image load');
-    //   });
-      // .progress(function (instance, image) {
-      //   console.log('image: ' + image.img.src);
-      // });
-  //}));
+  // $container.on('appear', Foundation.utils.debounce(function () {
+  //   $container.imagesLoaded()
+  //     .always(function () {
+  //       $container.isotope('layout');
+  //       //console.log('Debounced appear on image load');
+  //     });
+  //     .progress(function (instance, image) {
+  //       console.log('image: ' + image.img.src);
+  //     });
+  // }, 300));
 
-  $filters.on('click', 'dd', function () {
-    var $this = $(this),                   // clicked object
-      $group = $this.parents('dl'),             // clicked object group
-      //$parent = $this.parents('dd'),
-      selector = $this.attr('data-filter'),
-      group = $group.attr('data-filter-group'), // clicked object group name
-      isofilter = '',                           // collects filter classnames
-      filter = '';                              // iterator for groups
+  $sorts.on('click', 'dd', function(e) {
+    e.preventDefault();
 
-    // If clicking an active filter, disable it and clear out it's group
+    var $this = $(this),
+        $group = $this.parents('dl'),
+        sortBy = $this.trueData('reset-sort') ? '' : $group.data('sort-by'),
+        sortDir = $this.trueData('sort-desc') ? false : true;
+
+    $group.find('.active').removeClass('active');
+    $this.addClass('active');
+
+    $container.isotope({
+      sortBy: sortBy,
+      sortAscending: sortDir
+    });
+  });
+
+  $filters.on('click', 'dd', function (e) {
+    e.preventDefault();
+
+    var $this = $(this),
+        $group = $this.parents('dl'),             // clicked object group
+        selector = $this.data('filter'),
+        group = $group.data('filter-group'),      // filter group name
+        filter = '',                              // iterator for groups
+        isoFilter = '';                           // collects all filters
+                        
+
     if ($this.hasClass('active')) {
 
       $this.removeClass('active');
-
       filters[group] = '';
 
-    } else { // Otherwise, remove current active filter, add .active to
-             // clicked filter, and replace group filter
+    } else {
 
       $group.find('.active').removeClass('active');
       $this.addClass('active');
@@ -111,15 +126,10 @@ $(document).ready(function () {
 
     }
 
-    // Iterate through filter groups and collect filters
     for (filter in filters) {
-      isofilter += filters[filter];
+      isoFilter += filters[filter];
     }
-    console.log(isofilter);
-    $container.isotope({ filter: isofilter });
 
-    // Don't propagate the click event
-    return false;
+    $container.isotope({filter: isoFilter});
   });
-
 });
