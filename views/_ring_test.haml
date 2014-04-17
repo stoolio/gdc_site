@@ -1,0 +1,12 @@
+%article#post-id.engagement-ring{ class: classify([@ring.diamond, @ring.style, @ring.collection]), data: { price: @ring.raw_price } }
+
+  %header.entry-header
+    %h2.entry-title
+
+  .entry-summary
+    %img{ src: "/img/sareen/thumb/#{@ring.view}" }
+
+  %footer.entry-footer
+    %p.entry-meta
+      = "From #{@ring.price}"
+      

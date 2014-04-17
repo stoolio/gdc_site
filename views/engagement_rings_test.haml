@@ -1,0 +1,51 @@
+-# Frontmatter for layout
+- @title = 'Engagement Rings'
+-# End Frontmatter
+
+.row
+  .large-12.columns.clearfix
+    .filters.large-8.columns.left
+      %h3 Filter
+      %dl.sub-nav.panel.radius{ data: {filter_group: 'shape'} }
+        %dt{ data: {filter_group: 'shape'} } By Collection
+        %dd{ data: {filter: '.tension'} }
+          %a{ src: '#' } Tension
+        %dd{ data: {filter: '.colored-tension'} }
+          %a{ src: '#' } Colored Tension
+        %dd{ data: {filter: '.dianes-tiara'} }
+          %a{ src: '#' } Diane's Tiara
+        %dd{ data: {filter: '.luseen-a'} }
+          %a{ src: '#' } Luseen
+        %dd{ data: {filter: '.royal-cup'} }
+          %a{ src: '#' } Royal Cup
+        %dd{ data: {filter: '.papion'} }
+          %a{ src: '#' } Papion
+        %dd{ data: {filter: '.handmade-3-stone'} }
+          %a{ src: '#' } Handmade 3 Stone
+        %dd{ data: {filter: '.bezel'} }
+          %a{ src: '#' } Bezel
+    .sorts.large-4.columns.right
+      %h3 Sort
+      %dl.sub-nav.panel.radius{ data: {sort_by: 'price'} }
+        %dt By Price
+        %dd{ data: {sort_desc: false} }
+          %a{ src: '#' } Lease Expensive
+        %dd{ data: {sort_desc: true} }
+          %a{ src: '#' } Most Expensive
+        %dd{ data: {reset_sort: true} }
+          %a{ src: '#' } Reset
+
+%hr
+
+.row
+  .engagement-ring-archive.large-12.columns.large-centered
+    - rings.keys.each do |model|
+      - @ring = GDC::RingView.new(rings[model])
+      = partial 'ring_test'
+
+- content_for :scripts do
+  %script{ src: '/bower_components/jquery.lazyload/jquery.lazyload.min.js' }
+  %script{ src: '/bower_components/isotope/dist/isotope.pkgd.min.js' }
+  %script{ src: '/bower_components/isotope-cells-by-row/cells-by-row.js' }
+  %script{ src: '/bower_components/imagesloaded/imagesloaded.js' } 
+  %script{ src: '/js/ering.js' } 
