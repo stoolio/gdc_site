@@ -1,11 +1,11 @@
 - @title = 'Engagement Rings'
 
 .row
-  .large-12.columns.filters
-    .large-6.columns
+  .large-12.columns.clearfix
+    .filters.large-6.columns.left
       %h3 Filter
       %dl.sub-nav{ data: {filter_group: 'style'} }
-        %dt Style
+        %dt By Style
         %dd{ data: {filter: '.Tension'} }
           %a{ src: '#' } Tension Setting
         %dd{ data: {filter: '.solitaire'} }
@@ -15,7 +15,7 @@
         %dd{ data: {filter: '.bezel'} }
           %a{ src: '#' } Bezel Set
       %dl.sub-nav{ data: {filter_group: 'shape'} }
-        %dt{ data: {filter_group: 'shape'} } Shape
+        %dt By Shape
         %dd{ data: {filter: '.round'} }
           %a{ src: '#' } Round
         %dd{ data: {filter: '.princess'} }
@@ -24,23 +24,45 @@
           %a{ src: '#' } Radiant
         %dd{ data: {filter: '.cushion'} }
           %a{ src: '#' } Cushion
-    .large-6.columns
+      %dl.sub-nav{ data: {filter_group: 'collection'} }
+        %dt By Collection
+        %dd{ data: {filter: '.tension'} }
+          %a{ src: '#' } Tension
+        %dd{ data: {filter: '.colored-tension'} }
+          %a{ src: '#' } Colored Tension
+        %dd{ data: {filter: '.dianes-tiara'} }
+          %a{ src: '#' } Diane's Tiara
+        %dd{ data: {filter: '.luseen-a'} }
+          %a{ src: '#' } Luseen
+        %dd{ data: {filter: '.royal-cup'} }
+          %a{ src: '#' } Royal Cup
+        %dd{ data: {filter: '.papion'} }
+          %a{ src: '#' } Papion
+        %dd{ data: {filter: '.handmade-3-stone'} }
+          %a{ src: '#' } Handmade 3 Stone
+        %dd{ data: {filter: '.bezel'} }
+          %a{ src: '#' } Bezel
+    .sorts.large-6.columns.right
       %h3 Sort
-      %dl.sub-nav{ data: {sort_group: 'price'} }
-        %dt Price
-        %dd{ data: {sort: '<500'} }
+      %dl.sub-nav{ data: {sort_by: 'price'} }
+        %dt By Price
+        %dd{ data: {sort_desc: false} }
+          %a{ src: '#' } Lease Expensive
+        %dd{ data: {sort_desc: true} }
+          %a{ src: '#' } Most Expensive
+        %dd{ data: {reset_sort: true} }
+          %a{ src: '#' } Reset
 
 %hr
 
 .engagement-ring-archive
   - rings.keys.each do |model|
-    /= partial 'ring', locals: { ring: rings[model] }
     - @ring = GDC::Decorators::RingDecorator.new(rings[model])
     = partial 'ring'
 
 - content_for :scripts do
-  %script{ src: 'bower_components/jquery.lazyload/jquery.lazyload.min.js' }
-  %script{ src: 'bower_components/isotope/dist/isotope.pkgd.min.js' }
-  %script{ src: 'bower_components/isotope-cells-by-row/cells-by-row.js' }
-  %script{ src: 'bower_components/imagesloaded/imagesloaded.js' }
-  %script{ src: 'js/ering.js' }
+  %script{ src: '/bower_components/jquery.lazyload/jquery.lazyload.min.js' }
+  %script{ src: '/bower_components/isotope/dist/isotope.pkgd.min.js' }
+  %script{ src: '/bower_components/isotope-cells-by-row/cells-by-row.js' }
+  %script{ src: '/bower_components/imagesloaded/imagesloaded.js' }
+  %script{ src: '/js/ering.js' }
