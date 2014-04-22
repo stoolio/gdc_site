@@ -1,5 +1,5 @@
 module GDC
-  # Represents and engagement ring
+  # Represents an engagement ring
   class Ring
 
   end

@@ -1,6 +1,4 @@
--# Frontmatter for layout
 - @title = 'Engagement Rings'
--# End Frontmatter
 
 .row
   .large-12.columns.clearfix
@@ -40,12 +38,12 @@
 .row
   .engagement-ring-archive.large-12.columns.large-centered
     - rings.keys.each do |model|
-      - @ring = GDC::RingView.new(rings[model])
+      - @ring = GDC::Decorators::RingDecorator.new(rings[model])
       = partial 'ring_test'
 
 - content_for :scripts do
   %script{ src: '/bower_components/jquery.lazyload/jquery.lazyload.min.js' }
   %script{ src: '/bower_components/isotope/dist/isotope.pkgd.min.js' }
   %script{ src: '/bower_components/isotope-cells-by-row/cells-by-row.js' }
-  %script{ src: '/bower_components/imagesloaded/imagesloaded.js' } 
-  %script{ src: '/js/ering.js' } 
+  %script{ src: '/bower_components/imagesloaded/imagesloaded.js' }
+  %script{ src: '/js/ering.js' }

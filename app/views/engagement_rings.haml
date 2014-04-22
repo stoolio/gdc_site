@@ -1,8 +1,4 @@
--# Frontmatter for layout
 - @title = 'Engagement Rings'
-- @crumbs = breadcrumbs
-- @crumbs.add(:'Engagement Rings' => 'engagement-rings')
--# End Frontmatter
 
 .row
   .large-12.columns.filters
@@ -39,12 +35,12 @@
 .engagement-ring-archive
   - rings.keys.each do |model|
     /= partial 'ring', locals: { ring: rings[model] }
-    - @ring = rings[model]
+    - @ring = GDC::Decorators::RingDecorator.new(rings[model])
     = partial 'ring'
 
 - content_for :scripts do
   %script{ src: 'bower_components/jquery.lazyload/jquery.lazyload.min.js' }
   %script{ src: 'bower_components/isotope/dist/isotope.pkgd.min.js' }
   %script{ src: 'bower_components/isotope-cells-by-row/cells-by-row.js' }
-  %script{ src: 'bower_components/imagesloaded/imagesloaded.js' } 
-  %script{ src: 'js/ering.js' } 
+  %script{ src: 'bower_components/imagesloaded/imagesloaded.js' }
+  %script{ src: 'js/ering.js' }

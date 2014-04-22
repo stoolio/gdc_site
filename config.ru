@@ -1,5 +1,3 @@
-require 'bundler/setup'
+require './app'
 
-require './application.rb'
-
-map('/') { run GDC::Application }
+run GDC::App

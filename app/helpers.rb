@@ -1,0 +1,8 @@
+module GDC
+  module Helpers
+    autoload :Base, 'app/helpers/base'
+    autoload :Breadcrumb, 'app/helpers/breadcrumb'
+    autoload :Partials, 'app/helpers/partials'
+    autoload :Ring, 'app/helpers/ring'
+  end
+end

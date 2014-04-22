@@ -1,7 +1,8 @@
-/* global $:   false */
-/* global document: false */
-/* global window:   false */
-/* global console:  false */
+/* jshint curly: true */
+/* global $ */
+/* global $:          false */
+/* global document:   false */
+/* global window:     false */
 /* global Foundation: false */
 $(document).ready(function () {
   "use strict";
@@ -9,19 +10,19 @@ $(document).ready(function () {
   var $win = $(window),
       $imgs = $('img.lazy'),                      // images for lazy loading
       $container = $('.engagement-ring-archive'), // isotope container
-      $filters = $('.filters'),                   // filter container
-      filters = {},                               // saves selected filters
-      setCellSize,
-      cellSize,
-      $sorts = $('.sorts');
+    $filters = $('.filters'),                   // filter container
+    filters = {},                               // saves selected filters
+    cellSize,
+    $sorts = $('.sorts');
 
-  // Sets cellSize variable and creates a function for use later
-  (setCellSize = function () {
+  function setCellSize () {
     cellSize = $win.width() < 720 ? 210 : 310;
-  })();
+  }
+
+  setCellSize();
 
   $.fn.trueData = function (dataAttrib) {
-    return $(this).data(dataAttrib) == '';
+    return $(this).data(dataAttrib) === '';
   };
 
   $win.resize(Foundation.utils.debounce(function () {
@@ -55,7 +56,7 @@ $(document).ready(function () {
       columnWidth : cellSize + 20,
       rowHeight   : cellSize + 40
     }
-  }).imagesLoaded( function () {
+  }).imagesLoaded(function () {
     $container.isotope('layout');
   });
 
@@ -88,9 +89,9 @@ $(document).ready(function () {
     e.preventDefault();
 
     var $this = $(this),
-        $group = $this.parents('dl'),
-        sortBy = $this.trueData('reset-sort') ? '' : $group.data('sort-by'),
-        sortDir = $this.trueData('sort-desc') ? false : true;
+      $group = $this.parents('dl'),
+      sortBy = $this.trueData('reset-sort') ? '' : $group.data('sort-by'),
+      sortDir = $this.trueData('sort-desc') ? false : true;
 
     $group.find('.active').removeClass('active');
     $this.addClass('active');
@@ -105,12 +106,12 @@ $(document).ready(function () {
     e.preventDefault();
 
     var $this = $(this),
-        $group = $this.parents('dl'),             // clicked object group
-        selector = $this.data('filter'),
-        group = $group.data('filter-group'),      // filter group name
-        filter = '',                              // iterator for groups
-        isoFilter = '';                           // collects all filters
-                        
+      $group = $this.parents('dl'),             // clicked object group
+      selector = $this.data('filter'),
+      group = $group.data('filter-group'),      // filter group name
+      filter = '',                              // iterator for groups
+      isoFilter = '';                           // collects all filters
+
 
     if ($this.hasClass('active')) {
 
@@ -131,5 +132,6 @@ $(document).ready(function () {
     }
 
     $container.isotope({filter: isoFilter});
+    $win.trigger('scroll');
   });
 });

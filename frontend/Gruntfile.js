@@ -1,5 +1,5 @@
 /* global module: false */
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
         files: {
           '../public/css/app.css': 'scss/app.scss',
           '../public/css/app2.css': 'scss/app2.scss'
-        }        
+        }
       }
     },
 
@@ -56,6 +56,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
 
-  grunt.registerTask('build', ['newer:sass','newer:copy:vendor','newer:copy:app']);
-  grunt.registerTask('default', ['build','watch']);
-}
+  grunt.registerTask('build', ['newer:sass', 'newer:copy:vendor', 'newer:copy:app']);
+  grunt.registerTask('default', ['build', 'watch']);
+};
