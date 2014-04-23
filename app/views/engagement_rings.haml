@@ -56,9 +56,7 @@
 %hr
 
 .engagement-ring-archive
-  - rings.keys.each do |model|
-    - @ring = GDC::Decorators::RingDecorator.new(rings[model])
-    = partial 'ring'
+  = partial :ring, collection: rings
 
 - content_for :scripts do
   %script{ src: '/bower_components/jquery.lazyload/jquery.lazyload.min.js' }

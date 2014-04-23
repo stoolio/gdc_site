@@ -1,45 +1,15 @@
 module GDC
   module Decorators
     # ViewModel for Engagement Rings
-    class Ring
-      attr_reader :ring
-
+    class RingDecorator < Base
       include GDC::Helpers::Ring
 
-      def initialize(ring)
-        @ring = ring
+      def from_price
+        price('14kt') == 'N/A' ? price('18kt') : price('14kt')
       end
 
-      def diamond
-        ring.fetch('center stone', 'Unknown')
-      end
-
-      def raw_price
-        ring['price']['14kt'] == 'N/A' ? ring['price']['18kt'] : ring['price']['14kt']
-      end
-
-      def price
-        to_price(raw_price)
-      end
-
-      def style
-        ring.fetch('type', 'Unknown')
-      end
-
-      def view
-        ring.fetch('views', []).last
-      end
-
-      def collection
-        ring.fetch('collection', 'Unknown')
-      end
-
-      def top_width
-        ring.fetch('width top', '-')
-      end
-
-      def tapered_width
-        ring.fetch('width tapered', '-')
+      def display_price
+        to_price(from_price)
       end
 
       def tapered?

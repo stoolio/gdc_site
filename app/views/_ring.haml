@@ -1,7 +1,7 @@
-%article#post-id.engagement-ring{ class: classify([@ring.diamond, @ring.style, @ring.collection]), data: { price: @ring.raw_price } }
+%article#post-id.engagement-ring{ class: classify([ring.diamond, ring.style, ring.collection]), data: { price: ring.from_price } }
 
   .entry-summary
-    - src = "/img/sareen/#{tagify(@ring.collection)}/thumb/#{@ring.view}"
+    - src = "/img/sareen/#{tagify(ring.collection)}/thumb/#{ring.view}"
     %a{ href: '#', title: '' }
       %img.lazy{ src: '/img/white.gif', data: { original: src } }
       %noscript
@@ -9,4 +9,4 @@
 
   %footer.entry-footer
     %p.entry-meta
-      = "From #{@ring.price}"
+      = "From #{ring.display_price}"

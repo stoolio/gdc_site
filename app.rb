@@ -15,16 +15,13 @@ require 'app/routes'
 module GDC
   # App configuration
   class App < Sinatra::Base
-    configure :development do
-      register Sinatra::Reloader
+    register Sinatra::Reloader # remove for production
+    configure do
+      enable :reloader
     end
 
     use GDC::Routes::Static
     use GDC::Routes::EngagementRings
-
-    # catchall
-    not_found do
-      haml :'404'
-    end
+    use GDC::Routes::NotFound
   end
 end

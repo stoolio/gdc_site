@@ -10,10 +10,10 @@ $(document).ready(function () {
   var $win = $(window),
       $imgs = $('img.lazy'),                      // images for lazy loading
       $container = $('.engagement-ring-archive'), // isotope container
-    $filters = $('.filters'),                   // filter container
-    filters = {},                               // saves selected filters
-    cellSize,
-    $sorts = $('.sorts');
+      $filters = $('.filters'),                   // filter container
+      filters = {},                               // saves selected filters
+      cellSize,
+      $sorts = $('.sorts');
 
   function setCellSize () {
     cellSize = $win.width() < 720 ? 210 : 310;

@@ -3,5 +3,6 @@ module GDC
     autoload :Base, 'app/routes/base'
     autoload :Static, 'app/routes/static'
     autoload :EngagementRings, 'app/routes/engagement_rings'
+    autoload :NotFound, 'app/routes/not_found'
   end
 end
