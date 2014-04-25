@@ -8,6 +8,18 @@ module GDC
         @ring = ring
       end
 
+      def collection()
+        ring.fetch('collection')
+      end
+
+      def thumb_dim()
+        ring.fetch('thumb_dim')
+      end
+
+      def name()
+        ring.fetch('name', '')
+      end
+
       def price(type)
         ring.fetch('price').fetch(type)
       end
@@ -20,12 +32,12 @@ module GDC
         ring.fetch('type', 'Unknown')
       end
 
-      def view
-        ring.fetch('views', []).last
+      def total_views
+        ring.fetch('views').length
       end
 
-      def collection
-        ring.fetch('collection', 'Unknown')
+      def view
+        ring.fetch('views', []).first
       end
 
       def top_width

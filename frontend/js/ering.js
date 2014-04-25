@@ -9,92 +9,92 @@ $(document).ready(function () {
 
   var $win = $(window),
       $imgs = $('img.lazy'),                      // images for lazy loading
-      $container = $('.engagement-ring-archive'), // isotope container
+      $container = $('#engagement-ring-archive'), // isotope container
+      itemSelector = '.engagement-ring',
       $filters = $('.filters'),                   // filter container
       filters = {},                               // saves selected filters
-      cellSize,
+      // cellSize,
       $sorts = $('.sorts');
 
-  function setCellSize () {
-    cellSize = $win.width() < 720 ? 210 : 310;
-  }
+  // function setCellSize () {
+  //   cellSize = $win.width() < 720 ? 210 : 310;
+  // }
 
-  setCellSize();
+  // setCellSize();
 
   $.fn.trueData = function (dataAttrib) {
     return $(this).data(dataAttrib) === '';
   };
 
-  $win.resize(Foundation.utils.debounce(function () {
-    setCellSize();
+  // $win.resize(Foundation.utils.debounce(function () {
+  //   setCellSize();
 
-    $container.isotope({
-      cellsByRow: {
-        columnWidth : cellSize + 20,
-        rowHeight   : cellSize + 40
-      }
-    }).isotope('layout');
+  //   $container.isotope({
+  //     cellsByRow: {
+  //       columnWidth : cellSize + 20,
+  //       rowHeight   : cellSize + 40
+  //     }
+  //   }).isotope('layout');
 
-  }, 300));
+  // }, 300));
 
 
-  $imgs.show().lazyload({
+  // .show() for no js support
+  $imgs.lazyload({
     effect : 'fadeIn',
-    // Images may not appear in their html order, so we must check them all
     failure_limit : Math.max($imgs.length - 1, 0),
-    // Loads images 50px outside of viewport
-    threshold : 50,
+    threshold : 20,
   });
 
   $container.isotope({
-    itemSelector: '.engagement-ring',
+    itemSelector: itemSelector,
     getSortData: {
       price: '[data-price]'
     },
     layoutMode: 'cellsByRow',
     cellsByRow: {
-      columnWidth : cellSize + 20,
-      rowHeight   : cellSize + 40
+      columnWidth : itemSelector,
+      rowHeight   : itemSelector
+    },
+    hiddenStyle: {
+      opacity: 0
+    },
+    visibleStyle: {
+      opacity: 1
     }
-  }).imagesLoaded(function () {
-    $container.isotope('layout');
   });
 
   $container.isotope('on', 'layoutComplete', function () {
     // Scroll event triggers lazyload check
-    $win.trigger('scroll');
+    // console.log('layoutComplete: triggering scroll');
+    setTimeout(function() {
+      $win.trigger('scroll');
+    }, 100);
   });
 
-  // The appear event is fired whenever lazyload loads a new image. Since:
-  // 1. There are multiple images in a row
-  //    user scrolls->multiple images appear->we only want to layout once
-  // 2. layoutComplete triggers a scroll
-  //    scroll could trigger appear->layout->layoutComplete->scroll
-  //    aka infinite recursion
-  // To solve our problem we debounce this function.
-  // In short, this ensures the browser doesn't go crazy (infinite recursion),
-  // all visible images are loaded, and the layout is clean.
   // $container.on('appear', Foundation.utils.debounce(function () {
   //   $container.imagesLoaded()
   //     .always(function () {
   //       $container.isotope('layout');
-  //       //console.log('Debounced appear on image load');
   //     });
-  //     .progress(function (instance, image) {
-  //       console.log('image: ' + image.img.src);
-  //     });
-  // }, 300));
+  // }, 500));
 
   $sorts.on('click', 'dd', function(e) {
     e.preventDefault();
 
     var $this = $(this),
       $group = $this.parents('dl'),
-      sortBy = $this.trueData('reset-sort') ? '' : $group.data('sort-by'),
-      sortDir = $this.trueData('sort-desc') ? false : true;
+      sortBy = '',
+      sortDir = true;
 
-    $group.find('.active').removeClass('active');
-    $this.addClass('active');
+    if ($this.trueData('reset-sort') || $this.hasClass('active')) {
+      $group.find('.active').removeClass('active');
+    } else {
+      $group.find('.active').removeClass('active');
+      $this.addClass('active');
+      sortBy = $group.data('sort-by');
+      sortDir = $this.trueData('sort-desc') ? false : true;
+    }
 
     $container.isotope({
       sortBy: sortBy,
@@ -132,6 +132,5 @@ $(document).ready(function () {
     }
 
     $container.isotope({filter: isoFilter});
-    $win.trigger('scroll');
   });
 });

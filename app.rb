@@ -22,6 +22,7 @@ module GDC
 
     use GDC::Routes::Static
     use GDC::Routes::EngagementRings
+    use GDC::Routes::Forms
     use GDC::Routes::NotFound
   end
 end

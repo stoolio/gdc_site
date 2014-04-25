@@ -2,11 +2,11 @@
 
   .entry-summary
     - src = "/img/sareen/#{tagify(ring.collection)}/thumb/#{ring.view}"
-    %a{ href: '#', title: '' }
-      %img.lazy{ src: '/img/white.gif', data: { original: src } }
-      %noscript
-        %img{ src: src }
+    %a{ href: '#', title: ring.name }
+      %img.lazy{ src: '/img/white.gif', data: { original: src }, width: ring.width, height: ring.height }
+      -#%noscript
+      -#  %img{ src: src }
 
-  %footer.entry-footer
-    %p.entry-meta
+  %footer.entry-footer.text-center
+    %span.entry-meta
       = "From #{ring.display_price}"

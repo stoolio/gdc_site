@@ -13,6 +13,8 @@ gem 'sinatra-partial'
 
 gem 'haml'
 
+gem 'redcarpet'
+
 gem 'json'
 
 group :test do

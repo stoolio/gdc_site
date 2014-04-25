@@ -12,6 +12,19 @@ module GDC
         to_price(from_price)
       end
 
+      def width
+        dims[0]
+      end
+
+      def height
+        dims[1]
+      end
+
+      def dims
+        @dims ||= thumb_dim
+        @dims
+      end
+
       def tapered?
         tapered_width == top_width
       end

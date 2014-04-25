@@ -82,7 +82,7 @@
 // Variables
 
 $small-width: 45em;
-$bigcellsize: 300px; 
+$bigcellsize: 300px;
 $smallcellsize: 200px;
 
 // Ering Archive Header/Filter Styles
@@ -131,11 +131,11 @@ $smallcellsize: 200px;
   margin: 5px !important;
   padding: 0 !important;
 
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
 
-  background-color: rgba(126,169,211,.45);
+  background-color: rgba(126, 169, 211, .45;)
 
   .entry-footer,
   .entry-header {
@@ -195,7 +195,7 @@ $smallcellsize: 200px;
       max-height: $smallcellsize;
       max-width: $smallcellsize;
     }
-    
+
     .entry-footer {
       bottom: 1.7em;
     }
@@ -235,7 +235,7 @@ $smallcellsize: 200px;
 // Ering Archive Media Queries
 // @todo There are only two breakpoints, more is better
 
-@media only screen and (max-width: $small-width) { 
+@media only screen and (max-width: $small-width) {
 
   .ering-single .ering.image {
     float: none;
@@ -248,20 +248,12 @@ $smallcellsize: 200px;
     width: 80%;
   }
 
-  .big-sort {
-    display: none;
-  }
-
 }
 
 @media only screen and (min-width: $small-width) {
 
   #menu-primary-items {
     font-size: 1.4em;
-  }
-
-  .small-sort {
-    display: none;
   }
 
 }
@@ -355,7 +347,6 @@ $smallcellsize: 200px;
     padding: 2px;
     text-align: right;
     width: 100%;
-  
 
     .even {
       background-color: rgba(140, 146, 172, .3);

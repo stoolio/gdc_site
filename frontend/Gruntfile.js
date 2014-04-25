@@ -8,7 +8,9 @@ module.exports = function (grunt) {
         src: [
           'bower_components/modernizr/modernizr.js',
           'bower_components/jquery/dist/jquery.min.js',
+          'bower_components/foundation/js/foundation/*.js',
           'bower_components/foundation/js/foundation.min.js',
+          'bower_components/jquery.lazyload/jquery.lazyload.js',
           'bower_components/jquery.lazyload/jquery.lazyload.min.js',
           'bower_components/isotope/dist/isotope.pkgd.min.js',
           'bower_components/isotope-cells-by-row/cells-by-row.js',
@@ -32,8 +34,7 @@ module.exports = function (grunt) {
           sourceComments: 'map'
         },
         files: {
-          '../public/css/app.css': 'scss/app.scss',
-          '../public/css/app2.css': 'scss/app2.scss'
+          '../public/css/app.css': 'scss/app.scss'
         }
       }
     },
@@ -43,6 +44,10 @@ module.exports = function (grunt) {
       copy: {
         files: 'js/*',
         tasks: ['copy:app']
+      },
+      copy2: {
+        files: 'bower_components/**/*.js',
+        tasks: ['copy:vendor']
       },
       sass: {
         files: 'scss/**/*.scss',

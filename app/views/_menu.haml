@@ -1,28 +1,27 @@
 .row
   .large-12.columns
-    .sticky
-      %nav.top-bar{ data: { topbar: true } }
-        %ul.title-area
-          %li.name
-            %h1
-              %a{ href: '#' } Home
-          %li.toggle-topbar.menu-icon
-            %a{ href: '#' } Menu
+    %nav.top-bar{ data: { topbar: true } }
+      %ul.title-area
+        %li.name
+          %h1
+            %a{ href: url('/') } Home
+        %li.toggle-topbar.menu-icon
+          %a{ href: '#' } Menu
 
-        %section.top-bar-section
-          -# Right Nav Section
-          %ul.right
-            %li.active
-              %a{ href: '/engagement-rings' } Engagement Rings
-            %li.has-dropdown
-              %a{ href: '#' } Get a quote now!
-              %ul.dropdown
-                %li
-                  %a{ href: '#' } Diamond
-                %li
-                  %a{ href: '#' } Engagement Ring
+      %section.top-bar-section
+        -# Right Nav Section
+        %ul.right
+          %li.active
+            %a{ href: url('/engagement-rings') } Engagement Rings
+          %li.has-dropdown
+            %a{ href: url('/diamond-quote') } Get a quote now!
+            %ul.dropdown
+              %li
+                %a{ href: '#' } Diamond
+              %li
+                %a{ href: '#' } Engagement Ring
 
-          -# Left Nav Section
-          %ul.left
-            %li
-              %a{ href: '/about' } About
+        -# Left Nav Section
+        %ul.left
+          %li
+            %a{ href: '/about' } About
