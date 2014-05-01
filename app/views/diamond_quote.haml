@@ -12,9 +12,9 @@
           %a{ href: '#contact' } Contact Info
 .row
   .large-12.columns
-    %form{ date: { abide: true } }
+    %form#diamond-request{ action: '/diamond-quote', date: { abide: true } }
       .row
-        .large-4.columns
+        .medium-4.columns
           %a{ name: 'shape' }
           %label{ data: { magellan_destination: 'shape' } }
             Shape
@@ -28,9 +28,25 @@
               %li
                 %img.th.radius{ src: url('/img/diamonds/radiant.png') }
                 Radiant
-            %input{ type: 'text' }
-            %select#shape-list{ name: 'Shape', size: 7, multiple: true, type: 'hidden' }
-              %option{ value: 'Any', selected: true } Any
+              %li
+                %img.th.radius{ src: url('/img/diamonds/cushion.png') }
+                Cushion
+              %li
+                %img.th.radius{ src: url('/img/diamonds/oval.png') }
+                Oval
+              %li
+                %img.th.radius{ src: url('/img/diamonds/emerald.png') }
+                Emerald
+              %li
+                %img.th.radius{ src: url('/img/diamonds/marquise.png') }
+                Marquise
+              %li
+                %img.th.radius{ src: url('/img/diamonds/asscher.png') }
+                Asscher
+              %li
+                %img.th.radius{ src: url('/img/diamonds/pear.png') }
+                Pear
+            %select#shape-list{ name: 'shape', size: 7, multiple: true, style: 'display: none;' }
               %option{ value: 'Round' } Round
               %option{ value: 'Princess' } Princess
               %option{ value: 'Radiant' } Radiant
@@ -40,72 +56,83 @@
               %option{ value: 'Marquise' } Marquise
               %option{ value: 'Asscher' } Asscher
               %option{ value: 'Pear' } Pear
-        .large-4.large-offset-2.columns.end
-          %a{ name: 'budget' }
-          %label{ data: { magellan_destination: 'budget' } }
-            Budget
-            %input{ type: 'number' }
-          %label
-            Carat Weight
-            %input{ type: 'number' }
+        .medium-6.medium-offset-1.columns.end
+          .row
+            .large-6.large-centered.columns
+              %label
+                Carat Weight
+                .row.collapse
+                  .small-9.columns
+                    %input{ name: 'size', type: 'number' }
+                  .small-3.columns
+                    %span.postfix ct
+          .row
+            .large-6.large-centered.columns
+              %a{ name: 'budget' }
+              %label{ data: { magellan_destination: 'budget' } }
+                Budget
+                .row.collapse
+                  .small-3.columns
+                    %span.prefix $
+                  .small-9.columns
+                    %input{ name: 'budget', type: 'number' }
+          .row
+            .large-4.columns
+              %label
+                Color
+                %select{ name: 'color', size: 7, multiple: true, style: 'height: 100%;' }
+                  %option{ value: 'D' } D
+                  %option{ value: 'E' } E
+                  %option{ value: 'F' } F
+                  %option{ value: 'G' } G
+                  %option{ value: 'H' } H
+                  %option{ value: 'I' } I
+                  %option{ value: 'J' } J
+            .large-4.columns
+              %label
+                Clarity
+                %select{ name: 'clarity', size: 6, multiple: true, style: 'height: 100%;' }
+                  %option{ value: 'VVS1' } VVS1
+                  %option{ value: 'VVS2' } VVS2
+                  %option{ value: 'VS1' } VS1
+                  %option{ value: 'VS2' } VS2
+                  %option{ value: 'SI1' } SI1
+                  %option{ value: 'SI2' } SI2
+            .large-4.columns
+              %label
+                Cut
+                %select{ name: 'cut', size: 3, multiple: true, style: 'height: 100%;' }
+                  %option{ value: 'Excellent' } Excellent
+                  %option{ value: 'Very Good' } Very Good
+                  %option{ value: 'Good' } Good
       .row
-        .large-4.columns
-          %label
-            Color
-            %select{ name: 'Color', size: 8, multiple: true }
-              %option{ value: 'Any' } Any
-              %option{ value: 'D' } D
-              %option{ value: 'E' } E
-              %option{ value: 'F' } F
-              %option{ value: 'G' } G
-              %option{ value: 'H' } H
-              %option{ value: 'I' } I
-              %option{ value: 'J' } J
-        .large-4.columns
-          %label
-            Clarity
-            %select{ name: 'Clarity', size: 8, multiple: true }
-              %option{ value: 'Any' } Any
-              %option{ value: 'VVS1' } VVS1
-              %option{ value: 'VVS2' } VVS2
-              %option{ value: 'VS1' } VS1
-              %option{ value: 'VS2' } VS2
-              %option{ value: 'SI1' } SI1
-              %option{ value: 'SI2' } SI2
-        .large-4.columns
-          %label
-            Cut
-            %select{ name: 'Cut', size: 8, multiple: true }
-              %option{ value: 'Any' } Any
-              %option{ value: 'Excellent' } Excellent
-              %option{ value: 'Very Good' } Very Good
-              %option{ value: 'Good' } Good
-      %a{ name: 'contact' }
-      %fieldset{ data: { magellan_destination: 'contact' } }
-        %legend Contact Info
-        .row
-          .large-4.columns
-            %label
-              Name
-              %input{ type: 'text', placeholder: 'Enter your first and last name' }
-          .large-4.columns
-            %label
-              Email
-              %input{ type: 'email', placeholder: 'Enter your best email' }
-          .large-4.columns
-            %label
-              Phone
-              %input{ type: 'tel', placeholder: 'Enter the best phone number' }
-        .row
-          .large-12.columns
-            %label
-              State
-              %input{ type: 'text' }
-      .row
-        .large-12.columns
-          %label
-            Comments
-            %textarea{ rows: 10, cols: 30, placeholder: 'Enter any additional thoughts or questions...' }
+        .large-8.large-centered.columns
+          %a{ name: 'contact' }
+          %fieldset{ data: { magellan_destination: 'contact' } }
+            %legend Contact Info
+            .row
+              .large-6.columns
+                %label
+                  Name
+                  %input{ name: 'name', type: 'text', placeholder: 'Enter your first and last name' }
+              .large-6.columns
+                %label
+                  Email
+                  %input{ name: 'email', type: 'email', placeholder: 'Enter your best email' }
+            .row
+              .large-6.columns
+                %label
+                  State
+                  %input{ name: 'state', type: 'text' }
+              .large-6.columns
+                %label
+                  Phone
+                  %input{ name: 'phone', type: 'tel', placeholder: 'Enter the best phone number' }
+          .row
+            .large-12.columns
+              %label
+                Comments
+                %textarea{ name: 'comments', rows: 10, cols: 30, placeholder: 'Enter any additional thoughts or questions...' }
       .row
         .large-12.columns
           %button{ type: 'submit' } Request a Quote

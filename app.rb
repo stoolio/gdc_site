@@ -15,8 +15,8 @@ require 'app/routes'
 module GDC
   # App configuration
   class App < Sinatra::Base
-    register Sinatra::Reloader # remove for production
     configure do
+      register Sinatra::Reloader
       enable :reloader
     end
 

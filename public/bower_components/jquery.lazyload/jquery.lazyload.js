@@ -106,7 +106,7 @@
                         .bind("load", function() {
 
                             var original = $self.attr("data-" + settings.data_attribute);
-                            // $self.hide();
+                            $self.hide();
                             if ($self.is("img")) {
                                 $self.attr("src", original);
                             } else {
