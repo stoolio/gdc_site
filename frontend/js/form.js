@@ -1,5 +1,3 @@
-$(document).foundation();
-
 $(document).ready(function($) {
   $('#shape-selector').on('click', 'li', function () {
     var $this = $(this),
@@ -11,7 +9,7 @@ $(document).ready(function($) {
     $option.attr('Selected', !isActive);
   });
 
-  $( "#diamond-request" ).submit(function( event ) {
+  $('#diamond-request').submit(function( event ) {
     event.preventDefault();
 
     var $form = $(this),
@@ -47,6 +45,10 @@ $(document).ready(function($) {
       .always(function() {
         // alert( "finished" );
       });
+  });
+
+  $('#state-selector').select2({
+    placeholder: "Select a State"
   });
 
 });

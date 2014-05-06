@@ -17,6 +17,7 @@ $(document).ready(function($) {
     var $form = $(this),
       url = $form.attr( "action" ),
       data = $form.serializeArray(),
+      d,
       postData = {
         shape: [],
         color: [],
@@ -24,38 +25,28 @@ $(document).ready(function($) {
         cut: []
       };
 
-    for (var d in data) {
+    for (d in data) {
       switch(data[d].name) {
         case 'shape':
-        postData.shape.push(data[d].value);
-        break;
         case 'color':
-        postData.color.push(data[d].value);
-        break;
         case 'clarity':
-        postData.clarity.push(data[d].value);
-        break;
         case 'cut':
-        postData.cut.push(data[d].value);
-        break;
+          postData[data[d].name].push(data[d].value);
+          break;
         default:
-        postdata[data[d].name] = data[d].value;
+          postData[data[d].name] = data[d].value;
       }
     }
 
-    // postData.size;
-    // postData.budget;
-    // postData.name;
-    // postData.email;
-    // postData.state;
-    // postData.phone;
-    // postData.comments;
-
-    var posting = $.post( url, postData );
-    // Put the results in a div
-    posting.done(function( data ) {
-      console.log(data);
-    });
+    var diamondRequest = $.post( url, postData, function() {
+      alert( "success" );
+    })
+      .fail(function() {
+        alert( "error" );
+      })
+      .always(function() {
+        // alert( "finished" );
+      });
   });
 
 });

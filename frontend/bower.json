@@ -5,6 +5,7 @@
     "isotope": "~2.0.0",
     "jquery.lazyload": "~1.9.3",
     "isotope-cells-by-row": "metafizzy/isotope-cells-by-row#~0.1.2",
-    "imagesloaded": "~3.1.4"
+    "imagesloaded": "~3.1.4",
+    "select2": "~3.4.8"
   }
 }

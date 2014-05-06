@@ -1,20 +1,35 @@
 - @title = 'Get a Diamond Quote'
 
 .row
-  .large-8.columns.large-centered
+  .large-12.columns
+    %h1 Get a Diamond Quote
+    %p
+      Enter as much information as possible for to allow us to assist you.
+    %p
+      The only required information is your name and email, but entering a phone number will allow us to better discuss your needs.
+    %h3.show-for-small-only The table of contents below will help you navigate the form.
+
+
+.row.show-for-small-only
+  .small-12.large-8.large-centered.columns
     %div{ data: { magellan_expedition: 'fixed' } }
       %dl.sub-nav
         %dd{ data: { magellan_arrival: 'shape' } }
-          %a{ href: '#shape' } Diamond Shape
-        %dd{ data: { magellan_arrival: 'budget' } }
-          %a{ href: '#budget' } Budget
+          %a{ href: '#shape' } Shape
+        %dd{ data: { magellan_arrival: 'size-budget' } }
+          %a{ href: '#size-budget' } Size/Budget
+        %dd{ data: { magellan_arrival: 'quality' } }
+          %a{ href: '#quality' } Quality
         %dd{ data: { magellan_arrival: 'contact' } }
           %a{ href: '#contact' } Contact Info
+        %dd{ data: { magellan_arrival: 'comments' } }
+          %a{ href: '#comments' } Comments
+
 .row
   .large-12.columns
     %form#diamond-request{ action: '/diamond-quote', date: { abide: true } }
       .row
-        .medium-4.columns
+        .small-8.medium-4.small-centered.medium-uncentered.columns
           %a{ name: 'shape' }
           %label{ data: { magellan_destination: 'shape' } }
             Shape
@@ -56,29 +71,31 @@
               %option{ value: 'Marquise' } Marquise
               %option{ value: 'Asscher' } Asscher
               %option{ value: 'Pear' } Pear
-        .medium-6.medium-offset-1.columns.end
+        .medium-8.columns
           .row
-            .large-6.large-centered.columns
-              %label
-                Carat Weight
-                .row.collapse
-                  .small-9.columns
-                    %input{ name: 'size', type: 'number' }
-                  .small-3.columns
-                    %span.postfix ct
+            .large-10.large-centered.columns
+              .row
+                .x-small-12.small-6.columns
+                  %a{ name: 'size-budget' }
+                  %label{ data: { magellan_destination: 'size-budget' } }
+                    Carat Weight
+                    .row.collapse
+                      .small-11.medium-10.columns
+                        %input{ name: 'size', type: 'number' }
+                      .small-1.medium-2.columns
+                        %span.postfix ct
+                .x-small-12.small-6.columns
+                  %label
+                    Budget
+                    .row.collapse
+                      .small-1.medium-2.columns
+                        %span.prefix $
+                      .small-11.medium-10.columns
+                        %input{ name: 'budget', type: 'number' }
           .row
-            .large-6.large-centered.columns
-              %a{ name: 'budget' }
-              %label{ data: { magellan_destination: 'budget' } }
-                Budget
-                .row.collapse
-                  .small-3.columns
-                    %span.prefix $
-                  .small-9.columns
-                    %input{ name: 'budget', type: 'number' }
-          .row
-            .large-4.columns
-              %label
+            .small-6.medium-4.columns
+              %a{ name: 'quality' }
+              %label{ data: { magellan_destination: 'quality' } }
                 Color
                 %select{ name: 'color', size: 7, multiple: true, style: 'height: 100%;' }
                   %option{ value: 'D' } D
@@ -88,7 +105,7 @@
                   %option{ value: 'H' } H
                   %option{ value: 'I' } I
                   %option{ value: 'J' } J
-            .large-4.columns
+            .small-6.medium-4.columns
               %label
                 Clarity
                 %select{ name: 'clarity', size: 6, multiple: true, style: 'height: 100%;' }
@@ -98,51 +115,24 @@
                   %option{ value: 'VS2' } VS2
                   %option{ value: 'SI1' } SI1
                   %option{ value: 'SI2' } SI2
-            .large-4.columns
+            .medium-4.columns
               %label
                 Cut
                 %select{ name: 'cut', size: 3, multiple: true, style: 'height: 100%;' }
                   %option{ value: 'Excellent' } Excellent
                   %option{ value: 'Very Good' } Very Good
                   %option{ value: 'Good' } Good
+                  %option{ value: 'Fair' } Fair
+      - content_for :pre_comments do
+        %a{ name: 'comments', data: { magellan_destination: 'comments' } }
+      - content_for :pre_contact do
+        %a{ name: 'contact', data: { magellan_destination: 'contact' } }
+      = partial :contact
       .row
-        .large-8.large-centered.columns
-          %a{ name: 'contact' }
-          %fieldset{ data: { magellan_destination: 'contact' } }
-            %legend Contact Info
-            .row
-              .large-6.columns
-                %label
-                  Name
-                  %input{ name: 'name', type: 'text', placeholder: 'Enter your first and last name' }
-              .large-6.columns
-                %label
-                  Email
-                  %input{ name: 'email', type: 'email', placeholder: 'Enter your best email' }
-            .row
-              .large-6.columns
-                %label
-                  State
-                  %input{ name: 'state', type: 'text' }
-              .large-6.columns
-                %label
-                  Phone
-                  %input{ name: 'phone', type: 'tel', placeholder: 'Enter the best phone number' }
-          .row
-            .large-12.columns
-              %label
-                Comments
-                %textarea{ name: 'comments', rows: 10, cols: 30, placeholder: 'Enter any additional thoughts or questions...' }
-      .row
-        .large-12.columns
-          %button{ type: 'submit' } Request a Quote
-
-    %div.range-slider.radius{ data: { slider: true } }
-      %span.range-slider-handle
-      %span.range-slider-active-segment
-      %input{ type: 'hidden' }
+        .small-6.small-centered.columns
+          %button.button.large.radius{ type: 'submit' } Request a Quote
 
 - content_for :scripts do
   %script{ src: '/bower_components/foundation/js/foundation/foundation.abide.js' }
-  %script{ src: '/bower_components/foundation/js/foundation/foundation.slider.js' }
   %script{ src: '/bower_components/foundation/js/foundation/foundation.magellan.js' }
+  %script{ src: '/js/form.js' }

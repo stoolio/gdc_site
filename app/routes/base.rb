@@ -1,6 +1,7 @@
 require 'sinatra/namespace'
 require 'sinatra/content_for'
 require 'sinatra/partial'
+require 'sinatra/reloader'
 
 module GDC
   module Routes
@@ -14,8 +15,13 @@ module GDC
 
         enable :partial_underscores
       end
+      configure do
+        register Sinatra::Reloader
+        enable :reloader
+      end
 
       helpers GDC::Helpers::Base
+      helpers GDC::Helpers::Breadcrumbs
       helpers Sinatra::ContentFor
     end
   end

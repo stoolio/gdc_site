@@ -6,6 +6,7 @@
     %title= [@title, 'Gale Diamonds Chicago'].join(' | ')
     %link{ rel: 'stylesheet', href: '/css/app.css' }
     %link{ rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Open+Sans:400,700' }
+    = yield_content :styles
     %script{ src: '/bower_components/modernizr/modernizr.js' }
   %body
     .row
@@ -19,6 +20,9 @@
           Chicago, IL, 60602
 
     = partial :menu
+    .row
+      .large-12.columns
+        = breadcrumbs
 
     = yield
 

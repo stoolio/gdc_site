@@ -16,12 +16,12 @@ module GDC
         ring.fetch('thumb_dim')
       end
 
-      def name()
-        ring.fetch('name', '')
-      end
-
       def price(type)
         ring.fetch('price').fetch(type)
+      end
+
+      def name()
+        ring.fetch('name', '')
       end
 
       def diamond

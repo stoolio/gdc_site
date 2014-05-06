@@ -1,0 +1,39 @@
+.row
+  .large-8.large-centered.columns
+    = yield_content :pre_contact
+    %fieldset
+      %legend Contact Info
+      .row
+        .large-6.columns
+          %label
+            Name
+            %input{ name: 'name',
+                    type: 'text',
+                    placeholder: 'Enter your first and last name',
+                    required: true,
+                    autocomplete: 'name'}
+        .large-6.columns
+          %label
+            Email
+            %input{ name: 'e-mail',
+                    type: 'email',
+                    placeholder: 'Enter your best email',
+                    required: true,
+                    autocomplete: 'email'}
+      .row
+        .large-6.columns
+          = partial :state
+        .large-6.columns
+          %label
+            Phone
+            %input{ name: 'phone',
+                    type: 'tel',
+                    placeholder: '###-###-####',
+                    autocomplete: 'tel'}
+    .row
+      .large-12.columns
+        = yield_content :pre_comments
+        %label
+          Comments
+          %textarea{ name: 'comments', rows: 10, cols: 30, placeholder: 'Enter any additional thoughts or questions...' }
+

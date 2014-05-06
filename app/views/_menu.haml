@@ -1,27 +1,36 @@
 .row
   .large-12.columns
     %nav.top-bar{ data: { topbar: true } }
-      %ul.title-area
-        %li.name
-          %h1
-            %a{ href: url('/') } Home
-        %li.toggle-topbar.menu-icon
-          %a{ href: '#' } Menu
+      %li.toggle-topbar.menu-icon
+        %a{ href: '#' } Menu
 
       %section.top-bar-section
-        -# Right Nav Section
         %ul.right
-          %li.active
-            %a{ href: url('/engagement-rings') } Engagement Rings
+          %li{ class: 'active' }
+            %a{ href: url('/') } Home
           %li.has-dropdown
-            %a{ href: url('/diamond-quote') } Get a quote now!
+            %a{ href: url('/engagement-rings') } Engagement Rings
             %ul.dropdown
               %li
-                %a{ href: '#' } Diamond
+                %a{ href: url('#') } Browse designs
               %li
-                %a{ href: '#' } Engagement Ring
-
-        -# Left Nav Section
-        %ul.left
+                %a{ href: url('#') } Request a quote
+          %li.has-dropdown
+            %a{ href: url('/diamond-quote') } Diamonds
+            %ul.dropdown
+              %li
+                %a{ href: url('#') } Request a quote
+              %li
+                %a{ href: url('#') } Learn about diamonds
+          %li.has-dropdown
+            %a{ href: url('/education') } Education
+            %ul.dropdown
+              %li
+                %a{ href: url('/education/diamonds') } All About Diamonds
+              %li
+                %a{ href: url('/education/rings') } Learn about rings
           %li
-            %a{ href: '/about' } About
+            %a{ href: url('/about') } About
+          %li
+            %a{ href: url('/contact') } Contact
+    %hr
