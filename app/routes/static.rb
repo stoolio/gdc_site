@@ -5,8 +5,22 @@ module GDC
         haml :home
       end
 
-      get '/about' do
+      get '/about/?' do
         haml :about
+      end
+
+      namespace '/diamonds/?' do
+        get do
+          haml :diamond
+        end
+
+        get '/quote/?' do
+          haml :diamond_quote
+        end
+      end
+
+      get '/contact/?' do
+        haml :contact
       end
     end
   end

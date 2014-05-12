@@ -1,0 +1,6 @@
+- defaults = { method: 'post', data: { abide: true } }
+- defaults.merge(@form_data)
+.results{ style: 'display: none;' }
+  %h1
+%form{defaults}
+  = yield_content :form

@@ -1,0 +1,26 @@
+- menu.each do |name, data|
+  - dropdown = data[:dropdown]
+  - url = data[:url]
+  - active = active?(url)
+  = "<!--#{request.path}:#{data[:url]}:#{active}-->"
+  - classes = []
+  - classes << active
+  - classes << 'has-dropdown' if dropdown
+  %li{ class: classes }
+    %a{ href: url(data[:url]) }
+      = name
+    - if dropdown
+      %ul.dropdown
+        - dropdown.each do |subname, suburl|
+          %li
+            %a{ href: url(url + suburl) }
+              = subname
+
+-# %li.has-dropdown.active
+-#   %a{ href: url('/engagement-rings') } Engagement Rings
+-#   %ul.dropdown
+-#     %li
+-#       %a{ href: url('#') } Browse designs
+-#     %li
+-#       %a{ href: url('#') } Request a quote
+

@@ -1,0 +1,25 @@
+- @title = 'Contact Us'
+- crumb
+
+.row
+  .large-12.columns
+    %h1 Contact Us
+    %p
+      Enter your request and we will get back to you as quickly as possible.
+
+.row
+  .large-12.columns
+    - @form_data = { action: '/contact' }
+    - content_for :form do
+      - content_for :pre_comments
+      = partial :contact
+      .row
+        .small-6.small-centered.columns
+          - content_for :submit do
+            Submit your Question
+          = partial :submit_button
+    = partial :form
+
+- content_for :scripts do
+  %script{ src: '/bower_components/foundation/js/foundation/foundation.abide.js' }
+  %script{ src: '/js/form.js' }

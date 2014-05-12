@@ -1,0 +1,66 @@
+$background: #fff;
+$active: scale-color(#3d84c6, $lightness: 20%);
+$anim-props: 1s linear 0 infinite alternate;
+
+@mixin animation($properties...) {
+  -webkit-animation: $properties;
+  -moz-animation: $properties;
+  -ms-animation: $properties;
+  -o-animation: $properties;
+  animation: $properties;
+}
+
+@mixin keyframes( $name ) {
+  @-webkit-keyframes #{$name} { @content }
+  @-moz-keyframes #{$name} { @content }
+  @-o-keyframes #{$name} { @content }
+  @-ms-keyframes #{$name} { @content }
+  @keyframes #{$name} { @content }
+}
+
+@mixin active-anim {
+  background-color: rgba(0,0,100,.2);
+  -webkit-transform: translateY(-2px);
+}
+
+@mixin default-anim {
+  background-color: $background;
+}
+
+.loading {
+  div {
+    margin-left: 5px;
+    width: 12px;
+    height: 24px;
+    background-color: $background;
+    border-radius: 10px;
+    float: left;
+    &:first-child {
+      margin-left: 0;
+      @include animation(loader1 $anim-props);
+    }
+    &:nth-child(2) {
+      @include animation(loader2 $anim-props);
+    }
+    &:last-child {
+      @include animation(loader3 $anim-props);
+    }
+  }
+}
+
+@include keyframes(loader1) {
+  0% {@include default-anim;}
+  33% {@include active-anim;}
+  66% {@include default-anim;}
+}
+
+@include keyframes(loader2) {
+  33% {@include default-anim;}
+  66% {@include active-anim;}
+  100% {@include default-anim;}
+}
+
+@include keyframes(loader3) {
+  66% {@include default-anim;}
+  100% {@include active-anim;}
+}

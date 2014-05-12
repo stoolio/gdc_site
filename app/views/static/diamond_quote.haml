@@ -1,0 +1,145 @@
+- @title = 'Get a Diamond Quote'
+
+.row
+  .large-12.columns
+    %h1 Get a Diamond Quote
+    %p
+      Enter as much information as possible for to allow us to assist you.
+    %p
+      The only required information is your name and email, but entering a phone number will allow us to better discuss your needs.
+    %h3.show-for-small-only The table of contents below will help you navigate the form.
+
+
+.row.show-for-small-only
+  .small-12.large-8.large-centered.columns
+    %div{ data: { magellan_expedition: 'fixed' } }
+      %dl.sub-nav
+        %dd{ data: { magellan_arrival: 'shape' } }
+          %a{ href: '#shape' } Shape
+        %dd{ data: { magellan_arrival: 'size-budget' } }
+          %a{ href: '#size-budget' } Size/Budget
+        %dd{ data: { magellan_arrival: 'quality' } }
+          %a{ href: '#quality' } Quality
+        %dd{ data: { magellan_arrival: 'contact' } }
+          %a{ href: '#contact' } Contact Info
+        %dd{ data: { magellan_arrival: 'comments' } }
+          %a{ href: '#comments' } Comments
+
+.row
+  .large-12.columns
+    -#.results{ style: 'display: none;' }
+    -#  %h1
+    -#%form#diamond-request{ action: '/diamonds/quote', method: 'post', date: { abide: true, type: 'lead' } }
+    - @form_data = { id: 'diamond-request', action: '/diamonds/quote', method: 'post', date: { abide: true, type: 'lead' } }
+    - content_for :form do
+      .row
+        .small-8.medium-4.small-centered.medium-uncentered.columns
+          %a{ name: 'shape' }
+          %label{ data: { magellan_destination: 'shape' } }
+            Shape
+            %ul.small-block-grid-3.text-center#shape-selector
+              %li
+                %img.th.radius{ src: url('/img/diamonds/round.png') }
+                Round
+              %li
+                %img.th.radius{ src: url('/img/diamonds/princess.png') }
+                Princess
+              %li
+                %img.th.radius{ src: url('/img/diamonds/radiant.png') }
+                Radiant
+              %li
+                %img.th.radius{ src: url('/img/diamonds/cushion.png') }
+                Cushion
+              %li
+                %img.th.radius{ src: url('/img/diamonds/oval.png') }
+                Oval
+              %li
+                %img.th.radius{ src: url('/img/diamonds/emerald.png') }
+                Emerald
+              %li
+                %img.th.radius{ src: url('/img/diamonds/marquise.png') }
+                Marquise
+              %li
+                %img.th.radius{ src: url('/img/diamonds/asscher.png') }
+                Asscher
+              %li
+                %img.th.radius{ src: url('/img/diamonds/pear.png') }
+                Pear
+            %select#shape-list{ name: 'shape[]', size: 7, multiple: true, style: 'display: none;' }
+              %option{ value: 'Round' } Round
+              %option{ value: 'Princess' } Princess
+              %option{ value: 'Radiant' } Radiant
+              %option{ value: 'Cushion' } Cushion
+              %option{ value: 'Oval' } Oval
+              %option{ value: 'Emerald' } Emerald
+              %option{ value: 'Marquise' } Marquise
+              %option{ value: 'Asscher' } Asscher
+              %option{ value: 'Pear' } Pear
+        .medium-8.columns
+          .row
+            .large-10.large-centered.columns
+              .row
+                .x-small-12.small-6.columns
+                  %a{ name: 'size-budget' }
+                  %label{ data: { magellan_destination: 'size-budget' } }
+                    Carat Weight
+                    .row.collapse
+                      .small-11.medium-10.columns
+                        %input{ name: 'size', type: 'number' }
+                      .small-1.medium-2.columns
+                        %span.postfix ct
+                .x-small-12.small-6.columns
+                  %label
+                    Budget
+                    .row.collapse
+                      .small-1.medium-2.columns
+                        %span.prefix $
+                      .small-11.medium-10.columns
+                        %input{ name: 'budget', type: 'number' }
+          .row
+            .small-6.medium-4.columns
+              %a{ name: 'quality' }
+              %label{ data: { magellan_destination: 'quality' } }
+                Color
+                %select{ name: 'color[]', size: 7, multiple: true, style: 'height: 100%;' }
+                  %option{ value: 'D' } D
+                  %option{ value: 'E' } E
+                  %option{ value: 'F' } F
+                  %option{ value: 'G' } G
+                  %option{ value: 'H' } H
+                  %option{ value: 'I' } I
+                  %option{ value: 'J' } J
+            .small-6.medium-4.columns
+              %label
+                Clarity
+                %select{ name: 'clarity[]', size: 6, multiple: true, style: 'height: 100%;' }
+                  %option{ value: 'VVS1' } VVS1
+                  %option{ value: 'VVS2' } VVS2
+                  %option{ value: 'VS1' } VS1
+                  %option{ value: 'VS2' } VS2
+                  %option{ value: 'SI1' } SI1
+                  %option{ value: 'SI2' } SI2
+            .medium-4.columns
+              %label
+                Cut
+                %select{ name: 'cut[]', size: 3, multiple: true, style: 'height: 100%;' }
+                  %option{ value: 'Excellent' } Excellent
+                  %option{ value: 'Very Good' } Very Good
+                  %option{ value: 'Good' } Good
+                  %option{ value: 'Fair' } Fair
+      - content_for :pre_comments do
+        %a{ name: 'comments', data: { magellan_destination: 'comments' } }
+      - content_for :pre_contact do
+        %a{ name: 'contact', data: { magellan_destination: 'contact' } }
+      = partial :contact
+      .row
+        .small-6.small-centered.columns
+          - content_for :submit do
+            Request a Quote
+          = partial :submit_button
+    = partial :form
+
+- content_for :scripts do
+  %script{ src: '/bower_components/foundation/js/foundation/foundation.abide.js' }
+  %script{ src: '/bower_components/foundation/js/foundation/foundation.magellan.js' }
+  %script{ src: '/js/form.js' }

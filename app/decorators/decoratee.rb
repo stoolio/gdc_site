@@ -3,6 +3,8 @@ module GDC
     module Decoratee
       def decorate
         decorator.new(self)
+      rescue NameError
+        self
       end
       def decorator
         @decorator ||= GDC::Decorators.const_get(decorator_class)

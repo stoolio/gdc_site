@@ -1,36 +1,13 @@
 .row
   .large-12.columns
     %nav.top-bar{ data: { topbar: true } }
-      %li.toggle-topbar.menu-icon
-        %a{ href: '#' } Menu
+      %ul.title-area
+        %li.name Navigation
+        %li.toggle-topbar.menu-icon
+          %a{ href: '#' }
+            %span Menu
 
       %section.top-bar-section
         %ul.right
-          %li{ class: 'active' }
-            %a{ href: url('/') } Home
-          %li.has-dropdown
-            %a{ href: url('/engagement-rings') } Engagement Rings
-            %ul.dropdown
-              %li
-                %a{ href: url('#') } Browse designs
-              %li
-                %a{ href: url('#') } Request a quote
-          %li.has-dropdown
-            %a{ href: url('/diamond-quote') } Diamonds
-            %ul.dropdown
-              %li
-                %a{ href: url('#') } Request a quote
-              %li
-                %a{ href: url('#') } Learn about diamonds
-          %li.has-dropdown
-            %a{ href: url('/education') } Education
-            %ul.dropdown
-              %li
-                %a{ href: url('/education/diamonds') } All About Diamonds
-              %li
-                %a{ href: url('/education/rings') } Learn about rings
-          %li
-            %a{ href: url('/about') } About
-          %li
-            %a{ href: url('/contact') } Contact
+          = render_menu
     %hr

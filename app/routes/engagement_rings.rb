@@ -5,10 +5,10 @@ module GDC
         helpers GDC::Helpers::Ring
 
         get do
-          rings = JSON.load(open('test.json')).reduce([]) do |acc, (model,ring)|
+          @rings = JSON.load(open('test.json')).reduce([]) do |acc, (model,ring)|
             acc << GDC::Models::Ring.new(ring).decorate
           end
-          haml :engagement_rings, locals: { rings: rings }
+          haml :engagement_rings
         end
       end
     end
