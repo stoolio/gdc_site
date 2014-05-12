@@ -7,9 +7,9 @@ require 'sinatra/reloader'
 
 require 'json'
 
+require 'app/models'
 require 'app/decorators'
 require 'app/helpers'
-require 'app/models'
 require 'app/routes'
 
 module GDC
@@ -28,3 +28,5 @@ module GDC
     end
   end
 end
+
+include GDC::Models

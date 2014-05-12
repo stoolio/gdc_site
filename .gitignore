@@ -1,9 +1,17 @@
 *.DS_Store
+
 /css/*
 /frontend/bower_components/*
 /frontend/node_modules/*
+
 *.sublime-workspace
 /.bundle
 /log/*.log
 /tmp
 /public/img/*
+
+forms/
+frontend/.sass-cache/
+
+data.json
+test.json

@@ -33,7 +33,6 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     outputStyle: 'compressed',
-                    sourceComments: 'map'
                 },
                 files: {
                     '../public/css/app.css': 'scss/app.scss'
@@ -55,7 +54,10 @@ module.exports = function(grunt) {
             },
             sass: {
                 files: 'scss/**/*.scss',
-                tasks: ['sass']
+                tasks: ['sass'],
+                options: {
+                  livereload: true
+                }
             }
         }
     });
