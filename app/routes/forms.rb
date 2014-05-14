@@ -1,40 +1,37 @@
+# success: 'Thanks for your request, we will get back to you shortly'
+# failure: 'Something went wrong, perhaps you can try to email us at <a href="mailto:sales@galediamonds.com">sales@galediamonds.com</a>.'
 module GDC
   module Routes
     class Forms < Base
-      helpers do
-        def json?
-          request.accept? 'applicatoin/json'
-        end
-        def render_json(data)
-          JSON.generate(data)
-        end
-        def complete(status, msg)
-          if json?
-            content_type 'application/json'
-            render_json(msg)
-          else
-            redirect to("/forms/submit/#{status}")
+      helpers GDC::Helpers::Form
+
+      namespace '/forms' do
+        namespace '/submit' do
+          post do
+            type = params.delete(:type)
+            form = GDC::Models::Form.new(type, params)
+            if form.save!
+              success(
+                message: markdown(:form_submit_success)
+              )
+            else
+              failure(
+                message: markdown(:form_submit_failure)
+              )
+            end
+          end
+
+          get '/success' do
+            markdown :form_submit_success
+          end
+
+          get '/failure' do
+            markdown :form_submit_failure
           end
         end
-        def success(msg)
-          complete(:success, msg)
-        end
-        def failure(msg)
-          complete(:failure, msg)
-        end
       end
 
-      namespace '/forms/submit' do
-        get '/success' do
-          markdown :diamond_request_success
-        end
-
-        get '/failure' do
-          markdown :diamond_request_failure
-        end
-      end
-
-      post '/diamonds/quote/?' do
+      post '/diamonds/quote' do
         lead = GDC::Models::Form.new('lead', params)
         if lead.save!
           success(
@@ -47,7 +44,7 @@ module GDC
         end
       end
 
-      post '/contact/?' do
+      post '/contact' do
         contact = GDC::Models::Form.new('contact', params)
         if contact.save!
           success(

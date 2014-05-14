@@ -11,7 +11,7 @@ module GDC
 
       namespace '/diamonds/?' do
         get do
-          haml :diamond
+          haml :diamonds
         end
 
         get '/quote/?' do

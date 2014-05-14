@@ -23,9 +23,8 @@ module GDC
     use GDC::Routes::Static
     use GDC::Routes::EngagementRings
     use GDC::Routes::Forms
-    not_found do
-      haml :'../app/views/404'
-    end
+    use GDC::Routes::Education
+    use GDC::Routes::NotFound
   end
 end
 

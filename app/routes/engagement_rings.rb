@@ -1,14 +1,17 @@
 module GDC
   module Routes
     class EngagementRings < Base
-      namespace '/engagement-rings' do
-        helpers GDC::Helpers::Ring
+      helpers GDC::Helpers::Ring
 
+      namespace '/engagement-rings' do
         get do
-          @rings = JSON.load(open('test.json')).reduce([]) do |acc, (model,ring)|
-            acc << GDC::Models::Ring.new(ring).decorate
-          end
+          @rings = GDC::Models::Ring.decorate_all
           haml :engagement_rings
+        end
+
+        get '/:model' do
+          @ring = GDC::Models::Ring.find(params[:model]).decorate
+          haml :ring_detail
         end
       end
     end

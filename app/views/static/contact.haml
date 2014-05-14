@@ -7,8 +7,6 @@
     %p
       Enter your request and we will get back to you as quickly as possible.
 
-.row
-  .large-12.columns
     - @form_data = { action: '/contact' }
     - content_for :form do
       - content_for :pre_comments

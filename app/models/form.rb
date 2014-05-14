@@ -10,10 +10,19 @@ module GDC
 
       def save!
         json_data = JSON.generate(data)
-        file = %Q{forms/#{type}/#{Time.now.strftime "%F-%T"}.json}.gsub(':','_')
+        folder = get_dir
+        file = %Q{#{folder}/#{Time.now.strftime "%F-%T"}.json}.gsub(':','_')
         byte_size = json_data.bytesize
         bytes_written = File.write(file, json_data)
         byte_size == bytes_written ? true : false
+      end
+
+      private
+
+      def get_dir
+        folder_name = %Q{forms/#{type}/}
+        Dir.mkdir(folder_name) unless Dir.exist?(folder_name)
+        folder_name
       end
     end
   end

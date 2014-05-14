@@ -1,7 +1,29 @@
 -# Frontmatter for layout
 - @title = 'About'
+- crumb
 -# End Frontmatter
 
 .row
-  .large-12.columns
-    %p This is the about page
+  .large-8.columns
+    :markdown
+      # About Us
+
+      We have been custom crafting beautiful engagement rings for over 25 years in Chicago's historic diamond district.
+
+      From diamonds handpicked just for you, to engagement rings tailored to your every desire, you will be sure to find exactly what your looking for.
+
+      However, there are a few things you should know about us that make the Gale Diamonds experience a bit different:
+    .row
+      .large-8.columns
+        :markdown
+          * Custom Made Engagement Rings
+            * When we say that we make custom, we really mean it. We don't stock mountains of generic jewelry and settings.
+            * This means that you won't have to wade through a giant showroom full of case upon case of jewelry that *isn't quite right.*
+            * It does mean that together, we will have to create a design. But don't worry, we'll be with you the whole time. You can [learn about the Custom Design process here][Custom Design].
+
+            [Custom Design]: /education/rings/custom-design "Custom Design"
+      .large-4.columns
+        %div{ style: 'max-width: 300px;max-height: 300px;background-color:lightgray;'}
+        A pretty picture or something.
+  .large-4.columns
+    Sidebar Stuff

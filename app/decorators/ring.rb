@@ -25,6 +25,16 @@ module GDC
         @dims
       end
 
+      def tcw
+        ['round','princess','bg','colored'].reduce(0) do |acc, type|
+          acc + get("#{type} tcw").to_f
+        end
+      end
+
+      def all_side_stones
+        get('side stones').split(' ').map(&:capitalize).join(' & ')
+      end
+
       def tapered?
         tapered_width == top_width
       end

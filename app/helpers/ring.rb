@@ -15,8 +15,13 @@ module GDC
           .reduce([]) { |a, e| a << e.gsub("'", '').gsub(' ', '-') }
       end
 
-      def titlecase(string)
-        String(string).split(' ').map(&:capitalize).join(' ')
+      def sareen(collection, name, type = :thumb)
+        if type == :thumb
+          is_thumb = '/thumb'
+        else
+          is_thumb = ''
+        end
+        "/img/sareen/#{tagify(collection)}#{is_thumb}/#{name}"
       end
     end
   end

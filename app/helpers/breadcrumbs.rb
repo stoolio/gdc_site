@@ -1,5 +1,3 @@
-require 'pry'
-
 module GDC
   module Helpers
   # Generates breadcrumbs
@@ -9,7 +7,11 @@ module GDC
       end
 
       def crumb
-        crumbs[@title] = @env['PATH_INFO']
+        add_crumb(@title.gsub('-',' '), @env['PATH_INFO'])
+      end
+
+      def add_crumb(title, path)
+        crumbs[title] = url(path)
       end
 
       def breadcrumbs
