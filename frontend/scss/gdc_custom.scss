@@ -45,16 +45,6 @@ $smallcellsize: 210px;
 //   max-width: 100%;
 // }
 
-// $diamonds: asscher, baguette, cushion, emerald, heart, marquise, oval, pear, princess, radiant, round, trillion;
-
-// @each $diamond in $diamonds {
-//   option[value=#{$diamond}] {
-//     background-image: "/img/diamonds/#{$diamond}";
-//     width: 150px;
-//     height: 150px;
-//   }
-// }
-
 .ring-large {
   height: 500px;
     img {
@@ -145,7 +135,7 @@ input:invalid {
   }
 }
 
-.breadcrumbs > *.current {
+.breadcrumbs > .current {
   font-weight: bold;
 }
 
