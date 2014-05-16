@@ -1,6 +1,10 @@
 - defaults = { method: 'post', data: { abide: true } }
 - defaults.merge(@form_data)
-.results{ style: 'display: none;' }
-  %h1
 %form{defaults}
+  .results{ style: 'display: none;' }
+    %h1
   = yield_content :form
+
+-# content_for :scripts do
+-#   %script{ src: '/bower_components/foundation/js/foundation/foundation.abide.js' }
+-#   %script{ src: '/js/form.js' }

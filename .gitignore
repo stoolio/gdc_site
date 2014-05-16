@@ -1,14 +1,20 @@
 *.DS_Store
 
+// src map files
+*.map
+
 /css/*
 /frontend/bower_components/*
 /frontend/node_modules/*
+
+// src js folder so browser can easily source map
+/public/*
 
 *.sublime-workspace
 /.bundle
 /log/*.log
 /tmp
-/public/img/*
+
 
 forms/
 frontend/.sass-cache/

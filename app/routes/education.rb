@@ -8,6 +8,13 @@ module GDC
           end
         end
 
+        def categories
+          path = 'app/views/education/'
+          Dir.entries(path).select do |d|
+            Dir.exist?(path + d) && !d.include?('.')
+          end
+        end
+
         def page_exist?(file)
           File.exist?('app/views/education/' + file + '.md')
         end
@@ -34,7 +41,7 @@ module GDC
 
           get '/:page/?' do
             @page = params[:page]
-            @file = symbolize(@category + '/_' + @page)
+            @file = symbolize(@category + '/' + @page)
             if page_exist?(@file)
               education :page
             else

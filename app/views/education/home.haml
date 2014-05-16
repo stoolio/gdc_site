@@ -1,3 +1,18 @@
 %h1 Education
 
-= partial :'dogfood/yummyh'
+:markdown
+  Even though our business is selling diamonds and jewelry, we think that it is very important for our customers to know as much as possible about what they are buying.
+
+  Rather than try to rope you into an impulse purchase, buying something like an engagement ring should be taken with care to ensure that you are getting exactly what you want.
+
+  Particularly because you will be wearing for it many years to come, there is no reason not to learn as much about diamonds and the jewelry you are buying as you can.
+
+  With that in mind, we now present our attempt to help you get educated:
+
+- categories.each do |category|
+  %ul
+    %li
+      %h3
+        %a{ href: url("/education/#{category}") } #{category.capitalize}
+      %p
+        = markdown :"#{category}/description"

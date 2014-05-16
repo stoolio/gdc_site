@@ -40,6 +40,7 @@
                     autocomplete: 'tel'}
     .row
       .large-12.columns
+        = yield_content :pre_comments
         %label
           Comments
           %textarea{ name: 'comments',

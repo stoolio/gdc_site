@@ -9,7 +9,6 @@
 
     - @form_data = { action: '/contact' }
     - content_for :form do
-      - content_for :pre_comments
       = partial :contact
       .row
         .small-6.small-centered.columns
@@ -17,7 +16,3 @@
             Submit your Question
           = partial :submit_button
     = partial :form
-
-- content_for :scripts do
-  %script{ src: '/bower_components/foundation/js/foundation/foundation.abide.js' }
-  %script{ src: '/js/form.js' }
