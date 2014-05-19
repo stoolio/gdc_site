@@ -7,7 +7,6 @@
 /frontend/bower_components/*
 /frontend/node_modules/*
 
-// src js folder so browser can easily source map
 /public/*
 
 *.sublime-workspace

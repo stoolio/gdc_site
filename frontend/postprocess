@@ -1,0 +1,16 @@
+#!/bin/sh
+
+PWD=$(pwd)
+
+CSSLICENSE=$PWD/csslicenses.txt
+JSLICENSE=$PWD/jslicenses.txt
+
+cd ../public/src/min/
+
+cat CSSLICENSE build.css > app.css
+cat JSLICENSE build.js > app.js
+
+$PWD/cachify app.js ../../js/
+$PWD/cachify app.css ../../css/
+
+rm -r src/

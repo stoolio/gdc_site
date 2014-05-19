@@ -1,0 +1,16 @@
+#!/bin/sh
+
+cd frontend/
+
+echo "Compiling and copying assets..."
+
+cp frontend/bower_components/select2/*.png public/img/
+cp frontend/bower_components/select2/*.gif public/img/
+
+grunt dist
+
+echo "Inserting cachebuster in public assets and cleaning up..."
+
+./postprocess
+
+echo "Everything is set up!"

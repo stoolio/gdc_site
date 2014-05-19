@@ -19,7 +19,10 @@ module.exports = function(grunt) {
     bowerFiles = [
       // First, because it's jQuery
       // Also, isotope should attach itself to $.fn
+      // Via bridget, and bridget is the first file included
       'jquery/dist/jquery.js',
+
+      'fastclick/lib/fastclick.js',
 
       // Secret Depend for Isotope jQuery style
       'jquery-bridget/jquery.bridget.js',
@@ -47,7 +50,6 @@ module.exports = function(grunt) {
       'foundation/js/foundation/foundation.reveal.js',
       'foundation/js/foundation/foundation.magellan.js',
       'jquery.lazyload/jquery.lazyload.min.js',
-      //'imagesloaded/imagesloaded.js',
       'select2/select2.js',
     ],
     myDirs = {
@@ -64,7 +66,12 @@ module.exports = function(grunt) {
       'thumbclick.js',
       'eringarchive.js',
       'app.js',
-    ];
+    ],
+    otherFiles = {
+      img: [],
+      js: [],
+      css: [],
+    };
 
   function makeDirs(type) {
     return prependEachDir(bowerFiles, bowerDirs[type]).concat(prependEachDir(myFiles, myDirs[type]));
@@ -79,32 +86,45 @@ module.exports = function(grunt) {
 
     copy: {
       dev: {
-        src: copySrc,
-        dest: '../public/src/'
+        files: [
+          {
+            src: copySrc,
+            dest: '../public/src/'
+          },
+          {
+            src: 'bower_components/modernizr/modernizr.custom.min.js',
+            dest: '../public/js/modernizr.js'
+          },
+          {
+            src: 'bower_components/select2/select2.css',
+            dest: 'scss/select2.scss'
+          }
+        ]
       }
     },
 
     uglify: {
-      options: {
-        sourceMap: true,
-        mangle: false,
-        preserveComments: 'all'
-      },
       dev: {
+        options: {
+          sourceMap: true,
+          mangle: false,
+          preserveComments: 'all'
+        },
         files: [{
           src: uglifySrc,
-          dest: '../public/js/build.js'
+          dest: '../public/js/app.js'
         }]
       },
       dist: {
         options: {
+          banner: '/*! All other assets (c) Gale Diamonds Chicago <%= grunt.template.today("yyyy-mm-dd") %>*/',
           sourceMap: false,
           mangle: true,
           preserveComments: false
         },
         files: [{
           src: uglifySrc,
-          dest: '../public/js/build.js'
+          dest: '../public/src/min/build.js'
         }]
       },
     },
@@ -113,12 +133,21 @@ module.exports = function(grunt) {
       options: {
         includePaths: ['bower_components/foundation/scss']
       },
-      dist: {
+      dev: {
         options: {
-            outputStyle: 'compressed',
+          outputStyle: 'nested'
         },
         files: {
           '../public/css/app.css': 'scss/app.scss'
+        }
+      },
+      dist: {
+        options: {
+          banner: '/*! All other assets (c) Gale Diamonds Chicago <%= grunt.template.today("yyyy-mm-dd") %>*/',
+          outputStyle: 'compressed',
+        },
+        files: {
+          '../public/src/min/build.css': 'scss/app.scss'
         }
       }
     },
@@ -140,7 +169,7 @@ module.exports = function(grunt) {
       },
       sass: {
         files: 'scss/**/*.scss',
-        tasks: ['sass'],
+        tasks: ['sass:dev'],
         options: {
           livereload: true
         }
@@ -154,8 +183,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('dist', ['sass', 'copy', 'uglify:dist']);
-  grunt.registerTask('buildOld', ['sass', 'copy:dev', 'uglify:dev']);
-  grunt.registerTask('build', ['newer:sass', 'newer:copy:dev', 'newer:uglify:dev']);
+  grunt.registerTask('dist', ['copy:dev', 'sass:dist', 'uglify:dist']);
+  grunt.registerTask('build', ['newer:copy:dev', 'newer:sass:dev', 'newer:uglify:dev']);
   grunt.registerTask('default', ['build', 'watch']);
 };
