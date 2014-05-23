@@ -1,41 +1,43 @@
-= partial :scripts
 !!! 5
 %html.no-js{ lang: 'en' }
   %head
     %meta{ charset: 'utf-8' }
     %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
     %title= [@title, 'Gale Diamonds Chicago'].join(' | ')
-    -# %link{ rel: 'stylesheet', href: '/css/app.css' }
-    -# %link{ rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Open+Sans:400,700' }
-    -# - if settings.development?
-    -#   :javascript
-    -#     document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
-    = yield_content :styles
+    - if settings.development?
+      :javascript
+        document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    = partial :styles
+    -#<link href='http://fonts.googleapis.com/css?family=Dosis:400,800|Neuton:400,700|Rufina:400,700|Podkova:400,700|Asap:400,700|Nunito:400,700|Archivo+Narrow:400,700|Playfair+Display+SC:400,700|Cherry+Swash:400,700' rel='stylesheet' type='text/css'>
+    %link{ rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Neuton:400,700' }
+    %link{ rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Droid+Sans' }
+    %script{ src: '/js/modernizr.js' }
   %body
-    .row
-      .small-8.columns
+    .row.header
+      .medium-8.columns
         %h1 Gale Diamonds Chicago
         %p Chicago's Diamond Experts
-      .small-4.columns
-        %p<
-          5 N Wabash Ave #403
-          %br><
-          Chicago, IL, 60602
+      .medium-4.columns
+        %ul.vcard
+          %li.street-address 5 N Wabash Ave Apt 403
+          %li.locality Chicago
+          %li
+            %span.state Illinois
+            ,
+            %span.zip 60602
+        -#%p<
+        -#  5 N Wabash Ave #403
+        -#  %br><
+        -#  Chicago, IL, 60602
 
     = partial :menu
     .row
       .large-12.columns
         = "NO TITLE!!!" if settings.development? && (@title.nil? || @title.empty?)
-        = breadcrumbs
+        = autocrumb(@crumb)
 
     = yield
 
     = partial :footer
 
-    -# %script{ src: '/bower_components/jquery/dist/jquery.min.js' }
-    -# %script{ src: '/bower_components/foundation/js/foundation/foundation.js' }
-    -# %script{ src: '/bower_components/foundation/js/foundation/foundation.topbar.js' }
-    -# %script{ src: '/bower_components/foundation/js/foundation.reveal.js' }
-    -# %script{ src: '/bower_components/select2/select2.js' }
-    = yield_content :scripts_prod
-    -# %script{ src: '/js/app.js' }
+    = partial :scripts

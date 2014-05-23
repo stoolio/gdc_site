@@ -4,7 +4,8 @@ $base-font-size: 18px;
 
 $rem-base: $base-font-size;
 
-$body-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-family: "Neuton", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: "Droid Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 
 $primary-color: #3d84c6;
 $secondary-color: #e7e7e7;
@@ -22,8 +23,8 @@ $crumb-slash: '>';
 //
 
 // Background color for the top bar
-$topbar-bg-color: #fff;
-$topbar-hover-color: scale-color($topbar-bg-color, $lightness: -15%);
+$topbar-bg-color: white;
+$topbar-hover-color: #eee; //scale-color($topbar-bg-color, $lightness: -15%);
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
@@ -51,7 +52,7 @@ $topbar-link-color-hover: $topbar-link-color;
 // $topbar-link-weight: normal;
 $topbar-link-font-size: rem-calc(15);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
-$topbar-link-bg-hover: scale-color($topbar-hover-color, $blue: 5%);
+$topbar-link-bg-hover: scale-color(rgb(238,238,248), $lightness: -15%);
 $topbar-link-bg-active: scale-color($primary-color, $lightness: 20%);
 $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -5%);
 // $topbar-link-font-family: $body-font-family;
@@ -154,3 +155,6 @@ $input-error-message-font-size: rem-calc(13);
 
 // Select variables
 // $select-bg-color: #fafafa;
+
+
+$crumb-border-size: 0 0 1px 0;

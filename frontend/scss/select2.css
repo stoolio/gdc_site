@@ -52,7 +52,7 @@ Version: 3.4.8 Timestamp: Thu May  1 09:50:32 EDT 2014
     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eee), color-stop(0.5, #fff));
     background-image: -webkit-linear-gradient(center bottom, #eee 0%, #fff 50%);
     background-image: -moz-linear-gradient(center bottom, #eee 0%, #fff 50%);
-    filter: unquote("progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#eeeeee', GradientType = 0)");
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#eeeeee', GradientType = 0);
     background-image: linear-gradient(to top, #eee 0%, #fff 50%);
 }
 
@@ -64,7 +64,7 @@ Version: 3.4.8 Timestamp: Thu May  1 09:50:32 EDT 2014
     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eee), color-stop(0.9, #fff));
     background-image: -webkit-linear-gradient(center bottom, #eee 0%, #fff 90%);
     background-image: -moz-linear-gradient(center bottom, #eee 0%, #fff 90%);
-    filter: unquote("progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0)");
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0);
     background-image: linear-gradient(to bottom, #eee 0%, #fff 90%);
 }
 
@@ -125,7 +125,7 @@ Version: 3.4.8 Timestamp: Thu May  1 09:50:32 EDT 2014
     z-index: 9998;
     /* styles required for IE to work */
     background-color: #fff;
-    filter: unquote("alpha(opacity=0)");
+    filter: alpha(opacity=0);
 }
 
 .select2-drop {
@@ -192,7 +192,7 @@ Version: 3.4.8 Timestamp: Thu May  1 09:50:32 EDT 2014
     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ccc), color-stop(0.6, #eee));
     background-image: -webkit-linear-gradient(center bottom, #ccc 0%, #eee 60%);
     background-image: -moz-linear-gradient(center bottom, #ccc 0%, #eee 60%);
-    filter: unquote("progid:DXImageTransform.Microsoft.gradient(startColorstr = '#eeeeee', endColorstr = '#cccccc', GradientType = 0)");
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#eeeeee', endColorstr = '#cccccc', GradientType = 0);
     background-image: linear-gradient(to top, #ccc 0%, #eee 60%);
 }
 
@@ -274,7 +274,7 @@ Version: 3.4.8 Timestamp: Thu May  1 09:50:32 EDT 2014
     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #fff), color-stop(0.5, #eee));
     background-image: -webkit-linear-gradient(center bottom, #fff 0%, #eee 50%);
     background-image: -moz-linear-gradient(center bottom, #fff 0%, #eee 50%);
-    filter: unquote("progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0)");
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0);
     background-image: linear-gradient(to top, #fff 0%, #eee 50%);
 }
 
@@ -286,7 +286,7 @@ Version: 3.4.8 Timestamp: Thu May  1 09:50:32 EDT 2014
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(0.5, #eee));
     background-image: -webkit-linear-gradient(center top, #fff 0%, #eee 50%);
     background-image: -moz-linear-gradient(center top, #fff 0%, #eee 50%);
-    filter: unquote("progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0)");
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0);
     background-image: linear-gradient(to bottom, #fff 0%, #eee 50%);
 }
 
@@ -529,7 +529,7 @@ html[dir="rtl"] .select2-container-multi .select2-choices li
               user-select: none;
 
     background-color: #e4e4e4;
-    filter: unquote("progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#f4f4f4', GradientType=0)");
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#f4f4f4', GradientType=0);
     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(20%, #f4f4f4), color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8), color-stop(100%, #eee));
     background-image: -webkit-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);
     background-image: -moz-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);

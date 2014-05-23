@@ -1,18 +1,20 @@
+- @title = 'Education'
+
 %h1 Education
 
 :markdown
-  Even though our business is selling diamonds and jewelry, we think that it is very important for our customers to know as much as possible about what they are buying.
+  Even though our business is selling diamonds and jewelry, we think that it is very important for our customers to know as much as possible about what they are buying. So, we think it is more important that we provide a comprehensive education, particularly when it comes to diamonds.
 
   Rather than try to rope you into an impulse purchase, buying something like an engagement ring should be taken with care to ensure that you are getting exactly what you want.
 
-  Particularly because you will be wearing for it many years to come, there is no reason not to learn as much about diamonds and the jewelry you are buying as you can.
+  Especially because you will be wearing for it many years to come, there is no reason not to learn as much about diamonds and the jewelry you are buying as you can.
 
-  With that in mind, we now present our attempt to help you get educated:
+  With that in mind, read the following to get an idea of what we are about:
 
 - categories.each do |category|
   %ul
     %li
       %h3
-        %a{ href: url("/education/#{category}") } #{category.capitalize}
+        %a{ href: url("/education/#{category}/") } #{category.capitalize}
       %p
         = markdown :"#{category}/description"

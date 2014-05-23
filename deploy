@@ -1,16 +1,55 @@
 #!/bin/sh
 
-cd frontend/
+set -e
+
+# provide: /path/to/file.ext
+# returns: "file-$(md5sum).ext"
+cachify() {
+  CACHEBUSTER=$(md5sum $1 | cut -d ' ' -f 1)
+  FILE=$(basename $1)
+  NAME=${FILE%.*}
+  EXT=${FILE##*.}
+
+  echo "${NAME}-${CACHEBUSTER}.${EXT}"
+}
+
+PUBLIC=$PWD/public
+COMPILEDIR=$PUBLIC/src/min
+GRUNTDIR=$PWD/frontend
+SELECT2DIR=$GRUNTDIR/bower_components/select2/
+MAINDIR=$PWD
+
+VIEWS=$PWD/app/views
 
 echo "Compiling and copying assets..."
 
-cp frontend/bower_components/select2/*.png public/img/
-cp frontend/bower_components/select2/*.gif public/img/
+CSSLICENSE=$GRUNTDIR/csslicenses.txt
+JSLICENSE=$GRUNTDIR/jslicenses.txt
 
-grunt dist
+for IMAGE in select2.png select2x2.png select2-spinner.gif
+do
+  cp $SELECT2DIR/$IMAGE $PUBLIC/img/
+done
+
+(cd $GRUNTDIR && grunt dist)
+
+cat $CSSLICENSE  $COMPILEDIR/build.css > $COMPILEDIR/app.css
+cat $JSLICENSE   $COMPILEDIR/build.js  > $COMPILEDIR/app.js
 
 echo "Inserting cachebuster in public assets and cleaning up..."
 
-./postprocess
+INJS=$COMPILEDIR/app.js
+INCSS=$COMPILEDIR/app.css
+
+OUTJS=$(cachify $INJS)
+OUTCSS=$(cachify $INCSS)
+
+cp $INJS  $PUBLIC/js/$OUTJS
+cp $INCSS $PUBLIC/css/$OUTCSS
+
+echo "%link{ rel: 'stylesheet', href: '/css/$OUTCSS' }" > $VIEWS/_styles.haml
+echo "%script{ src: '/js/$OUTJS' }" > $VIEWS/_scripts.haml
+
+rm -r $PUBLIC/src
 
 echo "Everything is set up!"

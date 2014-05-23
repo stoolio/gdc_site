@@ -1,6 +1,4 @@
 - @title = @page.capitalize
-- add_crumb(@category, url("/education/#{@category}"))
-- crumb
 
 %h1 #{titlecase @page}
 = markdown :"#{symbolize(@category + '/' + @page)}"

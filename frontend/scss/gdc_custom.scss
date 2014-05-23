@@ -70,6 +70,10 @@ input:invalid {
 
 }
 
+.header p {
+  margin-bottom: 0;
+}
+
 .top-bar {
   @media #{$small-only} {
     .name {
@@ -78,7 +82,7 @@ input:invalid {
       font-weight: bold;
       background: #eee;
       border-radius: 10px 10px 0 0;
-      border: 1px solid #888;
+      border: 1px solid #bbb;
     }
   }
   @media #{$medium-up} {
@@ -104,9 +108,13 @@ input:invalid {
 
 .top-bar-section {
   @media #{$medium-up} {
-    li:not(.has-form) a:not(.button) {
-      border-top-right-radius: 10px;
-      border-top-left-radius: 10px;
+    .right {
+      li:last-child a {
+        border-radius: 0 10px 10px 0;
+      }
+      li:first-child a {
+        border-radius: 10px 0 0 10px;
+      }
     }
   }
 
@@ -119,6 +127,15 @@ input:invalid {
         background: #eee;
       }
     }
+  }
+
+  li:not(.has-form) a:not(.button) {
+    background-color: #eeeef8;
+    box-shadow: 0px 0px 2px 0px lightskyblue;
+  }
+
+  li:not(.has-form).active a:not(.button) {
+    background-color: #649ed1;
   }
 
   .dropdown {
@@ -135,12 +152,13 @@ input:invalid {
   }
 }
 
-.breadcrumbs > .current {
-  font-weight: bold;
+.select2-container {
+  display: inherit !important;
+  margin-bottom: 1em !important;
 }
 
-nav + hr {
-  margin-top: 0;
+.breadcrumbs > .current {
+  font-weight: bold;
 }
 
 .engagement-ring {

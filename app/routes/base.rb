@@ -35,6 +35,14 @@ module GDC
       helpers GDC::Helpers::Breadcrumbs
       helpers GDC::Helpers::Menu
       helpers Sinatra::ContentFor
+
+      # redirects any routes not ending in slashes to a slashed route
+      # Ex:
+      # /foo/bar will redirect to /foo/bar/
+      # /baz will redirect to /baz/
+      get %r{(/.*[^\/])$} do
+        redirect to("#{params[:captures].first}/"), 301
+      end
     end
   end
 end

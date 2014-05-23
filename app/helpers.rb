@@ -5,5 +5,6 @@ module GDC
     autoload :Ring, 'app/helpers/ring'
     autoload :Menu, 'app/helpers/menu'
     autoload :Form, 'app/helpers/form'
+    autoload :Education, 'app/helpers/education'
   end
 end

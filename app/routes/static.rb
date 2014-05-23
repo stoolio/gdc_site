@@ -5,22 +5,23 @@ module GDC
         haml :home
       end
 
-      get '/about/?' do
+      get '/about/' do
         haml :about
       end
 
-      namespace '/diamonds/?' do
-        get do
-          haml :diamonds
-        end
-
-        get '/quote/?' do
-          haml :diamond_quote
-        end
+      get '/diamonds/' do
+        haml :diamonds
       end
 
-      get '/contact/?' do
-        haml :contact
+      namespace '/policies/' do
+        get do
+          haml :"policies/index"
+        end
+
+        get ":policy/" do
+          @policy = params[:policy]
+          haml :"policies/policy"
+        end
       end
     end
   end

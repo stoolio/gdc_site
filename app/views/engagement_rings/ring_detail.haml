@@ -1,21 +1,17 @@
-- @title = @ring.name
-- add_crumb('Engagment Rings', url('/engagement-rings'))
-- crumb
+- @crumb = @title = @ring.name
 
 .row
   .large-8.columns
-    -# src = "/img/sareen/#{tagify(ring.collection)}/thumb/#{ring.view}"
-    -# title: ring.name }
     .row
       .medium-8.large-12.columns.show-for-medium-up
         %div.ring-large
-          %img{ src: sareen(@ring.collection, @ring.main_view, :full) }
+          %img{ src: sareen_image(@ring.collection, @ring.main_view, :full) }
       .small-10.small-centered.medium-4.large-12.columns
         %ul.small-block-grid-1.medium-block-grid-2.large-block-grid-3.ring-thumbs
           - @ring.views.each_with_index do |view, i|
             %li
-              %a.th.radius{ href: sareen(@ring.collection, view, :full) }
-                %img{ src: sareen(@ring.collection, view), title: "#{@ring.name} #{i}" }
+              %a.th.radius{ href: sareen_image(@ring.collection, view, :full) }
+                %img{ src: sareen_image(@ring.collection, view), title: "#{@ring.name} #{i}" }
   .large-4.columns
     %ul.pricing-table
       %li.title #{@ring.name}
@@ -44,6 +40,3 @@
                 next if price == "N/A"
                 %option{ value: metal } #{metal}: #{to_price(price)}
           %a.button{ href: url('#') } I like this ring!
-
--# - content_for :scripts do
--#   %script{ src: '/js/eringdetail.js' }

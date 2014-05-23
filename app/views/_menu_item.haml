@@ -2,7 +2,6 @@
   - dropdown = data[:dropdown]
   - url = data[:url]
   - active = active?(url)
-  = "<!--#{request.path}:#{data[:url]}:#{active}-->"
   - classes = []
   - classes << active
   - classes << 'has-dropdown' if dropdown
@@ -13,14 +12,5 @@
       %ul.dropdown
         - dropdown.each do |subname, suburl|
           %li
-            %a{ href: url(url + suburl) }
+            %a{ href: url(suburl) }
               = subname
-
--# %li.has-dropdown.active
--#   %a{ href: url('/engagement-rings') } Engagement Rings
--#   %ul.dropdown
--#     %li
--#       %a{ href: url('#') } Browse designs
--#     %li
--#       %a{ href: url('#') } Request a quote
-

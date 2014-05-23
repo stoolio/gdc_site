@@ -1,7 +1,7 @@
 module GDC
   module Helpers
     module Menu
-      PATHREGEX = %r{^(/[\w-]*)}
+      PATHREGEX = %r{^(/[\w-]*/?)}
 
       MENU = {
         'Home' => {
@@ -9,30 +9,36 @@ module GDC
           dropdown: false
         },
         'Engagement Rings' => {
-          url: '/engagement-rings',
+          url: '/engagement-rings/',
           dropdown: {
-            'Request a Quote' => '/quote'
+            'Request a Quote' => '/engagement-rings/quote/'
           }
         },
         'Diamonds' => {
-          url: '/diamonds',
+          url: '/diamonds/',
           dropdown: {
-            'Request a Quote' => '/quote'
+            'Request a Quote' => '/diamonds/quote/'
           }
         },
         'Education' => {
-          url: '/education',
+          url: '/education/',
           dropdown: {
-            'All About Diamonds' => '/diamonds',
-            'Learn About Rings' => '/rings'
+            'All About Diamonds' => '/education/diamonds/',
+            'Learn About Rings' => '/education/rings/'
           }
         },
-        'About' => {
-          url: '/about',
+        'Blog' => {
+          url: '/blog/',
           dropdown: false
         },
+        'About' => {
+          url: '/about/',
+          dropdown: {
+            'Policies' => '/policies/'
+          }
+        },
         'Contact' => {
-          url: '/contact',
+          url: '/contact/',
           dropdown: false
         }
       }

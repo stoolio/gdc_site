@@ -97,7 +97,7 @@ module.exports = function(grunt) {
           },
           {
             src: 'bower_components/select2/select2.css',
-            dest: 'scss/select2.scss'
+            dest: 'scss/select2.css'
           }
         ]
       }
@@ -112,7 +112,7 @@ module.exports = function(grunt) {
         },
         files: [{
           src: uglifySrc,
-          dest: '../public/js/app.js'
+          dest: '../public/js/app.dev.js'
         }]
       },
       dist: {
@@ -138,7 +138,7 @@ module.exports = function(grunt) {
           outputStyle: 'nested'
         },
         files: {
-          '../public/css/app.css': 'scss/app.scss'
+          '../public/css/app.dev.css': 'scss/app.scss'
         }
       },
       dist: {
