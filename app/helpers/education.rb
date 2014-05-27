@@ -3,7 +3,7 @@ module GDC
     module Education
       PATH = 'app/views/education/'
       def education(page)
-        haml :'education/layout' do
+        haml :education_layout do
           haml page
         end
       end

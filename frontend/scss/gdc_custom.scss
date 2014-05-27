@@ -55,7 +55,13 @@ $smallcellsize: 210px;
 }
 
 input:invalid {
-  outline: 2px solid #f00;
+  outline: 2px solid rgba(255,0,0,0.2);
+}
+
+form .button {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #shape-selector li {
@@ -157,8 +163,12 @@ input:invalid {
   margin-bottom: 1em !important;
 }
 
-.breadcrumbs > .current {
-  font-weight: bold;
+.breadcrumbs {
+  margin-bottom: 20px;
+
+  & > .current {
+    font-weight: bold;
+  }
 }
 
 .engagement-ring {

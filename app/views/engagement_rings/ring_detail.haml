@@ -31,12 +31,19 @@
           Tapered from #{@ring.top_width}mm to #{@ring.tapered_width}mm
       %li.bullet-item Model ##{@ring.model}
       %li.cta-button
-        %form#ring-interest{ action: '/', method: 'post', data: { type: 'ring_request' } }
-          %input{ type: 'hidden', value: @ring.model }
-          %label
-            Available Metals
-            %select
-              - @ring.prices.each do |metal, price|
-                next if price == "N/A"
-                %option{ value: metal } #{metal}: #{to_price(price)}
-          %a.button{ href: url('#') } I like this ring!
+        - @form_data = { id: 'product-inquiry', action: "/engagement-rings/#{@ring.model}/" }
+        - content_for :submit_text do
+          Submit Inquiry
+        - content_for :form do
+          = partial :contact
+        #inquiry-modal.reveal-modal.medium{ data: { reveal: true } }
+          = partial :form
+          %a.close-reveal-modal &#215;
+        %input{ type: 'hidden', name: 'model-number', value: @ring.model, form: 'product-inquiry' }
+        %label
+          Available Metals
+          %select{ name: 'selected-metal', form: 'product-inquiry' }
+            - @ring.prices.each do |metal, price|
+              - next if price == "N/A"
+              %option{ value: "#{metal}/#{price}" } #{metal}: #{to_price(price)}
+        %a.button{ href: '#', data: { reveal_id: 'inquiry-modal'} } I like this ring!

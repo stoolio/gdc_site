@@ -1,7 +1,7 @@
-- defaults = { method: 'post', data: { abide: true } }
-- defaults.merge(@form_data)
+- defaults = { method: 'post', data: { abide: true } }.merge(@form_data)
+.alert-box.radius{ style: 'display: none;', data: { results_for: @form_data[:id], alert: true } }
+  %h3{ style: 'color:white;' }
+  %a.close{ href: '#' } &times;
 %form{defaults}
-  .results{ style: 'display: none;' }
-    %h1
   = yield_content :form
   = partial :submit_button

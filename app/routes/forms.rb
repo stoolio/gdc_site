@@ -4,13 +4,24 @@ module GDC
       helpers GDC::Helpers::Form
 
       # Only for non-js form submit
-      namespace '/forms/submit/' do
-        get 'success/' do
-          markdown :form_submit_success
+      namespace '/forms/' do
+        namespace 'submit/' do
+          get 'success/' do
+            markdown :form_submit_success
+          end
+
+          get 'failure/' do
+            markdown :form_submit_failure
+          end
         end
 
-        get 'failure/' do
-          markdown :form_submit_failure
+        post 'signup/:type/' do
+          signup = GDC::Models::Form.new('signup', params)
+          if signup.save!
+            success( message: "Thanks #{params['name'].split(' ').first.capitalize}! You'll be hearing from us soon." )
+          else
+            failure( message: DEFAULT_FAILURE_MESSAGE )
+          end
         end
       end
 
@@ -36,6 +47,15 @@ module GDC
       post '/contact/' do
         contact = GDC::Models::Form.new('contact', params)
         if contact.save!
+          success( message: DEFAULT_SUCCESS_MESSAGE )
+        else
+          failure( message: DEFAULT_FAILURE_MESSAGE )
+        end
+      end
+
+      post '/engagement-rings/:model/' do
+        inquiry = GDC::Models::Form.new('inquiry', params)
+        if inquiry.save!
           success( message: DEFAULT_SUCCESS_MESSAGE )
         else
           failure( message: DEFAULT_FAILURE_MESSAGE )

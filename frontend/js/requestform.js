@@ -8,20 +8,20 @@ var RequestForms = (function() {
 
   var RequestForm = (function() {
 
-    function results(msg) {
-      this.$results.children('h1').text(data.message);
-      this.$results.fadeIn(1000);
+    function results(msg, id, result) {
+      $el = $('[data-results-for="' + id + '"]');
+      $el.addClass(result);
+      $el.children('h3').text(msg);
+      $el.fadeIn(1000);
     }
 
     function success(data) {
       this.submitted = true;
-      this.$form.fadeOut( function() {
-        results(data.message).bind(this);
-      });
+      this.$form.fadeOut( results(data.message, this.id, 'success') );
     }
 
     function fail(data) {
-      results(data.message).bind(this);
+      results(data.message, this.id, 'failure');
     }
 
     function process(e) {
@@ -43,7 +43,7 @@ var RequestForms = (function() {
 
       this.$form = $(el);
       this.$button = $(this.id + " button[type='submit']");
-      this.$results = this.$form.children('.results');
+      // this.$results = this.$form.children('.results');
 
       this.type = this.$form.data('type');
       this.url = this.$form.attr('action');

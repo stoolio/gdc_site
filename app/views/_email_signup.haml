@@ -1,0 +1,34 @@
+- type ||= 'list'
+- location ||= 'not-provided'
+- location = "#{request.path}|#{location}"
+- @form_data = { id: "email-signup-#{type}", action: "/forms/signup/#{type}/"}
+- content_for :form do
+  %input{ type: 'hidden', name: 'loc', value: location }
+  .row
+    .large-12.columns
+      %h2
+        = yield_content :form_title
+      %label
+        Name
+        %sup
+          %span{ style: 'color: red' } *
+          (required)
+        %input{ name: 'name',
+                type: 'text',
+                placeholder: 'Enter your name',
+                required: true,
+                autocomplete: 'name'}
+        %small.error A name is required.
+    .large-12.columns
+      %label
+        Email
+        %sup
+          %span{ style: 'color: red' } *
+          (required)
+        %input{ name: 'e-mail',
+                type: 'email',
+                placeholder: 'myemail@provider.com',
+                required: true,
+                autocomplete: 'email'}
+        %small.error A valid email address is required.
+= partial :form

@@ -48,6 +48,7 @@ module.exports = function(grunt) {
       'foundation/js/foundation/foundation.topbar.js',
       'foundation/js/foundation/foundation.abide.js',
       'foundation/js/foundation/foundation.reveal.js',
+      'foundation/js/foundation/foundation.alert.js',
       'foundation/js/foundation/foundation.magellan.js',
       'jquery.lazyload/jquery.lazyload.min.js',
       'select2/select2.js',
