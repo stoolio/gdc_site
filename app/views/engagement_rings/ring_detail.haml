@@ -30,8 +30,9 @@
         - else
           Tapered from #{@ring.top_width}mm to #{@ring.tapered_width}mm
       %li.bullet-item Model ##{@ring.model}
+
       %li.cta-button
-        - @form_data = { id: 'product-inquiry', action: "/engagement-rings/#{@ring.model}/" }
+        - @form_data = { id: 'product-inquiry', action: "/engagement-rings/inquiry/" }
         - content_for :submit_text do
           Submit Inquiry
         - content_for :form do

@@ -45,6 +45,15 @@ $smallcellsize: 210px;
 //   max-width: 100%;
 // }
 
+body {
+  background: url(/img/texture/zwartevilt.png)
+}
+
+.container {
+  background: white url(/img/texture/daimond_eyes.png);
+  box-shadow: 0 0 50px 0 black;
+}
+
 .ring-large {
   height: 500px;
     img {
@@ -125,6 +134,9 @@ form .button {
   }
 
   @media #{$small-only} {
+    li:not(.has-form).active a:not(.button) {
+      background-color: #649ed1;
+    }
     &> ul {
       border-color: #888;
       border-width: 0px 1px 1px;
@@ -138,10 +150,6 @@ form .button {
   li:not(.has-form) a:not(.button) {
     background-color: #eeeef8;
     box-shadow: 0px 0px 2px 0px lightskyblue;
-  }
-
-  li:not(.has-form).active a:not(.button) {
-    background-color: #649ed1;
   }
 
   .dropdown {
@@ -218,12 +226,18 @@ form .button {
   // }
 
   @media #{$small-up} { }
-  @media #{$small-only} { }
+  @media #{$small-only} {
+    & {
+      height: 225px;
+      margin: 5px;
+      width: 202px;
+    }
+  }
 
   @media #{$medium-up} {
     & {
       height: 325px;
-      margin: 5px;
+      margin: 15px;
       width: 302px;
     }
   }

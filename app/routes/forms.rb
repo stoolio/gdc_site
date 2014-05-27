@@ -53,7 +53,7 @@ module GDC
         end
       end
 
-      post '/engagement-rings/:model/' do
+      post '/engagement-rings/inquiry/' do
         inquiry = GDC::Models::Form.new('inquiry', params)
         if inquiry.save!
           success( message: DEFAULT_SUCCESS_MESSAGE )

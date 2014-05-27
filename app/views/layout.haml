@@ -8,36 +8,37 @@
       :javascript
         document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
     = partial :styles
-    -#<link href='http://fonts.googleapis.com/css?family=Dosis:400,800|Neuton:400,700|Rufina:400,700|Podkova:400,700|Asap:400,700|Nunito:400,700|Archivo+Narrow:400,700|Playfair+Display+SC:400,700|Cherry+Swash:400,700' rel='stylesheet' type='text/css'>
     %link{ rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Neuton:400,700' }
     %link{ rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Droid+Sans' }
     %script{ src: '/js/modernizr.js' }
   %body
-    .row.header
-      .medium-8.columns
-        %h1 Gale Diamonds Chicago
-        %p Chicago's Diamond Experts
-      .medium-4.columns
-        %ul.vcard
-          %li.street-address 5 N Wabash Ave Apt 403
-          %li.locality Chicago
-          %li
-            %span.state Illinois
-            ,
-            %span.zip 60602
-        -#%p<
-        -#  5 N Wabash Ave #403
-        -#  %br><
-        -#  Chicago, IL, 60602
-
-    = partial :menu
     .row
-      .large-12.columns
-        = "NO TITLE!!!" if settings.development? && (@title.nil? || @title.empty?)
-        = autocrumb(@crumb)
+      .large-12.columns.container
+        .row.header
+          .medium-8.columns
+            %h1 Gale Diamonds Chicago
+            %p Chicago's Diamond Experts
+          .medium-4.columns
+            %ul.vcard
+              %li.street-address 5 N Wabash Ave Apt 403
+              %li.locality Chicago
+              %li
+                %span.state Illinois
+                ,
+                %span.zip 60602
+            -#%p<
+            -#  5 N Wabash Ave #403
+            -#  %br><
+            -#  Chicago, IL, 60602
 
-    = yield
+        = partial :menu
+        .row
+          .large-12.columns
+            = "NO TITLE!!!" if settings.development? && (@title.nil? || @title.empty?)
+            = autocrumb(@crumb)
 
-    = partial :footer
+        = yield
 
-    = partial :scripts
+        = partial :footer
+
+        = partial :scripts
