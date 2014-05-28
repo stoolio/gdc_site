@@ -5,25 +5,27 @@
       .small-6.large-3.columns
         %ul.side-nav
           %li
-            %a{ href: url('/diamonds/') } Diamonds
+            = page_link('diamonds')
           %li
-            %a{ href: url('/engagement-rings/') } Engagement Rings
+            = page_link('engagement-rings')
           %li
-            %a{ href: url('/education/') } Education
+            = page_link('education')
           %li
-            %a{ href: url('//') } Blog
+            = page_link('blog')
       .small-6.large-3.columns
         %ul.side-nav
           %li
-            %a{ href: url('/policies/return/') } Return Policy
+            = page_link('policies/return', 'Return Policy')
           %li
-            %a{ href: url('/policies/shipping/') } Shipping Policy
+            = page_link('policies/shipping', 'Shipping Policy')
           %li
-            %a{ href: url('/policies/privacy/') } Privacy Policy
+            = page_link('policies/privacy', 'Privacy Policy')
           %li
-            %a{ href: url('/contact/') } Customer Service
-      .small-12.large-6.columns
-        %p.text-center
-          &copy; Copyright 2014 Gale Diamonds Chicago
-          %br
-          %a{ href: url('/policies/terms-of-service/') } Terms & Conditions
+            = page_link('contact', 'Customer Service')
+      .small-12.large-6.columns.text-center
+        %h4 Follow Us On
+        = partial :social_profiles
+    .row
+      .small-12.text-center.copyright
+        &copy; Copyright 2014 Gale Diamonds Chicago
+        %a{ href: url('/policies/terms-of-service/') } Terms & Conditions

@@ -17,6 +17,15 @@ var RequestForms = (function() {
 
     function success(data) {
       this.submitted = true;
+      if(this.key) {
+        var value;
+        if($.cookie(this.key) === undefined) {
+          value = Date.now();
+        } else {
+          value = $.cookie(this.key) + '|' + Date.now();
+        }
+        $.cookie(this.key, value, { expires: 180, path: '/' });
+      }
       this.$form.fadeOut( results(data.message, this.id, 'success') );
     }
 
@@ -45,7 +54,8 @@ var RequestForms = (function() {
       this.$button = $(this.id + " button[type='submit']");
       // this.$results = this.$form.children('.results');
 
-      this.type = this.$form.data('type');
+      this.key = this.$form.data('key') || false;
+      // this.type = this.$form.data('type');
       this.url = this.$form.attr('action');
 
       this.$form.submit(process.bind(this));

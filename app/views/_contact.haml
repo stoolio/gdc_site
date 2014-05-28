@@ -3,10 +3,10 @@
   %legend Contact Info
   .row
     .large-6.columns
-      %label
+      %label.required
         Name
         %sup
-          %span{ style: 'color: red' } *
+          %span *
           (required)
         %input{ name: 'name',
                 type: 'text',
@@ -15,10 +15,10 @@
                 autocomplete: 'name'}
         %small.error A name is required.
     .large-6.columns
-      %label
+      %label.required
         Email
         %sup
-          %span{ style: 'color: red' } *
+          %span *
           (required)
         %input{ name: 'e-mail',
                 type: 'email',
@@ -28,7 +28,7 @@
         %small.error A valid email address is required.
   .row
     .large-6.columns
-      = partial :state
+      = partial :state_selector
     .large-6.columns
       %label
         Phone

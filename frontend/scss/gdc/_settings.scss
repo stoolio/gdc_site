@@ -23,7 +23,7 @@ $crumb-slash: '>';
 //
 
 // Background color for the top bar
-$topbar-bg-color: white;
+$topbar-bg-color: rgba(0,0,0,0);
 $topbar-hover-color: #eee; //scale-color($topbar-bg-color, $lightness: -15%);
 // $topbar-bg: $topbar-bg-color;
 
@@ -36,7 +36,7 @@ $topbar-hover-color: #eee; //scale-color($topbar-bg-color, $lightness: -15%);
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
-$topbar-dropdown-bg: #fff;
+$topbar-dropdown-bg: rgba(0,0,0,0);
 $topbar-dropdown-link-color: #333;
 $topbar-dropdown-link-bg: scale-color($topbar-dropdown-bg, $lightness: -10%);
 // $topbar-dropdown-link-weight: normal;
@@ -156,5 +156,5 @@ $input-error-message-font-size: rem-calc(13);
 // Select variables
 // $select-bg-color: #fafafa;
 
-
+$crumb-bg: rgba(0,0,0,0);
 $crumb-border-size: 0 0 1px 0;

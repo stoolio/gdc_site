@@ -1,0 +1,17 @@
+.ring-large {
+  img {
+    max-height: 500px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.loupe {
+  border-radius: 100px;
+  box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
+  border: 2px ridge gray;
+
+  img {
+    max-width: none;
+  }
+}

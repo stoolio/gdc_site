@@ -1,0 +1,29 @@
+.engagement-ring {
+  border: 1px solid #d3d3d3;
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  // Other breakpoints to ease future changes
+  // @media #{$small-up} { }
+  @media #{$small-only} {
+    & {
+      height: 225px;
+      margin: 5px;
+      width: 202px;
+    }
+  }
+
+  @media #{$medium-up} {
+    & {
+      height: 325px;
+      margin: 15px;
+      width: 302px;
+    }
+  }
+  // @media #{$medium-only} { }
+  // @media #{$large-up} { }
+  // @media #{$large-only} { }
+}

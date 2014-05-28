@@ -1,0 +1,7 @@
+.breadcrumbs {
+  margin-bottom: 20px;
+
+  & > .current {
+    font-weight: bold;
+  }
+}

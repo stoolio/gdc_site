@@ -52,12 +52,14 @@ module.exports = function(grunt) {
       'foundation/js/foundation/foundation.magellan.js',
       'jquery.lazyload/jquery.lazyload.min.js',
       'select2/select2.js',
+      'jquery-cookie/jquery.cookie.js'
     ],
     myDirs = {
       copy: 'js/',
       uglify: '../public/src/js/'
     },
     myFiles = [
+      'jquery.loupe.js',
       'doonce.js',
       'filterer.js',
       'isotopelayout.js',
@@ -67,12 +69,7 @@ module.exports = function(grunt) {
       'thumbclick.js',
       'eringarchive.js',
       'app.js',
-    ],
-    otherFiles = {
-      img: [],
-      js: [],
-      css: [],
-    };
+    ];
 
   function makeDirs(type) {
     return prependEachDir(bowerFiles, bowerDirs[type]).concat(prependEachDir(myFiles, myDirs[type]));
@@ -96,10 +93,12 @@ module.exports = function(grunt) {
             src: 'bower_components/modernizr/modernizr.custom.min.js',
             dest: '../public/js/modernizr.js'
           },
-          {
-            src: 'bower_components/select2/select2.css',
-            dest: 'scss/select2.css'
-          }
+          // { // File must be edited manually so libsass can compile
+          //   // with unquote around IE specific functions
+          //   // copying would overrite edited file
+          //   src: 'bower_components/select2/select2.css',
+          //   dest: 'scss/gdc/select2.scss'
+          // }
         ]
       }
     },

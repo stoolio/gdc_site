@@ -1,5 +1,5 @@
 @import "normalize";
-@import "gdc_settings";
+@import "gdc/settings";
 // @import "foundation";
 
 // Or selectively include components
@@ -41,6 +41,4 @@
   // "foundation/components/offcanvas",
   "foundation/components/visibility";
 
-@import "gdc_custom";
-@import "loader";
-@import "select2";
+@import "gdc/app";

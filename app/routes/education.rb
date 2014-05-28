@@ -15,12 +15,12 @@ module GDC
           end
 
           get do
-            education :"#{@category}"
+            education :"#{@category}/home"
           end
 
           get ':page/' do
-            @page = params[:page]
-            @file = symbolize(@category + '/' + @page)
+            @page = params[:page].gsub('-',' ')
+            @file = symbolize(@category + '/pages/' + @page)
             if page_exist?(@file)
               education :"page"
             else

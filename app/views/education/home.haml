@@ -3,18 +3,33 @@
 %h1 Education
 
 :markdown
-  Even though our business is selling diamonds and jewelry, we think that it is very important for our customers to know as much as possible about what they are buying. So, we think it is more important that we provide a comprehensive education, particularly when it comes to diamonds.
+  Even though our business is selling diamonds and jewelry, we think that it is very important for our customers to know as much as possible about what they are buying.
 
-  Rather than try to rope you into an impulse purchase, buying something like an engagement ring should be taken with care to ensure that you are getting exactly what you want.
+  Diamonds are an obvious first step in the learning process, but don't forget all about rings. In addition to the wide range of styles, there are also different metals, processes of manaufacture, and technical terms that might be good to know.
 
-  Especially because you will be wearing for it many years to come, there is no reason not to learn as much about diamonds and the jewelry you are buying as you can.
-
-  With that in mind, we've created the following to help you on your way:
-
-- categories.each do |category|
-  %ul
+  Particularly when you need to communicate that vision of the beautiful ring in your head, knowing the right words to use can help you make the connection.
+%hr
+%ul.small-block-grid-1.medium-block-grid-2
+  - categories.each do |category|
     %li
       %h3
         %a{ href: url("/education/#{category}/") } #{category.capitalize}
       %p
         = markdown :"#{category}/description"
+%hr
+:markdown
+  Rather than try to rope you into an impulse purchase, buying something like an engagement ring should be taken with care to ensure that you are getting exactly what you want.
+
+  Especially because you will be wearing for it many years to come, take some time and do your research.
+
+  We are always trying to be more helpful. You can help us do that by asking us any burning questions you might have:
+
+%div.text-center
+  %p
+    %strong #{page_link('contact', 'Fill out our contact form')}
+    %br
+    or
+    %br
+    %strong #{email('sales', 'Send us an email')}
+  %p We can also be reached by phone at #{phone_number} during business hours.
+  %p See our #{page_link('contact', 'contact page')} for more details.

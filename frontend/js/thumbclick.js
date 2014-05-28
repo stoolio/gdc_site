@@ -6,9 +6,11 @@ var thumbClick = function(e) {
     $imgContainer = $('.ring-large img');
 
 
-
+  $imgContainer.height($imgContainer.height());
   $imgContainer.fadeOut( function() {
     $imgContainer.attr('src', largeSrc);
-    $imgContainer.fadeIn();
+    $imgContainer.fadeIn( function() {
+      $imgContainer.height('');
+    });
   });
 };

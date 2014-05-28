@@ -1,9 +1,8 @@
-.row
-  .large-12.columns
-    %h4 Education
-    %ul.side-nav
-      %li
-        %a{ href: url('/education/diamonds/') } Diamonds
-      %li
-        %a{ href: url('/education/rings/') } Engagement Rings
-    %h4
+= email_signup(location: 'sidebar')
+%h4 Education
+%ul.side-nav
+  %li
+    = page_link('education/diamonds', 'Diamonds')
+  %li
+    = page_link('education/rings', 'Engagement Rings')
+%h4

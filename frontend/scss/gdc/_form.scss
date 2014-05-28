@@ -1,0 +1,22 @@
+@import "select2";
+@import "loader";
+@import "shape-selector";
+
+.select2-container {
+  display: inherit !important;
+  margin-bottom: 1em !important;
+}
+
+input:invalid {
+  outline: 2px solid rgba(255,0,0,0.2);
+}
+
+form .button {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.required sup > span {
+  color: red;
+}

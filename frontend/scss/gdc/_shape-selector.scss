@@ -1,0 +1,10 @@
+#shape-selector li {
+  @include transition(200ms background-color ease-in-out);
+
+  &.active {
+    font-weight: bold;
+    img {
+      background-color: #d3d3d3;
+    }
+  }
+}

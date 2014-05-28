@@ -22,3 +22,5 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 Apache License and the GPL License for the specific language governing
 permissions and limitations under the Apache License and the GPL License.
 */
+/*! jqeury.loupe.js (c) 2010 jdbartlett, MIT license */
+/*! jQuery Cookie Plugin v1.4.1 | Copyright 2013 Klaus Hartl |  MIT license | https://github.com/carhartl/jquery-cookie */

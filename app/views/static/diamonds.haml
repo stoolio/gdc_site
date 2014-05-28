@@ -4,7 +4,7 @@
   .large-8.columns
     .text-center
       :markdown
-        # Buying a Diamond doesn't have to take forever
+        # Let us do the hard work for you
 
         Purchasing a diamond can be a very intimidating process.
 
@@ -16,14 +16,12 @@
       :markdown
         #### Don't know where to start?
 
-        Our education section is a great place to learn the _tricks_ of the trade.
+        Our #{page_link('education', 'education section')} is a great place to learn the tricks of the trade.
 .row
   .large-12.columns
     .text-center
       :markdown
         Why not?
-
-        <h3 class="subheading">That's what we're here for!</h3>
 
         ### That's what we're here for!
 
@@ -32,22 +30,24 @@
         We'd be happy to help you out, and we want you to feel comfortable contacting us, so you have a few options:
 
     :markdown
-      * **[Fill out a form, get a quote](/diamonds/quote/)**
+      * <strong>#{page_link('diamonds/quote', 'Fill out a form, get a quote')}</strong>
 
       > Yup, it's that easy. Rather than having to brave finding a diamond in the rough yourself, let us help.<br />It's that easy.
 
-      * **[Fill out a quick contact form](/contact/) or [Send us an email direct](mailto:sales@galediamonds.com)**
+      * <strong>#{page_link('contact', 'Fill out a quick contact form')} or #{email('sales', 'Send us an email direct')}</strong>
 
       > For best results, include a phone number so we can discuss your desires.
 
-      * **[Give us a call](tel:+1-312-920-0075)**
+      * <strong>#{phone_number('Give us a call')}</strong>
 
-      > On a cell phone, just click and we'll be speaking in seconds.<br ?> Otherwise, pick up your favorite phone and dial [312-920-0075](tel:+1-312-920-0075)
+      > On a cell phone, just click and we'll be speaking in seconds.<br ?> Otherwise, pick up your favorite phone and dial #{phone_number}
 
-      * **[Look a selection of pretty rings](/engagement-rings/)**
+      ### If your not quite ready to start the diamond journey, feel free to:
 
-      > Although the custom design process requires you select a diamond first, choosing the right ring can be even trickier. Get a head start by browsing our selection and pick your favorites. We can then remix all of your favorite rings into the custom design of your dreams.
-
-      * **[Get Educated](/education/)**
+      * <strong>#{page_link('education', 'Get Educated')}</strong>
 
       > Here you can learn important stuff, like [what's important to know when purchasing a diamond](/education/diamonds/). In addition, you'll learn other fun things, like the (not so secret) industry lingo, so you'll know exactly how to describe the thing you liked on that one ring you saw.
+
+      * <strong>#{page_link('engagement-rings', 'Look at a selection of pretty rings')}</strong>
+
+      > Although the custom design process requires you select a diamond first, choosing the right ring can be even trickier. Get a head start by browsing our selection and pick your favorites. We can then remix all of your favorite rings into the custom design of your dreams.

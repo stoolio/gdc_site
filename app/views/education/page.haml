@@ -1,4 +1,4 @@
-- @title = @page.capitalize
+- @title = @page.capitalize.gsub('-',' ')
 
 %h1 #{titlecase @page}
-= markdown :"#{symbolize(@category + '/' + @page)}"
+= markdown :"#{@file}"

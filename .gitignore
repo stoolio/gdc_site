@@ -4,6 +4,7 @@
 *.map
 
 /css/*
+/frontend/webicons-master/webicons/*
 /frontend/bower_components/*
 /frontend/node_modules/*
 
