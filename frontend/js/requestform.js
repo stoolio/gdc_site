@@ -9,10 +9,11 @@ var RequestForms = (function() {
   var RequestForm = (function() {
 
     function results(msg, id, result) {
-      $el = $('[data-results-for="' + id + '"]');
-      $el.addClass(result);
-      $el.children('h3').text(msg);
-      $el.fadeIn(1000);
+      var $el = $('[data-results-for="' + id + '"]'),
+        $flash = $el.find('.template').clone();
+      $flash.addClass(result).css('display', '');
+      $flash.children('.results-text').text(msg);
+      $el.append($flash);
     }
 
     function success(data) {
@@ -30,7 +31,7 @@ var RequestForms = (function() {
     }
 
     function fail(data) {
-      results(data.message, this.id, 'failure');
+      results(data.message, this.id, 'alert');
     }
 
     function process(e) {
@@ -46,19 +47,31 @@ var RequestForms = (function() {
       this.request = $.post( this.url, data, success.bind(this)).fail(fail.bind(this));
     }
 
+    function displayErrors(e) {
+      e.preventDefault();
+      var errors = this.$form.find('[data-invalid]'),
+        plural = errors.length > 1 ? 's' : '',
+        names = [],
+        input;
+      for (input in errors) {
+        names.push(errors[input].name);
+      }
+      results('Please fix the ' + names.join(', ') + ' field' + plural, this.id, 'warning');
+    }
+
     function RequestForm(el) {
       this.id = el.id;
       this.submitted = false;
 
       this.$form = $(el);
       this.$button = $(this.id + " button[type='submit']");
-      // this.$results = this.$form.children('.results');
 
       this.key = this.$form.data('key') || false;
-      // this.type = this.$form.data('type');
       this.url = this.$form.attr('action');
 
-      this.$form.submit(process.bind(this));
+      this.$form
+        .on('invalid', displayErrors.bind(this))
+        .on('valid', process.bind(this));
     }
 
     RequestForm.prototype.init = function(){};

@@ -1,0 +1,9 @@
+- defaults = { method: 'post', data: { abide: 'ajax' } }
+- attributes = deep_merge(defaults, form_data)
+.results{ data: { results_for: form_data[:id] } }
+  .template.alert-box.radius{ style: 'display: none;', data: { alert: true } }
+    %h4.results-text{ style: 'color:white;' }
+    %a.close{ href: '#' } &times;
+%form{attributes}
+  = yield
+  = partial :submit_button, locals: { submit_text: submit_text }

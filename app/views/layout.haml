@@ -1,6 +1,7 @@
 !!! 5
 %html.no-js{ lang: 'en' }
   %head
+    %link{ rel: 'stylesheet', href: '/fonts/style.css' }
     %meta{ charset: 'utf-8' }
     %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
     %title= [@title, 'Gale Diamonds Chicago'].join(' | ')
@@ -8,9 +9,9 @@
       :javascript
         document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
     = partial :styles
-    %link{ rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Neuton:400,700' }
-    %link{ rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Droid+Sans' }
-    %script{ src: '/js/modernizr.js' }
+    -# %link{ rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Neuton:400,700' }
+    -# %link{ rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Droid+Sans' }
+    %script{ src: '/js/modernizr.js', async: true }
   %body
     .row
       .large-12.columns.container

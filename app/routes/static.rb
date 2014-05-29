@@ -9,8 +9,18 @@ module GDC
         haml :about
       end
 
-      get '/diamonds/' do
-        haml :diamonds
+      namespace '/diamonds/' do
+        get do
+          haml :diamonds
+        end
+
+        get 'quote/' do
+          haml :diamonds_quote
+        end
+      end
+
+      get '/contact/' do
+        haml :contact
       end
 
       namespace '/policies/' do

@@ -1,8 +1,0 @@
-- defaults = { method: 'post', data: { abide: true } }
-- attributes = deep_merge(defaults, @form_data)
-.alert-box.radius{ style: 'display: none;', data: { results_for: @form_data[:id], alert: true } }
-  %h3{ style: 'color:white;' }
-  %a.close{ href: '#' } &times;
-%form{attributes}
-  = yield_content :form
-  = partial :submit_button

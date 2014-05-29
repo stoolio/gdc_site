@@ -25,23 +25,13 @@ module GDC
         end
       end
 
-      namespace '/diamonds/quote/' do
-        get do
-          haml :diamond_quote
+      post '/diamonds/quote/' do
+        lead = GDC::Models::Form.new('lead', params)
+        if lead.save!
+          success( message: DEFAULT_SUCCESS_MESSAGE )
+        else
+          failure( message: DEFAULT_FAILURE_MESSAGE )
         end
-
-        post do
-          lead = GDC::Models::Form.new('lead', params)
-          if lead.save!
-            success( message: DEFAULT_SUCCESS_MESSAGE )
-          else
-            failure( message: DEFAULT_FAILURE_MESSAGE )
-          end
-        end
-      end
-
-      get '/contact/' do
-        haml :contact
       end
 
       post '/contact/' do

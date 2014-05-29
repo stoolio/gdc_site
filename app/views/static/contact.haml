@@ -1,0 +1,11 @@
+- @title = 'Contact Us'
+
+.row
+  .large-8.columns
+    %h1 Contact Us
+    %p
+      Enter your questions or request and we will get back to you as quickly as possible.
+
+    - form_data = { id: 'contact-us', action: '/contact/' }
+    = form('contact', form_data, 'Submit your Question')
+  .large-4.columns

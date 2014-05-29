@@ -1,15 +1,17 @@
 - @title = "Diamond Education"
 
 %h1 Diamond Education
-%dl.sub-nav
-  %dt Diamonds:
-  %dd.active
-    %a The 4Cs
-  %dd
-    %a The other Cs
-  %dd
-    %a Advanced Diamonds
-  %dd
-    %a Take The Test
+
+%h2
+  = page_link('education/diamonds/the-4cs', 'The 4 Cs')
+%p
+  There is no better place to start than a serious study into the famous 4 Cs.
+
+%h3 Would you like more?
+%p
+  We are hard at work on our Diamond course. It's designed to turn you into a diamond expert and you won't want to miss it. Sign up below and we'll let you know when it's ready.
+.row
+  .large-6.columns
+    = email_signup( type: 'diamonds', location: 'after-content', title: 'Free Diamond Course', submit_text: 'Sign Up Now')
 
 
