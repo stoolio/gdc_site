@@ -38,7 +38,9 @@ All frontend commands should be run from the frontend folder. For organizations 
 
 There is an issue with grunt on our host (Webfaction), and in lieu of figuring that out, I've been compiling the assets locally and copying them to the server. This can probably be automated (deploy uploads to server, git push has a hook to run deploy script on server), or, I can stop being lazy and fix grunt on the server.
 
-If you want to set up the dev environment:
+### Everything Else
+
+If you want to set up the dev environment, you will also need to grab a file from dropbox containing images, the "product db" (json file) and other assets not fit for including in the git repo.
 
     cd gdc_site
     bundle install
