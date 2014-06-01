@@ -7,12 +7,12 @@ module GDC
       end
 
       def symbolize(string)
-        String(string).strip.downcase.gsub(/-|\s/,'_')
+        String(string).strip.downcase.gsub(/-|\s/, '_')
       end
 
       # Utilities
-      def deep_merge(a,b)
-        a.merge(b) { |k,o,n| o.class == Hash ? o.merge(n) : n }
+      def deep_merge(a, b)
+        a.merge(b) { |_, o, n| o.class == Hash ? o.merge(n) : n }
       end
 
       # Form Display
@@ -25,32 +25,25 @@ module GDC
         haml :"forms/#{type}", layout: :form_layout, locals: locals
       end
 
-
       def email_signup(opts)
         type = opts.fetch(:type, 'list')
-        return if request.cookies.key?("gdc_su_#{type.slice(0,3)}")
+        return if request.cookies.key?("gdc_su_#{type.slice(0, 3)}")
         form_data = {
           id: "email-signup-#{type}",
           action: "/forms/signup/#{type}/",
-          data: { key: "gdc_su_#{type.slice(0,3)}" }
+          data: { key: "gdc_su_#{type.slice(0, 3)}" }
         }
         form('email_signup', form_data, opts.fetch(:submit_text, 'Sign me up!'), {
           type: type,
           location: opts.fetch(:location, 'not-provided'),
           title: opts.fetch(:title, 'Get Updates')
         })
-        # partial :email_signup, locals: {
-        #   type: opts.fetch(:type, 'list'),
-        #   location: opts.fetch(:location, 'not-provided'),
-        #   title: opts.fetch(:title, 'Get Updates'),
-        #   submit_text: opts.fetch(:submit_text, 'Sign me up!')
-        # }
       end
 
       # Links
       def link_to(link, text, options = false)
         (options ||= {})[:href] = url(link)
-        partial :link, locals: {text: text, options: options}
+        partial :link, locals: { text: text, options: options }
         # "<a href=\"#{url(link)}\">#{text}</a>"
       end
 
@@ -64,7 +57,7 @@ module GDC
       end
 
       def page_link(name, text = '')
-        text = titlecase(name.gsub(%r{[-/]},' ')) if text.empty?
+        text = titlecase(name.gsub(/[-\/]/, ' ')) if text.empty?
         link_to("/#{name}/", text)
       end
     end
