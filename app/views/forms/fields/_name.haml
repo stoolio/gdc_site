@@ -1,0 +1,11 @@
+%label.required
+  Name
+  %sup
+    %span *
+    (required)
+  %input{ name: 'name',
+          type: 'text',
+          placeholder: 'Enter your first and last name',
+          required: true,
+          autocomplete: 'name'}
+  %small.error A name is required.

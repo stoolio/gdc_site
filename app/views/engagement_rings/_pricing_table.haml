@@ -17,13 +17,9 @@
   %li.bullet-item Model ##{@ring.model}
 
   %li.cta-button
-    - @form_data = { id: 'product-inquiry', action: "/engagement-rings/inquiry/" }
-    - content_for :submit_text do
-      Submit Inquiry
-    - content_for :form do
-      = partial :contact
     #inquiry-modal.reveal-modal.medium{ data: { reveal: true } }
-      = partial :form
+      - form_data = { id: 'product-inquiry', action: "/engagement-rings/inquiry/" }
+      = form('contact', form_data, 'Submit Inquiry')
       %a.close-reveal-modal &#215;
     %input{ type: 'hidden', name: 'model-number', value: @ring.model, form: 'product-inquiry' }
     %label

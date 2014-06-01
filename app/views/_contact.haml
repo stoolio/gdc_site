@@ -3,45 +3,15 @@
   %legend Contact Info
   .row
     .large-6.columns
-      %label.required
-        Name
-        %sup
-          %span *
-          (required)
-        %input{ name: 'name',
-                type: 'text',
-                placeholder: 'Enter your first and last name',
-                required: true,
-                autocomplete: 'name'}
-        %small.error A name is required.
+      = field :name
     .large-6.columns
-      %label.required
-        Email
-        %sup
-          %span *
-          (required)
-        %input{ name: 'e-mail',
-                type: 'email',
-                placeholder: 'myemail@provider.com',
-                required: true,
-                autocomplete: 'email'}
-        %small.error A valid email address is required.
+      = field :email
   .row
     .large-6.columns
-      = partial :state_selector
+      = field :state
     .large-6.columns
-      %label
-        Phone
-        %input{ name: 'phone',
-                type: 'tel',
-                placeholder: '###-###-####',
-                autocomplete: 'tel'}
+      = field :phone
 .row
   .large-12.columns
     = yield_content :pre_comments
-    %label
-      Comments
-      %textarea{ name: 'comments',
-                 rows: 10,
-                 cols: 30,
-                 placeholder: 'Enter any additional thoughts or questions...'}
+    = field :comments

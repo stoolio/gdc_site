@@ -20,7 +20,7 @@ module GDC
       private
 
       def get_dir
-        folder_name = %Q{forms/#{type}/}
+        folder_name = %Q{form-data/#{type}/}
         Dir.mkdir(folder_name) unless Dir.exist?(folder_name)
         folder_name
       end

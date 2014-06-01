@@ -1,0 +1,11 @@
+%label.required
+  Email
+  %sup
+    %span *
+    (required)
+  %input{ name: 'e-mail',
+          type: 'email',
+          placeholder: 'myemail@provider.com',
+          required: true,
+          autocomplete: 'email'}
+  %small.error A valid email address is required.

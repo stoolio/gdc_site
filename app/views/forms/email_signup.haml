@@ -1,0 +1,8 @@
+%input{ type: 'hidden', name: 'loc', value: [request.path, location].join('|') }
+.row
+  .large-12.columns
+    %h2
+      #{title}
+    = field :name
+  .large-12.columns
+    = field :email

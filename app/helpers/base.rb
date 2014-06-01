@@ -25,6 +25,10 @@ module GDC
         haml :"forms/#{type}", layout: :form_layout, locals: locals
       end
 
+      def field(type)
+        partial :"forms/fields/#{type}"
+      end
+
       def email_signup(opts)
         type = opts.fetch(:type, 'list')
         return if request.cookies.key?("gdc_su_#{type.slice(0, 3)}")

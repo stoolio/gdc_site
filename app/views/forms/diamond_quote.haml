@@ -1,0 +1,28 @@
+.row
+  .small-8.medium-4.small-centered.medium-uncentered.columns
+    %a{ name: 'shape', data: { magellan_destination: 'shape' } }
+    = field :shape_selector
+  .medium-8.columns
+    .row
+      .large-10.large-centered.columns
+        .row
+          .x-small-12.small-6.columns
+            %a{ name: 'size-budget', data: { magellan_destination: 'size-budget' } }
+            = field :carat
+          .x-small-12.small-6.columns
+            = field :budget
+    .row
+      .small-6.medium-4.columns
+        %a{ name: 'quality', data: { magellan_destination: 'quality' } }
+        = field :diamond_color
+      .small-6.medium-4.columns
+        = field :diamond_clarity
+      .medium-4.columns
+        = field :quality
+.row
+  .large-8.large-centered.columns
+    - content_for :pre_contact do
+      %a{ name: 'contact', data: { magellan_destination: 'contact' } }
+    - content_for :pre_comments do
+      %a{ name: 'comments', data: { magellan_destination: 'comments' } }
+    = partial :contact

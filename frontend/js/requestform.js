@@ -11,7 +11,7 @@ var RequestForms = (function() {
     function results(msg, id, result) {
       var $el = $('[data-results-for="' + id + '"]'),
         $flash = $el.find('.template').clone();
-      $flash.addClass(result).css('display', '');
+      $flash.removeClass('template').addClass(result).css('display', '');
       $flash.children('.results-text').text(msg);
       $el.append($flash);
     }
