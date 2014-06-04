@@ -1,15 +1,15 @@
 /* global module: false */
 module.exports = function(grunt) {
 
-  function prependDir(dir) {
+  function prepend(pre) {
     return function(acc, el) {
-      acc.push(dir + el);
+      acc.push(pre + el);
       return acc;
     };
   }
 
-  function prependEachDir(arr, dir) {
-    return arr.reduce(prependDir(dir), []);
+  function prependEach(arr, pre) {
+    return arr.reduce(prepend(pre), []);
   }
 
   var bowerDirs = {
@@ -72,7 +72,7 @@ module.exports = function(grunt) {
     ];
 
   function makeDirs(type) {
-    return prependEachDir(bowerFiles, bowerDirs[type]).concat(prependEachDir(myFiles, myDirs[type]));
+    return prependEach(bowerFiles, bowerDirs[type]).concat(prependEach(myFiles, myDirs[type]));
   }
 
   var copySrc = makeDirs('copy');
@@ -92,13 +92,7 @@ module.exports = function(grunt) {
           {
             src: 'bower_components/modernizr/modernizr.custom.min.js',
             dest: '../public/js/modernizr.js'
-          },
-          // { // File must be edited manually so libsass can compile
-          //   // with unquote around IE specific functions
-          //   // copying would overrite edited file
-          //   src: 'bower_components/select2/select2.css',
-          //   dest: 'scss/gdc/select2.scss'
-          // }
+          }
         ]
       }
     },
