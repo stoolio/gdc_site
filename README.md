@@ -57,7 +57,7 @@ I've found it is helpful to work on helpers by including them in the Routes them
       # insert helpers here
     end
 
-and then copying them over once they are working. This saves having to lots of restarting of Sinatra.
+and then copying them over once they are working. This saves lots of restarting of Sinatra.
 
 ## Directory Strucutre
 
