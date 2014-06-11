@@ -1,3 +1,4 @@
+Foundation.global.namespace = '';
 $(document).foundation();
 
 $(function() {
