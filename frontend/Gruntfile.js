@@ -22,7 +22,7 @@ module.exports = function(grunt) {
       // Via bridget, and bridget is the first file included
       'jquery/dist/jquery.js',
 
-      'fastclick/lib/fastclick.js',
+      // 'fastclick/lib/fastclick.js',
 
       // Secret Depend for Isotope jQuery style
       'jquery-bridget/jquery.bridget.js',
@@ -45,6 +45,7 @@ module.exports = function(grunt) {
 
       // Depends jQuery
       'foundation/js/foundation/foundation.js',
+      'foundation/js/foundation/foundation.tab.js',
       'foundation/js/foundation/foundation.topbar.js',
       'foundation/js/foundation/foundation.abide.js',
       'foundation/js/foundation/foundation.reveal.js',
@@ -178,6 +179,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.registerTask('dist', ['copy:dev', 'sass:dist', 'uglify:dist']);
-  grunt.registerTask('build', ['newer:copy:dev', 'newer:sass:dev', 'newer:uglify:dev']);
+  grunt.registerTask('build', ['copy:dev', 'sass:dev', 'uglify:dev']);
   grunt.registerTask('default', ['build', 'watch']);
 };
