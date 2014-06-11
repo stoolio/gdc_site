@@ -4,8 +4,8 @@ $base-font-size: 18px;
 
 $rem-base: $base-font-size;
 
-$header-font-family: "neutonregular", "Neuton", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$body-font-family: "Droid Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-family: "neutonregular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: "droid_sansregular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 
 $primary-color: #3d84c6;
 $secondary-color: #e7e7e7;
@@ -15,8 +15,9 @@ $warning-color: #f08a24;
 $info-color: #a0d3e8;
 
 $crumb-bg: #fff;
-$crumb-font-size: rem-calc(13);
+$crumb-font-size: rem-calc(14);
 $crumb-slash: '>';
+$crumb-link-decor: none;
 
 //
 // TOP BAR
