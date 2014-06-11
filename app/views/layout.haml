@@ -9,31 +9,19 @@
       :javascript
         document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
     = partial :styles
-    -# %link{ rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Neuton:400,700' }
-    -# %link{ rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Droid+Sans' }
     %script{ src: '/js/modernizr.js', async: true }
   %body
     .row
       .large-12.columns.container
-        .row.header
-          .medium-8.columns
+        %header.row.header
+          .medium-6.columns
             %h1 Gale Diamonds Chicago
             %p Chicago's Diamond Experts
-          .medium-4.columns
-            %ul.vcard
-              %li.street-address 5 N Wabash Ave Apt 403
-              %li.locality Chicago
-              %li
-                %span.state Illinois
-                ,
-                %span.zip 60602
-            -#%p<
-            -#  5 N Wabash Ave #403
-            -#  %br><
-            -#  Chicago, IL, 60602
+          .medium-6.columns
+            = partial :headline
 
         = partial :menu
-        .row
+        .row.breadcrumbs
           .large-12.columns
             = "NO TITLE!!!" if settings.development? && (@title.nil? || @title.empty?)
             = autocrumb(@crumb)

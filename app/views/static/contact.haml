@@ -2,10 +2,42 @@
 
 .row
   .large-8.columns
-    %h1 Contact Us
-    %p
-      Enter your questions or request and we will get back to you as quickly as possible.
+    %h1 Contact & Location Info
+    %ul.tabs{ data: { tab: true } }
+      %li.tab-title.active
+        %a{ href: '#contact' } Send us a message
+      %li.tab-title
+        %a{ href: '#directions' } Maps & Directions
+    .tabs-content
+      #contact.content.active
+        %h2 Contact Us
+        %p
+          Enter your questions or request and we will get back to you as quickly as possible.
 
-    - form_data = { id: 'contact-us', action: '/contact/' }
-    = form('contact', form_data, 'Submit your Question')
+        - form_data = { id: 'contact-us', action: '/contact/' }
+        = form('contact', form_data, 'Submit your Question')
+      #directions.content
+        %h2 Location & Directions
+        = partial :map
   .large-4.columns
+    %h3 Contact Info
+    %hr
+    %h4 We are located at:
+    %p
+      = partial :address
+    %h4 Hours of Operation
+    %p
+      Monday-Friday 10am-6pm
+      %br
+      By Appointment Only
+      %br
+      Saturday Hours Available
+    %h4 How to Contact Us
+    %p
+      Give us a call:
+      %br
+      #{phone_number}
+      %br
+      Send us an email:
+      %br
+      #{email}
