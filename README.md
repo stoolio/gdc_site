@@ -47,6 +47,8 @@ If you want to set up the dev environment, you will also need to grab a file fro
     bundle exec rackup
     # new terminal
     cd gdc_site/frontend
+    npm install
+    bower install
     grunt
 
 Any changes to styles will reload the page, and sinatra is set up to reload most files. Views and routes will accept changes, helpers will not. For now, those change very little, so I'm not bothering to try and get reloading working on them. Plus, sinatra boots up in no time.
