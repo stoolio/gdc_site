@@ -57,7 +57,7 @@ module GDC
 
       def email(person = 'sales', text = '*@galediamonds.com')
         text.gsub!('*', person) if text.include?('*')
-        link_to("mailto:#{person}@galediamonds", text)
+        link_to("mailto:#{person}@galediamonds.com", text)
       end
 
       def page_link(name, text = '')
