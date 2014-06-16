@@ -7,10 +7,6 @@ $(function() {
 
   $('.ring-thumbs').doOnce($.fn.on, 'click', 'a', thumbClick);
 
-  // $('.ring-thumbs').doOnce(function() {
-  //   this.on('click', 'a', thumbClick);
-  // });
-
   if($('#engagement-ring-archive').length) {
     engagementRingArchive = new EngagementRingArchive();
   }
