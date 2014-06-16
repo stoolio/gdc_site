@@ -55,14 +55,14 @@ module GDC
         link_to('tel:+1-312-920-0075', text)
       end
 
-      def email(person = 'sales', text = '*@galediamonds.com')
+      def email(person = 'sales', text = '*@galediamonds.com', options = nil)
         text.gsub!('*', person) if text.include?('*')
-        link_to("mailto:#{person}@galediamonds.com", text)
+        link_to("mailto:#{person}@galediamonds.com", text, options)
       end
 
-      def page_link(name, text = '')
+      def page_link(name, text = '', options = nil)
         text = titlecase(name.gsub(/[-\/]/, ' ')) if text.empty?
-        link_to("/#{name}/", text)
+        link_to("/#{name}/", text, options)
       end
     end
   end

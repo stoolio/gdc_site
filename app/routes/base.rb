@@ -34,6 +34,7 @@ module GDC
       helpers GDC::Helpers::Base
       helpers GDC::Helpers::Breadcrumbs
       helpers GDC::Helpers::Menu
+      helpers GDC::Helpers::Microformatted
       helpers Sinatra::ContentFor
 
       # redirects any routes not ending in slashes to a slashed route
