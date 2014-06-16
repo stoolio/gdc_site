@@ -25,11 +25,14 @@ module Microdata
     end
 
     def span(prop, text, post = '')
-      tag('span', prop, text, post)
+      # tag('span', prop, text, post: post)
+      output("#{level}<span#{prop(prop)}'>#{text}</span>#{post}")
     end
 
-    def a(prop, text, post = '')
-      tag('a', prop, text, post)
+    def a(prop, text, href, options = {})
+      # tag('a', prop, text, post)
+      options[:itemprop] = prop
+      link_to(href, text, options)
     end
 
     def scope(scope, property = '', &block)
@@ -44,7 +47,8 @@ module Microdata
       prop.empty? ? '' : " itemprop='#{prop}'"
     end
 
-    def tag(tag, property, text, post = '')
+    def tag(tag, property, text, options = {})
+      post = options.delete(:post)
       output("#{level}<#{tag}#{prop(property)}'>#{text}</#{tag}>#{post}")
     end
   end

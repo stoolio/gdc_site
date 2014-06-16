@@ -45,10 +45,9 @@ module GDC
       end
 
       # Links
-      def link_to(link, text, options = false)
-        (options ||= {})[:href] = url(link)
+      def link_to(link, text, options = {})
+        options[:href] = url(link)
         partial :link, locals: { text: text, options: options }
-        # "<a href=\"#{url(link)}\">#{text}</a>"
       end
 
       def phone_number(text = '312-920-0075')

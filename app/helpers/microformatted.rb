@@ -19,6 +19,11 @@ module GDC
           tag tag, 'name', 'Gale Diamonds Chicago', '<br />'
           address('address')
 
+          tag 'time', 'openingHours', 'Monday-Friday 10am-6pm'
+
+          span 'telephone', phone_number, '<br />'
+          span 'email', email
+
         end
       end
     end
