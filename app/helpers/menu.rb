@@ -20,17 +20,17 @@ module GDC
             'Request a Quote' => '/diamonds/quote/'
           }
         },
-        'Education' => {
-          url: '/education/',
-          dropdown: {
-            'All About Diamonds' => '/education/diamonds/',
-            'Learn About Rings' => '/education/rings/'
-          }
-        },
-        'Blog' => {
-          url: '/blog/',
-          dropdown: false
-        },
+        # 'Education' => {
+        #   url: '/education/',
+        #   dropdown: {
+        #     'All About Diamonds' => '/education/diamonds/',
+        #     'Learn About Rings' => '/education/rings/'
+        #   }
+        # },
+        # 'Blog' => {
+        #   url: '/blog/',
+        #   dropdown: false
+        # },
         'About' => {
           url: '/about/',
           dropdown: {
