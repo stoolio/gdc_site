@@ -43,12 +43,23 @@ module GDC
         end
       end
 
-      post '/engagement-rings/inquiry/' do
-        inquiry = GDC::Models::Form.new('inquiry', params)
-        if inquiry.save!
-          success( message: DEFAULT_SUCCESS_MESSAGE )
-        else
-          failure( message: DEFAULT_FAILURE_MESSAGE )
+      namespace '/engagement-rings/' do
+        post 'quote/' do
+          ring_quote = GDC::Models::Form.new('ring_quote', params)
+          if ring_quote.save!
+            success( message: "Thanks #{params['name'].split(' ').first.capitalize}! We got your request, and we are going to have a look at it and follow up with you soon. If you'd like, you can include some images and links below if you have something specific in mind. It's completely optional though." )
+          else
+            failure( message: DEFAULT_FAILURE_MESSAGE )
+          end
+        end
+
+        post 'inquiry/' do
+          inquiry = GDC::Models::Form.new('inquiry', params)
+          if inquiry.save!
+            success( message: DEFAULT_SUCCESS_MESSAGE )
+          else
+            failure( message: DEFAULT_FAILURE_MESSAGE )
+          end
         end
       end
     end

@@ -13,11 +13,12 @@ module GDC
         end
 
         def find(id)
+          return nil unless model_index.include?(id)
           rings[model_index[id]]
         end
 
         private
-        @rings
+        attr_reader :rings
         def model_index
           @model_index ||= {}
         end

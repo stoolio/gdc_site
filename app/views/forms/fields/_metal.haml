@@ -1,0 +1,29 @@
+%fieldset
+  %legend
+    Select your desired Metal
+  .small-block-grid-3.text-right
+    %li
+      %label
+        14kt Gold
+        %input{ type: 'checkbox', name: 'Metal[]', value: '14kt Gold' }
+    %li
+      %label
+        18kt Gold
+        %input{ type: 'checkbox', name: 'Metal[]', value: '18kt Gold' }
+    %li
+      %label
+        Platinum
+        %input{ type: 'checkbox', name: 'Metal[]', value: 'Platinum' }
+    -#%li
+    -#  %label
+    -#    White
+    -#    %input{ type: 'checkbox', value: 'White' }
+    -#%li
+    -#  %label
+    -#    Yellow
+    -#    %input{ type: 'checkbox', value: 'Yellow' }
+    -#%li
+    -#  %label
+    -#    Rose
+    -#    %input{ type: 'checkbox', value: 'Rose' }
+  %input{ type: 'text', name: 'Metal[]', placeholder: 'Enter any other metals that interest you...' }

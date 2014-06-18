@@ -9,8 +9,14 @@ module GDC
           haml :engagement_rings
         end
 
+        get 'quote/' do
+          haml :custom_quote
+        end
+
         get ':model/' do
-          @ring = GDC::Models::Ring.find(params[:model]).decorate
+          ring = GDC::Models::Ring.find(params[:model])
+          redirect '/engagement-rings/' if ring.nil?
+          @ring = ring.decorate
           haml :ring_detail
         end
       end
