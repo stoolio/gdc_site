@@ -23,8 +23,11 @@ module GDC
     use GDC::Routes::Static
     use GDC::Routes::EngagementRings
     use GDC::Routes::Forms
-    use GDC::Routes::Education
     use GDC::Routes::NotFound
+    # use GDC::Routes::Education
+    not_found do
+      redirect '/404/'
+    end
   end
 end
 
