@@ -1,0 +1,26 @@
+%section
+  %div{ itemscope: true, itemtype: 'http://schema.org/JewelryStore' }
+    %h3{ itemprop: 'name' } Gale Diamonds Chicago
+    %p{ itemprop: 'description' }
+      Fine custom jewelry, engagement rings, and anything else your heart desires
+    %h4 We are located at:
+    = partial :address
+    %h4 Hours of operation:
+    %p
+      %time{ itemprop: 'openingHours', datetime: 'Mo-Fr 10:00-18:00' }
+        Monday - Friday 10am-6pm
+        %br
+        By appointment only
+        %br
+        Weekend Hours Available
+    %h4 How to get in touch:
+    %p
+      %span{ itemprop: 'telephone', content: '+13129200075' }
+        Give us a call:
+        %br
+        #{phone_number}
+      %br
+      %span{ itemprop: 'email', content: 'sales@galediamonds.com' }
+        Send us an email:
+        %br
+        #{email}

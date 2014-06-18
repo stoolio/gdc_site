@@ -1,12 +1,11 @@
-.vcard{ itemscope: true, itemtype: '' }
-  %div{ itemprop: 'address', itemscope: true, itemtype: 'http://schema.org/PostalAddress' }
-    %span.street-address{ itemprop: 'streetAddress' }
-      5 N Wabash Ave Apt 403
-    %span.locality{ itemprop: 'addressLocality' }
+%ul.vcard{ itemprop: 'address', itemscope: true, itemtype: 'http://schema.org/PostalAddress' }
+  %li.street-address{ itemprop: 'streetAddress' }
+    5 N Wabash Ave Apt 403
+  %li.locality{ itemprop: 'addressLocality' }
     Chicago
-    %span
-      %span.state{ itemprop: 'addressRegion' }
-        Illinois
-      ,
-      %span.zip{ itemprop: 'postalCode' }
-        60602
+  %li
+    %span.state{ itemprop: 'addressRegion' }
+      Illinois
+    ,
+    %span.zip{ itemprop: 'postalCode' }
+      60602
