@@ -1,0 +1,15 @@
+.tabs {
+  border-bottom: 3px double grey;
+
+  .tab-title a {
+    position: relative;
+    border: 1px solid grey;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 0;
+  }
+
+  .tab-title.active a {
+    position: relative;
+    top: 3px;
+  }
+}

@@ -1,9 +1,8 @@
 - menu.each do |name, data|
   - dropdown = data[:dropdown]
   - url = data[:url]
-  - active = active?(url)
   - classes = []
-  - classes << active
+  - classes << active?(url)
   - classes << 'has-dropdown' if dropdown
   %li{ class: classes }
     %a{ href: url(data[:url]) }

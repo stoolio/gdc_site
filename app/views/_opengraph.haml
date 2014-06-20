@@ -1,0 +1,20 @@
+%meta{ property: 'og:title', content: product.title }
+%meta{ property: 'og:description', content: product.description }
+%meta{ property: 'og:type', content: 'product' }
+%meta{ property: 'og:url', content: product.url }
+
+
+- product.images.first(6) each do |image|
+  %meta{ property: 'og:image', content: image }
+
+%meta{ property: 'og:site_name', content: 'Gale Diamonds Chicago' }
+%meta{ property: 'og:price:amount', content: product.price }
+%meta{ property: 'og:price:standard_amount', content: '' }
+%meta{ property: 'og:price:currency', content: 'USD' }
+%meta{ property: 'og:availability', content: 'instock' }
+
+%meta{ property: 'product:gender', content: '' }
+%meta{ property: 'product:color', content: '' }
+%meta{ property: 'product:color:map', content: '' }
+%meta{ property: 'product:color:image', content: '' }
+%meta{ property: 'product:color:image', content: '' }
