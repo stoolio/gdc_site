@@ -22,7 +22,7 @@ module.exports = function(grunt) {
       // Via bridget, and bridget is the first file included
       'jquery/dist/jquery.js',
 
-      // 'fastclick/lib/fastclick.js',
+      'fastclick/lib/fastclick.js',
 
       // Secret Depend for Isotope jQuery style
       'jquery-bridget/jquery.bridget.js',
@@ -60,7 +60,7 @@ module.exports = function(grunt) {
       uglify: '../public/src/js/'
     },
     myFiles = [
-      'jquery.loupe.js',
+      //'jquery.loupe.js',
       'doonce.js',
       'filterer.js',
       'isotopelayout.js',

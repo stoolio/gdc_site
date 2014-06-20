@@ -9,9 +9,13 @@ module GDC
           haml :engagement_rings
         end
 
-        get 'quote/' do
-          haml :custom_quote
+        get 'custom/' do
+          haml :custom_process
         end
+
+        #get 'quote/' do
+        #  haml :custom_quote
+        #end
 
         get ':model/' do
           ring = GDC::Models::Ring.find(params[:model])

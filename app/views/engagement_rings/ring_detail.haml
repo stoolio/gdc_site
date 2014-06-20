@@ -1,6 +1,9 @@
 - @crumb = @title = @ring.name
+- url = url("/engagement-rings/#{@ring.model}/")
+- desc = "#{@ring.get('description')} - Model #{@ring.model}: From #{@ring.display_price}"
 - content_for :scripts do
   %script{ type: 'text/javascript', src: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53a1e8af06fe5411', async: true }
+  %script{ type: 'text/javascript', src: '//assets.pinterest.com/js/pinit.js' }
 
 .row
   .large-7.columns
@@ -16,5 +19,8 @@
                 %img{ src: sareen_image(@ring.collection, view), title: "#{@ring.name} #{i}" }
   .large-1.columns.text-center
     .addthis_sharing_toolbox
+      = partial :'social/pin_button', locals: { url: url(url),
+                                              img: url(sareen_image(@ring.collection, @ring.main_view, :full)),
+                                              desc: desc}
   .large-4.columns
     = partial :pricing_table

@@ -21,6 +21,6 @@ $(function() {
 
   $('form').doOnce($.fn.each, RequestForms.init);
 
-  $('.ring-large img').doOnce($.fn.loupe, {width:200,height:200,method:'hover'});
+  //$('.ring-large img').doOnce($.fn.loupe, {width:200,height:200,method:'hover'});
 
 });

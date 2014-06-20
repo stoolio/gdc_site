@@ -11,8 +11,11 @@ module GDC
         'Engagement Rings' => {
           url: '/engagement-rings/',
           dropdown: {
-            'Request a Quote' => '/engagement-rings/quote/'
+            'Custom Design Process' => '/engagement-rings/custom/'
           }
+          #dropdown: {
+          #  'Request a Quote' => '/engagement-rings/quote/'
+          #}
         },
         'Diamonds' => {
           url: '/diamonds/',
