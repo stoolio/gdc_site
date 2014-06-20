@@ -1,0 +1,14 @@
+.engagement-ring:hover .pinterest-button {
+  opacity: .5;
+}
+.pinterest-button {
+  opacity: .15;
+  transition: .2s opacity ease-in;
+  top: 5px;
+  position: absolute;
+  left: 5px;
+
+  &:hover {
+    opacity: 1 !important;
+  }
+}

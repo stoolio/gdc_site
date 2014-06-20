@@ -3,6 +3,9 @@ require 'sinatra/content_for'
 require 'sinatra/partial'
 require 'sinatra/reloader'
 
+# URI.escape used in pinterest button generation
+require 'uri'
+
 module GDC
   module Routes
     class Base < Sinatra::Base

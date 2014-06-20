@@ -5,11 +5,16 @@
     %meta{ charset: 'utf-8' }
     %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
     %title= [@title, 'Gale Diamonds Chicago'].join(' | ')
+    = yield_content :head
     - if settings.development?
       :javascript
         document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
     = partial :styles
+    = yield_content :styles
     %script{ src: '/js/modernizr.js', async: true }
+    -# AddThis JS
+    -# %script{ type: 'text/javascript', src: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53a1e8af06fe5411'}
+    -# End AddThis
   %body
     .row
       .large-12.columns.container
@@ -31,3 +36,4 @@
         = partial :footer
 
         = partial :scripts
+        = yield_content :scripts

@@ -1,7 +1,9 @@
 - @crumb = @title = @ring.name
+- content_for :scripts do
+  %script{ type: 'text/javascript', src: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53a1e8af06fe5411', async: true }
 
 .row
-  .large-8.columns
+  .large-7.columns
     .row
       .medium-8.large-12.columns
         %div.ring-large
@@ -12,5 +14,7 @@
             %li
               %a.th.radius{ href: sareen_image(@ring.collection, view, :full) }
                 %img{ src: sareen_image(@ring.collection, view), title: "#{@ring.name} #{i}" }
+  .large-1.columns.text-center
+    .addthis_sharing_toolbox
   .large-4.columns
     = partial :pricing_table
