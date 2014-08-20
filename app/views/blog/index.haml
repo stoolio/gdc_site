@@ -1,0 +1,22 @@
+- @title = 'Blog'
+
+%h1.text-center Blog
+
+%ul.posts{ style: 'list-style:none' }
+  - @posts.each do |post|
+    %li
+      %a{ href: "/blog/#{post}/" }
+        %h2 #{nice_title(post)}
+      %hr
+
+%ul.pagination
+  %li.arrow{ class: (@page == 1 ? 'unavailable' : '') }
+    %a{ href: "/blog/page/#{[@page-1, @page].max}/" }
+      &laquo;
+  - 1.upto(@pages).each do |page|
+    %li
+      %a{ href: "/blog/page/#{page}/", class: (page == @page ? 'current' : '') }
+        #{page}
+  %li.arrow{ class: (@page == @pages ? 'unavailable' : '') }
+    %a{ href: "/blog/page/#{[@page+1, @pages].min}/" }
+      &raquo;

@@ -1,6 +1,6 @@
 require 'bundler/setup'
 
-$: << File.expand_path('../', __FILE__)
+$LOAD_PATH << File.expand_path('../', __FILE__)
 
 require 'sinatra/base'
 require 'sinatra/reloader'
@@ -11,6 +11,7 @@ require 'app/models'
 require 'app/decorators'
 require 'app/helpers'
 require 'app/routes'
+require 'app/jobs'
 
 module GDC
   # App configuration
@@ -23,6 +24,8 @@ module GDC
     use GDC::Routes::Static
     use GDC::Routes::EngagementRings
     use GDC::Routes::Forms
+    use GDC::Routes::Specials
+    use GDC::Routes::Blog
     use GDC::Routes::NotFound
     # use GDC::Routes::Education
     not_found do

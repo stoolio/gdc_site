@@ -1,0 +1,1327 @@
+{
+  "AN001": {
+    "model": "AN001",
+    "vendor": "Gale Diamonds",
+    "name": "Criss Cross Antique Pave Diamond Ring",
+    "description": "This ring is shown with a princess center stone.",
+    "views": [
+      "antique-criss-cross-engagement-ring-princess-cut-diamond.jpg"
+    ],
+    "thumb_dim": [272, 300],
+    "center stone": "princess",
+    "collection": "Antique",
+    "side stones": "round",
+    "total stones": "60",
+    "round tcw": ".7",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2400,
+      "18kt": "N/A",
+      "Platinum": 2900
+    }
+  },
+  "AN002": {
+    "model": "AN002",
+    "vendor": "Gale Diamonds",
+    "name": "Antique Halo Style Diamond Encrusted Ring",
+    "description": "This unique ring is covered in beautiful diamonds. The diamond look is complemented with intricate beadwork for a truly stunning piece. If you want your ring to stand out, then this ring will fit the bill",
+    "views": [
+      "antique-engagement-ring-cushion-cut-diamond-designer-shank.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "round",
+    "collection": "Antique",
+    "side stones": "round",
+    "total stones": "104",
+    "round tcw": "1.5",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 4000,
+      "18kt": "N/A",
+      "Platinum": 4800
+    }
+  },
+  "AN003": {
+    "model": "AN003",
+    "vendor": "Gale Diamonds",
+    "name": "Prong Set Antique Halo Ring",
+    "description": "This classic design features a beautiful pave shank with beaded edges. The sloping design directs the eye toward the center stone.",
+    "views": [
+      "antique-engagement-ring-emerald-cut-diamond-prong-set-halo.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "emerald",
+    "collection": "Antique",
+    "side stones": "round",
+    "total stones": "48",
+    "round tcw": "0.75",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2500,
+      "18kt": "N/A",
+      "Platinum": 3100
+    }
+  },
+  "AN004": {
+    "model": "AN004",
+    "vendor": "Gale Diamonds",
+    "name": "Antique Style Engagement Ring with Tri-Row Shank",
+    "description": "This design has a classic setting with a single, prominently featured, diamond. It sits atop a band set with three rows of prong set round diamonds.",
+    "views": [
+      "antique-engagement-ring-four-prong-set-round-diamond-three-row-shank.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "round",
+    "collection": "Antique",
+    "side stones": "round",
+    "total stones": "72",
+    "round tcw": "1.00",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 3000,
+      "18kt": "N/A",
+      "Platinum": 3600
+    }
+  },
+  "AN005": {
+    "model": "AN005",
+    "vendor": "Gale Diamonds",
+    "name": "Split-Shank Antique Style Marquise Engagement Ring",
+    "description": "",
+    "views": [
+      "antique-engagement-ring-marquise-cut-split-shank-diamond.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "marquise",
+    "collection": "Antique",
+    "side stones": "round",
+    "total stones": "28",
+    "round tcw": "1.20",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 3200,
+      "18kt": "N/A",
+      "Platinum": 3900
+    }
+  },
+  "AN006": {
+    "model": "AN006",
+    "vendor": "Gale Diamonds",
+    "name": "Designer Eternity Shank Antique Engagement Ring",
+    "description": "",
+    "views": [
+      "antique-engagement-ring-princess-cut-diamond-designer-eternity-shank.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "princess",
+    "collection": "Antique",
+    "side stones": "round",
+    "total stones": "42",
+    "round tcw": "0.84",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2750,
+      "18kt": "N/A",
+      "Platinum": 3300
+    }
+  },
+  "AN008": {
+    "model": "AN008",
+    "vendor": "Gale Diamonds",
+    "name": "U-Shape Floating Crown Antique Style Ring",
+    "description": "",
+    "views": [
+      "antique-engagement-ring-radiant-diamond-u-shape-floating-crown.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "radiant",
+    "collection": "Antique",
+    "side stones": "round",
+    "total stones": "34",
+    "round tcw": "0.60",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2500,
+      "18kt": "N/A",
+      "Platinum": 3000
+    }
+  },
+  "AN009": {
+    "model": "AN009",
+    "vendor": "Gale Diamonds",
+    "name": "Half-Around Designer Antique Ring",
+    "description": "",
+    "views": [
+      "antique-engagement-ring-round-cut-diamond-u-shape-crown-beaded-designer-shank.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "round",
+    "collection": "Antique",
+    "side stones": "round",
+    "total stones": "21",
+    "round tcw": "0.45",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2200,
+      "18kt": "N/A",
+      "Platinum": 2700
+    }
+  },
+  "AN010": {
+    "model": "AN010",
+    "vendor": "Gale Diamonds",
+    "name": "Three Stone Antique Designer Ring",
+    "description": "",
+    "views": [
+      "antique-engagement-ring-round-cut-diamond-v-shape-crown-radiant-side-stones_0.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "round",
+    "collection": "Antique",
+    "side stones": "radiant round",
+    "total stones": "76",
+    "round tcw": "0.50",
+    "princess tcw": "",
+    "bg tcw": "0.60",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 3700,
+      "18kt": "N/A",
+      "Platinum": 4200
+    }
+  },
+  "AN011": {
+    "model": "AN011",
+    "vendor": "Gale Diamonds",
+    "name": "Cathedral Crown Antique Style Engagement Ring",
+    "description": "",
+    "views": [
+      "antique-engagement-ring-round-diamond-set-in-floating-crown.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "Round",
+    "collection": "Antique",
+    "side stones": "round",
+    "total stones": "54",
+    "round tcw": "1.50",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 3900,
+      "18kt": "N/A",
+      "Platinum": 4600
+    }
+  },
+  "AN012": {
+    "model": "AN012",
+    "vendor": "Gale Diamonds",
+    "name": "Tri-Halo Three Stone Antique Ring",
+    "description": "",
+    "views": [
+      "antique-engagement-ring-three-stone-radiant-trapezoid-diamond-halo.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "radiant",
+    "collection": "Antique",
+    "side stones": "trapezoid round",
+    "total stones": "84",
+    "round tcw": "2.20",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 5000,
+      "18kt": "N/A",
+      "Platinum": 5900
+    }
+  },
+  "AN013": {
+    "model": "AN013",
+    "vendor": "Gale Diamonds",
+    "name": "Split Shank Antique Style Halo Ring",
+    "description": "",
+    "views": [
+      "antique-style-marquise-cut-diamond-halo-ring.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "marquise",
+    "collection": "Antique",
+    "side stones": "round",
+    "total stones": "58",
+    "round tcw": "0.75",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2800,
+      "18kt": "N/A",
+      "Platinum": 3400
+    }
+  },
+  "AN014": {
+    "model": "AN014",
+    "vendor": "Gale Diamonds",
+    "name": "Classic Crown Ring with Large Diamond Pave Shank",
+    "description": "",
+    "views": [
+      "emerald-cut-diamond-engagement-ring-with-pave-diamond-shank.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "emerald",
+    "collection": "Antique",
+    "side stones": "round",
+    "total stones": "14",
+    "round tcw": "1.40",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 3500,
+      "18kt": "N/A",
+      "Platinum": 4100
+    }
+  },
+  "AN015": {
+    "model": "AN015",
+    "vendor": "Gale Diamonds",
+    "name": "",
+    "description": "Knife Edge Split Shank Antique Engagement Ring",
+    "views": [
+      "knife-edge-split-shank-antique-diamond-ring-with-radiant-cut-center.jpg"
+    ],
+    "thumb_dim": [240, 300],
+    "center stone": "radiant",
+    "collection": "Antique",
+    "side stones": "round",
+    "total stones": "48",
+    "round tcw": "0.58",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2500,
+      "18kt": "N/A",
+      "Platinum": 3100
+    }
+  },
+  "AN016": {
+    "model": "AN016",
+    "vendor": "Gale Diamonds",
+    "name": "Classic Crown Engagmeent Ring with Scalloped Pave Shank",
+    "description": "",
+    "views": [
+      "princess-cut-diamond-engagement-ring-with-pave-diamond-shank.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "princess",
+    "collection": "Antique",
+    "side stones": "round",
+    "total stones": "12",
+    "round tcw": "0.60",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2500,
+      "18kt": "N/A",
+      "Platinum": 3000
+    }
+  },
+  "AN017": {
+    "model": "AN017",
+    "vendor": "Gale Diamonds",
+    "name": "Dual Halo Diamond & Sapphire Engagement Ring",
+    "description": "",
+    "views": [
+      "radiant-cut-dual-halo-diamond-and-sapphire-ring.jpg"
+    ],
+    "thumb_dim": [300, 272],
+    "center stone": "radiant",
+    "collection": "Antique",
+    "side stones": "round sapphire",
+    "total stones": "94",
+    "round tcw": "0.50",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "0.25",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 3000,
+      "18kt": "N/A",
+      "Platinum": 3700
+    }
+  },
+  "AN018": {
+    "model": "AN018",
+    "vendor": "Gale Diamonds",
+    "name": "Cathedral Style Crown Engagement Ring with Split Shank",
+    "description": "",
+    "views": [
+      "split-shank-antique-style-beaded-engagement-ring-with-emerald-cut-center-diamond.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "emerald",
+    "collection": "Antique",
+    "side stones": "22",
+    "total stones": "0.55",
+    "round tcw": "",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2500,
+      "18kt": "N/A",
+      "Platinum": 3000
+    }
+  },
+  "CS001": {
+    "model": "CS001",
+    "vendor": "Gale Diamonds",
+    "name": "",
+    "description": "",
+    "views": [
+      "2-64ct-cushion-blue-sapphire-halo-ring.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "",
+    "collection": "Colored Stone",
+    "side stones": "round trillion sapphire",
+    "total stones": "104",
+    "round tcw": "0.75",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "0.67",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 3500,
+      "18kt": "N/A",
+      "Platinum": 4000
+    }
+  },
+  "CS002": {
+    "model": "CS002",
+    "vendor": "Gale Diamonds",
+    "name": "Three Stone Diamond & Sapphire Ring",
+    "description": "",
+    "views": [
+      "2-66ct-oval-sapphire-three-stone-ring.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "oval",
+    "collection": "Colored Stone",
+    "side stones": "trillion",
+    "total stones": "2",
+    "round tcw": "",
+    "princess tcw": "",
+    "bg tcw": "0.60",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2100,
+      "18kt": "N/A",
+      "Platinum": 2600
+    }
+  },
+  "CS003": {
+    "model": "CS003",
+    "vendor": "Gale Diamonds",
+    "name": "Classic Halo Garnet Ring",
+    "description": "",
+    "views": [
+      "3-58ct-garnet-halo-ring.jpg"
+    ],
+    "thumb_dim": [298, 300],
+    "center stone": "cushion",
+    "collection": "Colored Stone",
+    "side stones": "round",
+    "total stones": "44",
+    "round tcw": "0.50",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2200,
+      "18kt": "N/A",
+      "Platinum": 2800
+    }
+  },
+  "CS004": {
+    "model": "CS004",
+    "vendor": "Gale Diamonds",
+    "name": "Classic Halo Garnet Ring with Split Shank",
+    "description": "",
+    "views": [
+      "4-63ct-rhodolite-garnet.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "round",
+    "collection": "Colored Stone",
+    "side stones": "round",
+    "total stones": "64",
+    "round tcw": "1.00",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 3000,
+      "18kt": "N/A",
+      "Platinum": 3600
+    }
+  },
+  "CS005": {
+    "model": "CS005",
+    "vendor": "Gale Diamonds",
+    "name": "Five Stone Tourmaline Engagement Ring",
+    "description": "",
+    "views": [
+      "5-40ct-red-tourmaline-five-stone-ring.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "emerald",
+    "collection": "Colored Stone",
+    "side stones": "baguette trapezoid",
+    "total stones": "4",
+    "round tcw": "",
+    "princess tcw": "",
+    "bg tcw": "1.50",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 3500,
+      "18kt": "N/A",
+      "Platinum": 4100
+    }
+  },
+  "CS006": {
+    "model": "CS006",
+    "vendor": "Gale Diamonds",
+    "name": "Spessartite Halo Split Shank Ring",
+    "description": "",
+    "views": [
+      "8-86ct-spessartite-diamond-ring.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "oval",
+    "collection": "Colored Stone",
+    "side stones": "round",
+    "total stones": "34",
+    "round tcw": "0.40",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 1900,
+      "18kt": "N/A",
+      "Platinum": 2500
+    }
+  },
+  "CS007": {
+    "model": "CS007",
+    "vendor": "Gale Diamonds",
+    "name": "Antique Style Ruby Promise Ring",
+    "description": "",
+    "views": [
+      "antique-style-ruby-solitaire-ring.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "round",
+    "collection": "Colored Stone",
+    "side stones": "0",
+    "total stones": "0",
+    "round tcw": "",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 1800,
+      "18kt": "N/A",
+      "Platinum": 2200
+    }
+  },
+  "CS008": {
+    "model": "CS008",
+    "vendor": "Gale Diamonds",
+    "name": "Sapphire & Emerald Three Stone Ring",
+    "description": "",
+    "views": [
+      "blue-sapphire-and-emerald-three-stone-halo-style-platinum-ring.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "round",
+    "collection": "Colored Stone",
+    "side stones": "emerald diamond",
+    "total stones": "32",
+    "round tcw": "0.25",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "0.4",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2200,
+      "18kt": "N/A",
+      "Platinum": 2700
+    }
+  },
+  "GS001": {
+    "model": "GS001",
+    "vendor": "Gale Diamonds",
+    "name": "Floating Design Diamond Encrusted Signature Engagement Ring",
+    "description": "",
+    "views": [
+      "4-29ct-three-row-diamond-shank-round-brilliant-center.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "round",
+    "collection": "Signature",
+    "side stones": "round princess",
+    "total stones": "100",
+    "round tcw": "1.20",
+    "princess tcw": "1.00",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 6000,
+      "18kt": "N/A",
+      "Platinum": 7000
+    }
+  },
+  "GS002": {
+    "model": "GS002",
+    "vendor": "Gale Diamonds",
+    "name": "Cathedral Crown Signature Split Shank Engagement Ring",
+    "description": "",
+    "views": [
+      "cushion-cut-diamond-engagement-ring-with-split-shank-diamonds-under-crown.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "round",
+    "collection": "Signature",
+    "side stones": "round",
+    "total stones": "54",
+    "round tcw": "1.25",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 3500,
+      "18kt": "N/A",
+      "Platinum": 4100
+    }
+  },
+  "GS003": {
+    "model": "GS003",
+    "vendor": "Gale Diamonds",
+    "name": "Graduated Floating Design Signature Engagement Ring",
+    "description": "",
+    "views": [
+      "designer-engagement-ring-v-shape-cathedraled-princess-cut-diamond-graduated-channel-set-shank.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "princess",
+    "collection": "Signature",
+    "side stones": "10",
+    "total stones": "1.00",
+    "round tcw": "",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 3000,
+      "18kt": "N/A",
+      "Platinum": 3500
+    }
+  },
+  "GS004": {
+    "model": "GS004",
+    "vendor": "Gale Diamonds",
+    "name": "V-Prong Princess Cut Engagement Ring with Scalloped Shank",
+    "description": "",
+    "views": [
+      "diamond-engagement-ring-princess-cut-center-prong-set-round-brilliant-side-stones.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "princess",
+    "collection": "Signature",
+    "side stones": "round",
+    "total stones": "12",
+    "round tcw": "0.84",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2600,
+      "18kt": "N/A",
+      "Platinum": 3200
+    }
+  },
+  "GS005": {
+    "model": "GS005",
+    "vendor": "Gale Diamonds",
+    "name": "Modern Design Engagement Ring with Shared Prong Shank",
+    "description": "",
+    "views": [
+      "emerald-cut-diamond-engagement-ring-round-brilliant-side-stones.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "emerald",
+    "collection": "Signature",
+    "side stones": "round",
+    "total stones": "12",
+    "round tcw": "1.00",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 3000,
+      "18kt": "N/A",
+      "Platinum": 3500
+    }
+  },
+  "GS006": {
+    "model": "GS006",
+    "vendor": "Gale Diamonds",
+    "name": "Triple Shank Pave Engagement Ring",
+    "description": "",
+    "views": [
+      "marquise-shape-diamond-engagement-ring-round-stone-in-triple-shank.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "marquise",
+    "collection": "Signature",
+    "side stones": "round",
+    "total stones": "70",
+    "round tcw": "1.60",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 3800,
+      "18kt": "N/A",
+      "Platinum": 4300
+    }
+  },
+  "GS007": {
+    "model": "GS007",
+    "vendor": "Gale Diamonds",
+    "name": "Modern Style Engagement Ring with Floating U-Shape Crown",
+    "description": "",
+    "views": [
+      "oval-cut-diamond-engagement-ring-u-shape-floating-crown-channel-set-princess.JPG"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "oval",
+    "collection": "Signature",
+    "side stones": "round",
+    "total stones": "8",
+    "round tcw": "0.80",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2700,
+      "18kt": "N/A",
+      "Platinum": 3200
+    }
+  },
+  "GS008": {
+    "model": "GS008",
+    "vendor": "Gale Diamonds",
+    "name": "Floating Design Three Stone Engagement Ring with Half Moon Sides",
+    "description": "",
+    "views": [
+      "oval-cut-three-stone-diamond-engagement-ring-half-moon-side-channel-set-shank.jpg"
+    ],
+    "thumb_dim": [300, 204],
+    "center stone": "oval",
+    "collection": "Signature",
+    "side stones": "round half-moon",
+    "total stones": "12",
+    "round tcw": "0.25",
+    "princess tcw": "",
+    "bg tcw": "0.40",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2500,
+      "18kt": "N/A",
+      "Platinum": 3000
+    }
+  },
+  "GS009": {
+    "model": "GS009",
+    "vendor": "Gale Diamonds",
+    "name": "Floating Princess Cut Modern Design Engagement Ring with Channel Set Shank",
+    "description": "",
+    "views": [
+      "princess-cut-diamond-engagement-ring-floating-design-channel-set-princess-shank.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "princess",
+    "collection": "Signature",
+    "side stones": "princess",
+    "total stones": "10",
+    "round tcw": "",
+    "princess tcw": "0.7",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2700,
+      "18kt": "N/A",
+      "Platinum": 3200
+    }
+  },
+  "GS010": {
+    "model": "GS010",
+    "vendor": "Gale Diamonds",
+    "name": "Three Stone Past-Present-Future Engagement Ring",
+    "description": "",
+    "views": [
+      "round-brilliant-cut-diamond-three-stone-engagement-ring-prong-set.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "round",
+    "collection": "Signature",
+    "side stones": "pear",
+    "total stones": "2",
+    "round tcw": "",
+    "princess tcw": "",
+    "bg tcw": "0.60",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2500,
+      "18kt": "N/A",
+      "Platinum": 3000
+    }
+  },
+  "GS011": {
+    "model": "GS011",
+    "vendor": "Gale Diamonds",
+    "name": "Two Tone Halo Designer Engagment Ring",
+    "description": "",
+    "views": [
+      "two-tone-4-29ct-diamond-engagement-ring.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "",
+    "collection": "Signature",
+    "side stones": "round",
+    "total stones": "66",
+    "round tcw": "0.80",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 3200,
+      "18kt": 3600,
+      "Platinum": 4200
+    }
+  },
+  "HA001": {
+    "model": "HA001",
+    "vendor": "Gale Diamonds",
+    "name": "Prong Set Heart Shape Halo Engagement ring",
+    "description": "",
+    "views": [
+      "heart-shape-diamond-engagement-ring-halo-style.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "heart",
+    "collection": "Halo",
+    "side stones": "round",
+    "total stones": "34",
+    "round tcw": "1.20",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 3400,
+      "18kt": "N/A",
+      "Platinum": 3900
+    }
+  },
+  "HA002": {
+    "model": "HA002",
+    "vendor": "Gale Diamonds",
+    "name": "Pear Shape Diamond Halo Engagement Ring",
+    "description": "",
+    "views": [
+      "pear-shape-diamond-halo-ring-pave.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "pear",
+    "collection": "Halo",
+    "side stones": "round",
+    "total stones": "32",
+    "round tcw": "1.36",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 3800,
+      "18kt": "N/A",
+      "Platinum": 4300
+    }
+  },
+  "HA003": {
+    "model": "HA003",
+    "vendor": "Gale Diamonds",
+    "name": "Split Shank Pave Halo Ring",
+    "description": "",
+    "views": [
+      "radiant-cut-diamond-halo-ring-with-diamond-set-split-shank.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "radiant",
+    "collection": "Halo",
+    "side stones": "round",
+    "total stones": "66",
+    "round tcw": "0.70",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2400,
+      "18kt": "N/A",
+      "Platinum": 2900
+    }
+  },
+  "HA004": {
+    "model": "HA004",
+    "vendor": "Gale Diamonds",
+    "name": "Split Shank Classic Halo Engagement Ring",
+    "description": "",
+    "views": [
+      "round-brilliant-halo-diamond-ring-with-split-shank.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "round",
+    "collection": "Halo",
+    "side stones": "round",
+    "total stones": "40",
+    "round tcw": "0.80",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2700,
+      "18kt": "N/A",
+      "Platinum": 3300
+    }
+  },
+  "HA005": {
+    "model": "HA005",
+    "vendor": "Gale Diamonds",
+    "name": "Round Halo Engagement Ring with Triple Row Prong Set Pave Shank",
+    "description": "",
+    "views": [
+      "round-halo-tri-row-pave-set-shank-diamond-ring.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "round",
+    "collection": "Halo",
+    "side stones": "round",
+    "total stones": "59",
+    "round tcw": "1.30",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 3600,
+      "18kt": "N/A",
+      "Platinum": 4100
+    }
+  },
+  "SO001": {
+    "model": "SO001",
+    "vendor": "Gale Diamonds",
+    "name": "Classic Prong Set Solitaire Ring",
+    "description": "",
+    "views": [
+      "round-brilliant-four-prong-solitaire-ring.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "round",
+    "collection": "Solitaire",
+    "side stones": "",
+    "total stones": "0",
+    "round tcw": "",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2000,
+      "18kt": "N/A",
+      "Platinum": 2500
+    }
+  },
+  "SO002": {
+    "model": "SO002",
+    "vendor": "Gale Diamonds",
+    "name": "Criss Cross Solitaire Engagement Ring",
+    "description": "",
+    "views": [
+      "solitaire-engagement-ring-princess-diamond-criss-cross.jpg"
+    ],
+    "thumb_dim": [284, 300],
+    "center stone": "princess",
+    "collection": "Solitaire",
+    "side stones": "",
+    "total stones": "0",
+    "round tcw": "",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2000,
+      "18kt": "N/A",
+      "Platinum": 2500
+    }
+  },
+  "SO003": {
+    "model": "SO003",
+    "vendor": "Gale Diamonds",
+    "name": "Basket Set Solitaire Engagement Ring",
+    "description": "",
+    "views": [
+      "solitaire-engagement-ring-rectangle-shape-radiant-cut-diamond-designer-crown.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "radiant",
+    "collection": "Solitaire",
+    "side stones": "",
+    "total stones": "0",
+    "round tcw": "",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2000,
+      "18kt": "N/A",
+      "Platinum": 2500
+    }
+  },
+  "SO004": {
+    "model": "SO004",
+    "vendor": "Gale Diamonds",
+    "name": "Swing Top Solitaire Engagement Ring",
+    "description": "",
+    "views": [
+      "solitaire-engagement-ring-round-diamond-swing-top.jpg"
+    ],
+    "thumb_dim": [300, 233],
+    "center stone": "round",
+    "collection": "Solitaire",
+    "side stones": "",
+    "total stones": "0",
+    "round tcw": "",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 1800,
+      "18kt": "N/A",
+      "Platinum": 2200
+    }
+  },
+  "SO005": {
+    "model": "SO005",
+    "vendor": "Gale Diamonds",
+    "name": "V-Shape Prong Set Solitaire Engagement Ring",
+    "description": "",
+    "views": [
+      "solitaire-engagement-ring-round-diamond-v-shape-crown.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "round",
+    "collection": "Solitaire",
+    "side stones": "",
+    "total stones": "0",
+    "round tcw": "",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2000,
+      "18kt": "N/A",
+      "Platinum": 2500
+    }
+  },
+  "SO006": {
+    "model": "SO006",
+    "vendor": "Gale Diamonds",
+    "name": "V-Split Shank Solitaire Engagement Ring",
+    "description": "",
+    "views": [
+      "split-shank-solitaire-round-diamond-engagement-ring.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "round",
+    "collection": "Solitaire",
+    "side stones": "",
+    "total stones": "0",
+    "round tcw": "",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2100,
+      "18kt": "N/A",
+      "Platinum": 2600
+    }
+  },
+  "TS001": {
+    "model": "TS001",
+    "vendor": "Gale Diamonds",
+    "name": "Three Stone Ring with V-Shape Baskets",
+    "description": "",
+    "views": [
+      "round-brilliant-three-stone-diamond-ring-with-v-shape-crown.jpg"
+    ],
+    "thumb_dim": [270, 300],
+    "center stone": "",
+    "collection": "Three Stone",
+    "side stones": "round",
+    "total stones": "18",
+    "round tcw": "0.55",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2500,
+      "18kt": "N/A",
+      "Platinum": 3100
+    }
+  },
+  "TS002": {
+    "model": "TS002",
+    "vendor": "Gale Diamonds",
+    "name": "Antique Style Three Stone Engagement Ring",
+    "description": "",
+    "views": [
+      "three-stone-engagement-ring-cushion-cut-diamond-trapezoid-side-stones.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "cushion",
+    "collection": "Three Stone",
+    "side stones": "trapezoid",
+    "total stones": "2",
+    "round tcw": "",
+    "princess tcw": "",
+    "bg tcw": "0.50",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2700,
+      "18kt": "N/A",
+      "Platinum": 3300
+    }
+  },
+  "TS003": {
+    "model": "TS003",
+    "vendor": "Gale Diamonds",
+    "name": "Oval Three Stone Engagement Ring",
+    "description": "",
+    "views": [
+      "three-stone-engagement-ring-oval-cut-diamonds.JPG"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "oval",
+    "collection": "Three Stone",
+    "side stones": "oval",
+    "total stones": "2",
+    "round tcw": "",
+    "princess tcw": "",
+    "bg tcw": "1.00",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 3000,
+      "18kt": "N/A",
+      "Platinum": 3500
+    }
+  },
+  "TS004": {
+    "model": "TS004",
+    "vendor": "Gale Diamonds",
+    "name": "Diamond & Sapphire Three Stone Engagement Ring",
+    "description": "",
+    "views": [
+      "three-stone-engagement-ring-princess-cut-diamond-sapphire-side-stones-antique-look-shank.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "radiant",
+    "collection": "Three Stone",
+    "side stones": "round sapphire",
+    "total stones": "30",
+    "round tcw": "0.20",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "0.40",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 2700,
+      "18kt": "N/A",
+      "Platinum": 3200
+    }
+  },
+  "TS005": {
+    "model": "TS005",
+    "vendor": "Gale Diamonds",
+    "name": "Classic Past-Present-Future Three Stone Ring",
+    "description": "",
+    "views": [
+      "three-stone-engagement-ring-round-brilliant-cut-diamonds.JPG"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "round",
+    "collection": "Three Stone",
+    "side stones": "round",
+    "total stones": "2",
+    "round tcw": "1.00",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt": 3000,
+      "18kt": "N/A",
+      "Platinum": 3600
+    }
+  },
+  "TS007": {
+    "model": "TS007",
+    "vendor": "Gale Diamonds",
+    "name": "Three Stone Engagement Ring with Diamond Accents",
+    "description": "",
+    "views": [
+      "three-stone-round-brillinat-diamond-engagement-ring.jpg"
+    ],
+    "thumb_dim": [300, 300],
+    "center stone": "round",
+    "collection": "Three Stone",
+    "side stones": "round",
+    "total stones": "8",
+    "round tcw": "0.65",
+    "princess tcw": "",
+    "bg tcw": "",
+    "colored tcw": "",
+    "width top": "",
+    "width tapered": "",
+    "price": {
+      "14kt":  2400,
+      "18kt": "N/A",
+      "Platinum": 2900
+    }
+  }
+}

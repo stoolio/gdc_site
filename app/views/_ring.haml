@@ -1,4 +1,4 @@
-- src = sareen_image(ring.collection, ring.main_view)
+- src = image(ring.collection, ring.main_view)
 - url = url("/engagement-rings/#{ring.model}/")
 - desc = "#{ring.get('description')} - Model #{ring.model}: From #{ring.display_price}"
 %article#post-id.engagement-ring{ class: classify([ring.diamond, ring.style, ring.collection]), data: { price: ring.from_price } }
@@ -10,7 +10,7 @@
   %footer.entry-footer.text-center
     %span.left.pinterest-button
       = partial :'social/pin_button', locals: { url: url,
-                                              img: url(sareen_image(ring.collection, ring.main_view, :full)),
+                                              img: url(image(ring.collection, ring.main_view, :full)),
                                               desc: desc}
     %span.entry-meta
       = "From #{ring.display_price}"

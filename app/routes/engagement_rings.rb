@@ -19,7 +19,7 @@ module GDC
 
         get ':model/' do
           ring = GDC::Models::Ring.find(params[:model])
-          redirect '/engagement-rings/' if ring.nil?
+          redirect '/engagement-rings/', 404 if ring.nil?
           @ring = ring.decorate
           haml :ring_detail
         end

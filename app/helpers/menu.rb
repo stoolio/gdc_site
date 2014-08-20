@@ -23,6 +23,10 @@ module GDC
             'Request a Quote' => '/diamonds/quote/'
           }
         },
+        'Specials' => {
+          url: '/specials/',
+          dropdown: false
+        },
         # 'Education' => {
         #   url: '/education/',
         #   dropdown: {
@@ -30,10 +34,10 @@ module GDC
         #     'Learn About Rings' => '/education/rings/'
         #   }
         # },
-        # 'Blog' => {
-        #   url: '/blog/',
-        #   dropdown: false
-        # },
+        'Blog' => {
+          url: '/blog/',
+          dropdown: false
+        },
         'About' => {
           url: '/about/',
           dropdown: {

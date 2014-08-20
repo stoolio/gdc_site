@@ -1,7 +1,7 @@
 module GDC
   module Models
     class Form < Base
-      attr_reader :type, :data
+      attr_reader :type, :data, :file
 
       def initialize(type, data)
         @type = type
@@ -11,10 +11,10 @@ module GDC
       def save!
         json_data = JSON.generate(data)
         folder = get_dir
-        file = %Q{#{folder}/#{Time.now.strftime "%F-%T"}.json}.gsub(':','_')
+        @file = %Q{#{folder}/#{Time.now.strftime "%F-%T"}.json}.gsub(':','_')
         byte_size = json_data.bytesize
         bytes_written = File.write(file, json_data)
-        byte_size == bytes_written ? true : false
+        byte_size == bytes_written ? file : false
       end
 
       private

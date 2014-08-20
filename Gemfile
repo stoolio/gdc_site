@@ -1,8 +1,3 @@
-# A gemfile for the new GDC
-# Groups:
-#   :development
-#   :test
-#   :production
 source 'https://rubygems.org'
 
 gem 'sinatra'
@@ -10,6 +5,10 @@ gem 'sinatra'
 gem 'sinatra-contrib'
 
 gem 'sinatra-partial'
+
+gem 'pony'
+
+gem 'sucker_punch', '~> 1.0'
 
 gem 'haml'
 

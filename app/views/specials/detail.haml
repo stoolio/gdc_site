@@ -1,0 +1,34 @@
+- @crumb = @title = @item['name']
+- price = @item['price'].first
+- pretty_price = to_price(price[1])
+- content_for :scripts do
+  %script{ type: 'text/javascript', src: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53a1e8af06fe5411', async: true }
+  %script{ type: 'text/javascript', src: '//assets.pinterest.com/js/pinit.js' }
+
+.row
+  .large-6.large-offset-1.columns
+    %img{ src: "/img/specials/#{@item['views'].first}" }
+  .large-1.columns
+    .addthis_sharing_toolbox
+      = partial :'social/pin_button', locals: { url: url("/specials/#{@item['model']}/"),
+                                                img: url("/img/specials/#{@item["views"].first}"),
+                                                desc: "#{@item['description']} - Model #{@item['model']}: #{pretty_price}" }
+  .large-3.end.columns
+    %ul.pricing-table
+      %li.title= @item['name']
+      -unless @item['description'].empty?
+        %li.description= @item['description']
+      %li.bullet-item
+        - price = @item['price'].first
+        Ready Made in #{price[0]} for #{pretty_price}
+      %li.bullet-item
+        %h3 Specifications
+      - @item['data'].each_pair do |name, value|
+        %li.bullet-item
+          #{name}: #{value}
+      %li.cta-button
+        .text-center
+          %p
+            %strong Interested in this item?
+          %p
+            %strong Call #{phone_number}

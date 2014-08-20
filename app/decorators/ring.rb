@@ -26,13 +26,23 @@ module GDC
       end
 
       def tcw
-        ['round','princess','bg','colored'].reduce(0) do |acc, type|
+        total = %w[round princess bg colored].reduce(0) do |acc, type|
           acc + get("#{type} tcw").to_f
         end
+        format("%.2f", total)
       end
 
       def all_side_stones
-        get('side stones').split(' ').map(&:capitalize).join(' & ')
+        temp = get('side stones').split(' ').map do |stone|
+          stone.split('-').map(&:capitalize).join(' ')
+        end
+        if temp.length > 2
+          [temp.slice(0, temp.length - 1).join(', '), temp.last].join(' & ')
+        elsif temp.length == 2
+          temp.join(' & ')
+        else
+          temp.join('')
+        end
       end
 
       def tapered?

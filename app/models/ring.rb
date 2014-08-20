@@ -1,8 +1,7 @@
 module GDC
   module Models
-  # Represents an engagement ring
+    # Represents an engagement ring
     class Ring < Base
-
       class << self
         public
 
@@ -18,15 +17,17 @@ module GDC
         end
 
         private
+
         attr_reader :rings
         def model_index
           @model_index ||= {}
         end
+
         def rings
           index = 0
-          @rings ||= JSON.load(open('data.json')).reduce([]) do |acc, (model,ring)|
+          @rings ||= JSON.load(open('db/rings.json')).reduce([]) do |acc, (model, ring)|
             model_index[model] = index
-            index = index + 1
+            index += 1
             acc << Ring.new(ring)
           end
         end
@@ -41,15 +42,15 @@ module GDC
       end
 
       # stupid get/fetch no logic
-      def collection()
+      def collection
         get('collection')
       end
 
-      def thumb_dim()
+      def thumb_dim
         get('thumb_dim')
       end
 
-      def name()
+      def name
         get('name')
       end
 
@@ -105,56 +106,32 @@ module GDC
         defaults(item)
       end
 
-      # allows us to log when we fall back to defaults
-      # as well as provide noticeable defaults for developement
+      # provides noticeable defaults for developement
       def defaults(item)
         DEV_DEFAULTS[item]
-        # DEFAULTS[item]
+        # ''
       end
 
-      private
       DEV_DEFAULTS = {
-        "model" => "NO_MODEL",
-        "name" => "NO_NAME",
-        "description" => "NO_DESCRIPTION",
-        "type" => "NO_TYPE",
-        "main_view" => "NO_MAIN_VIEW",
-        "views" => "NO_VIEWS",
-        "thumb_dim" => "NO_THUMB_DIM",
-        "center stone" => "NO_CENTER_STONE",
-        "collection" => "NO_COLLECTION",
-        "side stones" => "NO_SIDE_STONES",
-        "total stones" => "NO_TOTAL_STONES",
-        "round tcw" => "NO_ROUND_TCW",
-        "princess tcw" => "NO_PRINCESS_TCW",
-        "bg tcw" => "NO_BG_TCW",
-        "colored tcw" => "NO_COLORED_TCW",
-        "width top" => "NO_WIDTH_TOP",
-        "width tapered" => "NO_WIDTH_TAPERED",
-        "price" => "NO_PRICE",
-        "tags" => "NO_TAGS"
-      }
-
-      DEFAULTS = {
-        "model" => "",
-        "name" => "",
-        "description" => "",
-        "type" => "",
-        "main_view" => "",
-        "views" => "",
-        "thumb_dim" => "",
-        "center stone" => "",
-        "collection" => "",
-        "side stones" => "",
-        "total stones" => "",
-        "round tcw" => "",
-        "princess tcw" => "",
-        "bg tcw" => "",
-        "colored tcw" => "",
-        "width top" => "",
-        "width tapered" => "",
-        "price" => "",
-        "tags" => ""
+        'model' => 'NO_MODEL',
+        'name' => 'NO_NAME',
+        'description' => 'NO_DESCRIPTION',
+        'type' => 'NO_TYPE',
+        'main_view' => 'NO_MAIN_VIEW',
+        'views' => 'NO_VIEWS',
+        'thumb_dim' => 'NO_THUMB_DIM',
+        'center stone' => 'NO_CENTER_STONE',
+        'collection' => 'NO_COLLECTION',
+        'side stones' => 'NO_SIDE_STONES',
+        'total stones' => 'NO_TOTAL_STONES',
+        'round tcw' => 'NO_ROUND_TCW',
+        'princess tcw' => 'NO_PRINCESS_TCW',
+        'bg tcw' => 'NO_BG_TCW',
+        'colored tcw' => 'NO_COLORED_TCW',
+        'width top' => 'NO_WIDTH_TOP',
+        'width tapered' => 'NO_WIDTH_TAPERED',
+        'price' => 'NO_PRICE',
+        'tags' => 'NO_TAGS'
       }
     end
   end

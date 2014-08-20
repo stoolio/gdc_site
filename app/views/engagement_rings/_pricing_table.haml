@@ -1,20 +1,24 @@
+- gdc = @ring.get('vendor') == 'Gale Diamonds Chicago'
 %ul.pricing-table
   %li.title #{@ring.name}
   %li.price From #{@ring.display_price}
-  %li.description #{@ring.get('description')}
+  - unless gdc
+    %li.description #{@ring.get('description')}
   %li.bullet-item Shown with #{titlecase(@ring.diamond)} Center Stone
-  %li.bullet-item
-    #{@ring.get('total stones')} #{titlecase(@ring.all_side_stones)} Side Stones
-    %br
-    #{@ring.tcw}ct Total Weight
+  - unless @ring.get('total stones') == '0'
+    %li.bullet-item
+      #{@ring.get('total stones')} #{titlecase(@ring.all_side_stones)} Side Stones
+      %br
+      #{@ring.tcw}ct Total Weight
   %li.bullet-item From the #{@ring.get('vendor')} #{@ring.collection} Collection
-  %li.bullet-item Featuring a #{@ring.style} Design
-  %li.bullet-item
-    - if @ring.tapered?
-      Width: #{@ring.top_width}mm
-    - else
-      Tapered from #{@ring.top_width}mm to #{@ring.tapered_width}mm
-  %li.bullet-item Model ##{@ring.model}
+  -#%li.bullet-item Featuring a #{@ring.style} Design
+  - unless gdc
+    %li.bullet-item
+      - if @ring.tapered?
+        Width: #{@ring.top_width}mm
+      - else
+        Width: Tapered from #{@ring.top_width}mm to #{@ring.tapered_width}mm
+  %li.bullet-item Model #{@ring.model}
 
   %li.cta-button
     #inquiry-modal.reveal-modal.medium{ data: { reveal: true } }

@@ -10,6 +10,10 @@ module GDC
         String(string).strip.downcase.gsub(/-|\s/, '_')
       end
 
+      def to_price(number)
+        '$' + number.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse
+      end
+
       # Utilities
       def deep_merge(a, b)
         a.merge(b) { |_, o, n| o.class == Hash ? o.merge(n) : n }

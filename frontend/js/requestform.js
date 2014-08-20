@@ -10,10 +10,13 @@ var RequestForms = (function() {
 
     function results(msg, id, result) {
       var $el = $('[data-results-for="' + id + '"]'),
+        $flash = $el.find('.' + result);
+      if ($flash.length === 0) {
         $flash = $el.find('.template').clone();
-      $flash.removeClass('template').addClass(result).css('display', '');
+        $flash.removeClass('template').addClass(result).css('display', '');
+        $el.append($flash);
+      }
       $flash.children('.results-text').text(msg);
-      $el.append($flash);
     }
 
     function success(data) {
@@ -50,13 +53,19 @@ var RequestForms = (function() {
     function displayErrors(e) {
       e.preventDefault();
       var errors = this.$form.find('[data-invalid]'),
-        plural = errors.length > 1 ? 's' : '',
+        plural = errors.length > 1,
         names = [],
-        input;
-      for (input in errors) {
-        names.push(errors[input].name);
+        input,
+        resultsString = 'There are errors in the ';
+      for (var i = errors.length - 1; i >= 0; i--) {
+        names.push(errors[i].name);
       }
-      results('Please fix the ' + names.join(', ') + ' field' + plural, this.id, 'warning');
+      if(plural) {
+        resultsString += names.slice(0,-1).join(', ') + ' and ' + names[names.length-1] + ' fields.';
+      } else {
+        resultsString += names[0] + ' field.';
+      }
+      results(resultsString, this.id, 'warning');
     }
 
     function RequestForm(el) {

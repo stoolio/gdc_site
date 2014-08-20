@@ -1,0 +1,11 @@
+%h2 Specials
+
+%p
+  These items are in stock and ready to ship. We can also make modifications and customize them to your liking.
+
+.specials
+  %ul.small-block-grid-2.medium-block-grid-3.large-block-grid-4
+    - @items.each do |item|
+      %li
+        %a.th.radius{ href: url("/specials/#{item["model"]}/") }
+          %img{ src: url("/img/specials/thumb/#{item["views"].first}"), title: item["name"] }
