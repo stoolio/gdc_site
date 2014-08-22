@@ -3,7 +3,7 @@ var Sorter = (function () {
   function trueData(el, dataAttrib) {
     return el instanceof jQuery ?
       el.data(dataAttrib) === '' :
-      $(el).data(dataAttrib);
+      $(el).data(dataAttrib) === '';
   }
 
   function click(e) {
@@ -23,10 +23,12 @@ var Sorter = (function () {
       sortDir = trueData($this, 'sort-desc') ? false : true;
     }
 
-    e.data.isotopeLayout.options({
-      sortBy: sortBy,
-      sortAscending: sortDir
-    });
+    e.data.isotopeLayout.sort(sortBy, sortDir);
+
+    // e.data.isotopeLayout.options({
+    //   sortBy: sortBy,
+    //   sortAscending: sortDir
+    // });
   }
 
   function Sorter(el, itemEl, iso) {
@@ -35,6 +37,22 @@ var Sorter = (function () {
 
     this.$sorts.on('click', itemEl, {isotopeLayout: this.isotopeLayout }, click);
   }
+
+  Sorter.prototype.update = function () {
+    console.log('updating sorts');
+
+    if(this.isotopeLayout.state.s['by'] === '' ) {
+      $('dd[data-sort-asc]').removeClass('active');
+      $('dd[data-sort-desc]').removeClass('active');
+      return;
+    }
+
+    if(this.isotopeLayout.state.s['dir'] === true ) {
+      $('dd[data-sort-asc]').addClass('active');
+    } else {
+      $('dd[data-sort-desc]').addClass('active');
+    }
+  };
 
   return Sorter;
 }());

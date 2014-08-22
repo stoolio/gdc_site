@@ -1,0 +1,22 @@
+{
+  "model": "MG358GA",
+  "vendor": "Gale Diamonds Chicago",
+  "category": "Engagement Rings",
+  "name": "3.58ct Purple-Pink Garnet Ring",
+  "description": "",
+  "views": [
+    "pink-blue-3-stone-ring.jpg"
+  ],
+  "center stone": "cushion",
+  "collection": "Three Stone",
+  "data": {
+    "Metal": "14kt White Gold X1",
+    "Carat Weight": "3.58ct",
+    "Gemstone": "Rhodolite Garnet",
+    "Diamond Shape": "Cushion",
+    "Side Stones": "2 Trillion Cut Garnet"
+  },
+  "price": {
+    "Platinum": 4300
+  }
+}

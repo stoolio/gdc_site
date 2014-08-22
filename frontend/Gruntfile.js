@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     bowerFiles = [
       // First, because it's jQuery
       // Also, isotope should attach itself to $.fn
-      // Via bridget, and bridget is the first file included
+      // Via bridget, so bridget is the first file included
       'jquery/dist/jquery.js',
 
       'fastclick/lib/fastclick.js',
@@ -51,6 +51,7 @@ module.exports = function(grunt) {
       'foundation/js/foundation/foundation.reveal.js',
       'foundation/js/foundation/foundation.alert.js',
       'foundation/js/foundation/foundation.magellan.js',
+      'foundation/js/foundation/foundation.clearing.js',
       'jquery.lazyload/jquery.lazyload.min.js',
       'select2/select2.js',
       'jquery-cookie/jquery.cookie.js'
@@ -60,7 +61,7 @@ module.exports = function(grunt) {
       uglify: '../public/src/js/'
     },
     myFiles = [
-      //'jquery.loupe.js',
+      // 'jquery.loupe.js',
       'doonce.js',
       'filterer.js',
       'isotopelayout.js',

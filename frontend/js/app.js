@@ -21,6 +21,7 @@ $(function() {
 
   $('form').doOnce($.fn.each, RequestForms.init);
 
-  //$('.ring-large img').doOnce($.fn.loupe, {width:200,height:200,method:'hover'});
+  // jQuery loupe is currently disabled
+  // $('.ring-large img').doOnce($.fn.loupe, {width:200,height:200,method:'hover'});
 
 });

@@ -1,3 +1,4 @@
+- @title = 'Specials'
 %h2 Specials
 
 %p
@@ -7,5 +8,6 @@
   %ul.small-block-grid-2.medium-block-grid-3.large-block-grid-4
     - @items.each do |item|
       %li
-        %a.th.radius{ href: url("/specials/#{item["model"]}/") }
+        %a.th.radius.text-center{ href: url("/specials/#{item["model"]}/") }
           %img{ src: url("/img/specials/thumb/#{item["views"].first}"), title: item["name"] }
+          %h5 #{to_price(item['price'].values.first)}

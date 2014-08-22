@@ -18,7 +18,9 @@ var EngagementRingArchive = (function(IsotopeLayout, Filterer, Sorter) {
       getSortData: {
         price: '[data-price]'
       }
-    });
+    }, [this.filters.update.bind(this.filters), this.sorts.update.bind(this.sorts)]);
+    // this.filters.update();
+    // this.sorts.update()
   }
 
   return EngagementRingArchive;

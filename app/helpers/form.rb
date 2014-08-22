@@ -21,9 +21,9 @@ module GDC
         end
       end
 
-      def success(form, msg)
+      def success(_form, msg)
+        # GDC::Jobs::Email.new.async.perform(form)
         complete(:success, msg)
-        GDC::Jobs::Email.new.async.perform(form)
       end
 
       def failure(_form, msg)

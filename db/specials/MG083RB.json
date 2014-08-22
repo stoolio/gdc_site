@@ -1,0 +1,22 @@
+{
+  "model": "MG083RB",
+  "vendor": "Gale Diamonds Chicago",
+  "category": "Engagement Rings",
+  "name": "0.83ct Round Brilliant Diamond in Solitaire Platinum Mounting",
+  "description": "",
+  "views": [
+    "4-prong-round-diamond-engagement-ring.jpg"
+  ],
+  "center stone": "round",
+  "collection": "Solitaire",
+  "data": {
+    "Metal": "Platinum",
+    "Carat Weight": "0.83ct",
+    "Color": "D",
+    "Clarity": "VS2",
+    "Diamond Shape": "Round"
+  },
+  "price": {
+    "Platinum": 8000
+  }
+}

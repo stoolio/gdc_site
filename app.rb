@@ -5,6 +5,7 @@ $LOAD_PATH << File.expand_path('../', __FILE__)
 require 'sinatra/base'
 require 'sinatra/reloader'
 
+require 'haml'
 require 'json'
 
 require 'app/models'

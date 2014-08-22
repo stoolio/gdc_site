@@ -7,6 +7,7 @@
     "isotope-cells-by-row": "metafizzy/isotope-cells-by-row#~0.1.2",
     "imagesloaded": "~3.1.4",
     "select2": "~3.4.8",
-    "jquery-cookie": "~1.4.1"
+    "jquery-cookie": "~1.4.1",
+    "jquery.bbq": "~1.2.1"
   }
 }

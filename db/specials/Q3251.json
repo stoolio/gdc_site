@@ -1,0 +1,24 @@
+{
+  "model": "Q3251",
+  "vendor": "Gale Diamonds Chicago",
+  "name": "Antique Tanzanite Three Stone Ring",
+  "description": "",
+  "views": [
+    "Q3251.jpg"
+  ],
+  "center stone": "emerald",
+  "collection": [
+    "Halo",
+    "Colored Stone"
+  ],
+  "data": {
+    "Metal": "Platinum",
+    "Carat Weight": "4.16ct",
+    "Gemstone": "Tanzanite",
+    "Gemstone Shape": "Emerald"
+  },
+  "price": {
+    "Platinum": 14000
+  }
+}
+

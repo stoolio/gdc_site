@@ -1,0 +1,24 @@
+{
+  "model": "MG494TZ",
+  "vendor": "Gale Diamonds Chicago",
+  "name": "Tanzanite Split Shank Ring",
+  "description": "",
+  "views": [
+    "MG494TZ.jpg"
+  ],
+  "center stone": "oval",
+  "collection": [
+    "Halo",
+    "Colored Stone"
+  ],
+  "data": {
+    "Metal": "Platinum",
+    "Carat Weight": "4.94ct",
+    "Side Stones": "1.10ct tw Round Diamonds",
+    "Gemstone": "Tanzanite",
+    "Gemstone Shape": "Oval"
+  },
+  "price": {
+    "Platinum": 8200
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "model": "MG302R",
+  "vendor": "Gale Diamonds Chicago",
+  "category": "Engagement Rings",
+  "name": "3.02ct Radiant Cut Diamond Engagement Ring",
+  "description": "This is an excellent price on this gorgeous stone, which is pictured loose for our your reference.",
+  "views": [
+    "3.02-Radiant-VS2-I-angle.jpg",
+    "3.02-Radiant-VS2-I-side.jpg",
+    "3.02-Radiant-VS2-I-top.jpg",
+    "3.02-Radiant-VS2-I.jpg"
+  ],
+  "center stone": "radiant",
+  "collection": "Halo",
+  "data": {
+    "Metal": "Platinum",
+    "Carat Weight": "3.02ct",
+    "Color": "I",
+    "Clarity": "VS2",
+    "Diamond Shape": "Radiant",
+    "Side Stones": "60 Diamonds @ 0.80ct tw"
+  },
+  "price": {
+    "Platinum": 28000
+  }
+}

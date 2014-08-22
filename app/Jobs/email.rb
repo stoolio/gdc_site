@@ -8,6 +8,7 @@ module GDC
 
       def perform(form)
         log 'email_sent'
+        puts 'email_sent'
         # @type = form.type
         # @data = form.data
         # clean

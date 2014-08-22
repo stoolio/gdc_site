@@ -470,6 +470,7 @@
       300,
       300
     ],
+    "center stone": "none",
     "collection": "Bezel",
     "side stones": "round",
     "total stones": "40",
@@ -513,6 +514,7 @@
       300,
       300
     ],
+    "center stone": "none",
     "collection": "Bezel",
     "side stones": "round",
     "total stones": "26",
@@ -556,6 +558,7 @@
       300,
       300
     ],
+    "center stone": "none",
     "collection": "Bezel",
     "side stones": "round",
     "total stones": "30",
@@ -856,6 +859,7 @@
       300,
       300
     ],
+    "center stone": "emerald",
     "collection": "Colored Tension",
     "side stones": "round",
     "total stones": "2",
@@ -897,6 +901,7 @@
       272,
       300
     ],
+    "center stone": "oval",
     "collection": "Colored Tension",
     "side stones": "round",
     "total stones": "34",
@@ -940,6 +945,7 @@
       300,
       300
     ],
+    "center stone": "oval",
     "collection": "Colored Tension",
     "side stones": "round",
     "total stones": "2",
@@ -983,6 +989,7 @@
       300,
       300
     ],
+    "center stone": "emerald",
     "collection": "Colored Tension",
     "side stones": "sapphire",
     "total stones": "6",
@@ -1026,6 +1033,7 @@
       300,
       300
     ],
+    "center stone": "oval",
     "collection": "Colored Tension",
     "side stones": "round",
     "total stones": "0",
@@ -1069,6 +1077,7 @@
       300,
       300
     ],
+    "center stone": "cushion",
     "collection": "Colored Tension",
     "side stones": "round",
     "total stones": "2",
@@ -1112,6 +1121,7 @@
       300,
       300
     ],
+    "center stone": "oval",
     "collection": "Colored Tension",
     "side stones": "round",
     "total stones": "2",
@@ -1153,6 +1163,7 @@
       258,
       300
     ],
+    "center stone": "oval",
     "collection": "Colored Tension",
     "side stones": "round",
     "total stones": "26",
@@ -1196,6 +1207,7 @@
       300,
       300
     ],
+    "center stone": "trillion",
     "collection": "Colored Tension",
     "side stones": "round",
     "total stones": "2",
@@ -1239,6 +1251,7 @@
       300,
       300
     ],
+    "center stone": "oval",
     "collection": "Colored Tension",
     "side stones": "round",
     "total stones": "4",
@@ -1282,6 +1295,7 @@
       296,
       300
     ],
+    "center stone": "oval",
     "collection": "Colored Tension",
     "side stones": "none",
     "total stones": "0",
@@ -1325,6 +1339,7 @@
       300,
       300
     ],
+    "center stone": "round",
     "collection": "Colored Tension",
     "side stones": "none",
     "total stones": "0",
@@ -1368,6 +1383,7 @@
       300,
       300
     ],
+    "center stone": "cushion",
     "collection": "Colored Tension",
     "side stones": "round",
     "total stones": "16",
@@ -1411,6 +1427,7 @@
       243,
       300
     ],
+    "center stone": "heart",
     "collection": "Colored Tension",
     "side stones": "none",
     "total stones": "0",
@@ -1454,6 +1471,7 @@
       277,
       300
     ],
+    "center stone": "heart",
     "collection": "Colored Tension",
     "side stones": "round",
     "total stones": "36",
@@ -1498,6 +1516,7 @@
       300,
       300
     ],
+    "center stone": "cushion",
     "collection": "Colored Tension",
     "side stones": "round",
     "total stones": "72",
@@ -1539,6 +1558,7 @@
       217,
       300
     ],
+    "center stone": "round",
     "collection": "Colored Tension",
     "side stones": "round tourmaline",
     "total stones": "98",
@@ -1581,6 +1601,7 @@
       246,
       300
     ],
+    "center stone": "round",
     "collection": "Colored Tension",
     "side stones": "round sapphire",
     "total stones": "96",
@@ -1623,6 +1644,7 @@
       219,
       300
     ],
+    "center stone": "oval",
     "collection": "Colored Tension",
     "side stones": "round sapphire",
     "total stones": "136",
@@ -1665,6 +1687,7 @@
       245,
       300
     ],
+    "center stone": "round",
     "collection": "Colored Tension",
     "side stones": "round sapphire",
     "total stones": "134",
@@ -1707,6 +1730,7 @@
       272,
       300
     ],
+    "center stone": "emerald",
     "collection": "Colored Tension",
     "side stones": "round sapphire",
     "total stones": "84",
@@ -1749,6 +1773,7 @@
       230,
       300
     ],
+    "center stone": "round",
     "collection": "Colored Tension",
     "side stones": "round",
     "total stones": "69",
@@ -1790,6 +1815,7 @@
       268,
       300
     ],
+    "center stone": "emerald",
     "collection": "Colored Tension",
     "side stones": "round sapphire",
     "total stones": "70",
@@ -1832,6 +1858,7 @@
       269,
       300
     ],
+    "center stone": "emerald",
     "collection": "Colored Tension",
     "side stones": "round",
     "total stones": "38",
@@ -1875,6 +1902,7 @@
       300,
       300
     ],
+    "center stone": "cushion",
     "collection": "Colored Tension",
     "side stones": "none",
     "total stones": "0",
@@ -1918,6 +1946,7 @@
       300,
       300
     ],
+    "center stone": "oval",
     "collection": "Colored Tension",
     "side stones": "none",
     "total stones": "0",
@@ -1961,6 +1990,7 @@
       300,
       300
     ],
+    "center stone": "cushion",
     "collection": "Colored Tension",
     "side stones": "none",
     "total stones": "0",
@@ -2004,6 +2034,7 @@
       300,
       300
     ],
+    "center stone": "none",
     "collection": "Diane's Tiara",
     "side stones": "round",
     "total stones": "44",
@@ -2795,14 +2826,14 @@
     "model": "DTC609t",
     "vendor": "Sareen",
     "name": "Diane's Tiara Ladies Diamond Ring",
-    "description": "Beautiful 3 stone ring with Cushion cut center stone, two trillion and micro pave setting of 0.79ctw diamonds all aRound,  with beautiful scroll work on the sides",
+    "description": "Beautiful 3 stone ring with Cushion cut center stone, two trillion and micro pave setting of 0.79ctw diamonds all around,  with beautiful scroll work on the sides",
     "type": "French Pave",
     "main_view": "profile",
     "views": [
       "dtc609t-profile.jpg",
       "dtc609t-angle.jpg",
       "dtc609t-bottom.jpg",
-      "dtc609t-profile 2.jpg",
+      "dtc609t-profile-2.jpg",
       "dtc609t-side.jpg",
       "dtc609t.jpg"
     ],
@@ -2810,7 +2841,7 @@
       300,
       300
     ],
-    "center stone": "trillion",
+    "center stone": "cushion",
     "collection": "Diane's Tiara",
     "side stones": "round",
     "total stones": "102",
@@ -3123,6 +3154,7 @@
       268,
       300
     ],
+    "center stone": "hexagon",
     "collection": "Diane's Tiara",
     "side stones": "round",
     "total stones": "120",
@@ -3736,6 +3768,7 @@
       297,
       300
     ],
+    "center stone": "none",
     "collection": "Handmade 3-Stone",
     "side stones": "none",
     "total stones": "0",
@@ -3769,7 +3802,7 @@
     "model": "DTLA602S2",
     "vendor": "Sareen",
     "name": "Sareen Handmade 3-Stone Rings Ladies Diamond Ring",
-    "description": "Hand-made 3 stone ring, with Asscher or Princess cut blue sapphire, seach prong is cleaned, tapered and lasered in its place, the ultimate high end 3 stone ring",
+    "description": "Hand-made 3 stone ring, with Asscher or Princess cut blue sapphire, each prong is cleaned, tapered and lasered in its place, the ultimate high end 3 stone ring",
     "type": "Handmade",
     "main_view": "profile",
     "views": [
@@ -3781,6 +3814,7 @@
       300,
       300
     ],
+    "center stone": "asscher",
     "collection": "Handmade 3-Stone",
     "side stones": "asscher",
     "total stones": "2",
@@ -3827,6 +3861,7 @@
       300,
       300
     ],
+    "center stone": "oval",
     "collection": "Handmade 3-Stone",
     "side stones": "trillion",
     "total stones": "2",
@@ -3872,6 +3907,7 @@
       293,
       300
     ],
+    "center stone": "asscher",
     "collection": "Handmade 3-Stone",
     "side stones": "pear",
     "total stones": "2",
@@ -4645,6 +4681,7 @@
       300,
       300
     ],
+    "center stone": "round",
     "collection": "Papion",
     "side stones": "round",
     "total stones": "88",
@@ -4687,6 +4724,7 @@
       300,
       300
     ],
+    "center stone": "round",
     "collection": "Papion",
     "side stones": "round",
     "total stones": "110",
@@ -4718,7 +4756,7 @@
     "vendor": "Sareen",
     "name": "Sareen Papion Collection Ladies Diamond Ring",
     "description": "A contemporary beautiful engagement ring that built in a unique and most modern setting, called papion combined with micro pave setting that links each diamonds in a most secured structure.",
-    "type": "Pampion Micropave/micropave",
+    "type": "Papion Micropave/micropave",
     "main_view": "profile",
     "views": [
       "spn11031-profile.jpg",
@@ -4729,6 +4767,7 @@
       300,
       300
     ],
+    "center stone": "round",
     "collection": "Papion",
     "side stones": "round",
     "total stones": "44",
@@ -4759,7 +4798,7 @@
     "vendor": "Sareen",
     "name": "Sareen Papion Collection Ladies Diamond Ring",
     "description": "A contemporary beautiful engagement ring that built in a unique and most modern setting, called papion combined with micro pave setting that links each diamonds in a most secured structure.",
-    "type": "Pampion Micropave/micropave",
+    "type": "Papion Micropave/micropave",
     "main_view": "profile",
     "views": [
       "spn11041-profile.jpg",
@@ -4770,6 +4809,7 @@
       300,
       300
     ],
+    "center stone": "round",
     "collection": "Papion",
     "side stones": "round",
     "total stones": "82",
@@ -4812,6 +4852,7 @@
       300,
       300
     ],
+    "center stone": "round",
     "collection": "Papion",
     "side stones": "round",
     "total stones": "58",
@@ -4843,7 +4884,7 @@
     "vendor": "Sareen",
     "name": "Sareen Papion Collection Ladies Diamond Ring",
     "description": "A modern beautiful engagement ring in white gold with rose gold accents that features a floating center stone inspired by a ribbon crown.",
-    "type": "Pampion Micropave/micropave",
+    "type": "Papion Micropave/micropave",
     "main_view": "profile",
     "views": [
       "spn11211-profile.jpg",
@@ -4854,6 +4895,7 @@
       300,
       300
     ],
+    "center stone": "round",
     "collection": "Papion",
     "side stones": "round",
     "total stones": "98",
@@ -4886,7 +4928,7 @@
     "vendor": "Sareen",
     "name": "Sareen Papion Collection Ladies Diamond Ring",
     "description": "A modern beautiful engagement ring in white gold with rose gold accents that features a floating center stone bind with a handmade halo that flows aRound the center stone.",
-    "type": "Pampion Micropave/micropave",
+    "type": "Papion Micropave/micropave",
     "main_view": "profile",
     "views": [
       "spn11221-profile.jpg",
@@ -4897,6 +4939,7 @@
       300,
       300
     ],
+    "center stone": "round",
     "collection": "Papion",
     "side stones": "round",
     "total stones": "94",
@@ -5209,6 +5252,7 @@
       283,
       300
     ],
+    "center stone": "none",
     "collection": "Tension",
     "side stones": "round",
     "total stones": "30",
@@ -5240,6 +5284,7 @@
       206,
       300
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -5272,6 +5317,7 @@
       226,
       300
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -5304,6 +5350,7 @@
       225,
       300
     ],
+    "center stone": "cushion",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -5339,6 +5386,7 @@
       164,
       300
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "round",
     "total stones": "1",
@@ -5379,6 +5427,7 @@
       238,
       300
     ],
+    "center stone": "cushion",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -5421,6 +5470,7 @@
       300,
       257
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -5461,6 +5511,7 @@
       294,
       300
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -5502,6 +5553,7 @@
       300,
       257
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -5543,6 +5595,7 @@
       300,
       257
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -5584,6 +5637,7 @@
       263,
       300
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -5625,6 +5679,7 @@
       260,
       300
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -5666,6 +5721,7 @@
       300,
       300
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "round",
     "total stones": "2",
@@ -5707,6 +5763,7 @@
       260,
       300
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -5748,6 +5805,7 @@
       300,
       300
     ],
+    "center stone": "princess",
     "collection": "Tension",
     "side stones": "princess",
     "total stones": "6",
@@ -5789,6 +5847,7 @@
       252,
       300
     ],
+    "center stone": "princess",
     "collection": "Tension",
     "side stones": "princess",
     "total stones": "12",
@@ -5830,6 +5889,7 @@
       300,
       300
     ],
+    "center stone": "princess",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -5871,6 +5931,7 @@
       300,
       257
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -5911,6 +5972,7 @@
       255,
       300
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -5952,6 +6014,7 @@
       300,
       292
     ],
+    "center stone": "pear",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -5993,6 +6056,7 @@
       251,
       300
     ],
+    "center stone": "marquise",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -6034,6 +6098,7 @@
       300,
       257
     ],
+    "center stone": "princess",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -6075,6 +6140,7 @@
       300,
       300
     ],
+    "center stone": "princess",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -6116,6 +6182,7 @@
       293,
       300
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "round",
     "total stones": "84",
@@ -6157,6 +6224,7 @@
       300,
       257
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "round",
     "total stones": "2",
@@ -6198,6 +6266,7 @@
       244,
       300
     ],
+    "center stone": "princess",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -6237,6 +6306,7 @@
       282,
       300
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "round",
     "total stones": "2",
@@ -6278,6 +6348,7 @@
       300,
       296
     ],
+    "center stone": "princess",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -6319,6 +6390,7 @@
       249,
       300
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "round",
     "total stones": "104",
@@ -6359,6 +6431,7 @@
       300,
       300
     ],
+    "center stone": "princess",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -6400,6 +6473,7 @@
       300,
       257
     ],
+    "center stone": "princess",
     "collection": "Tension",
     "side stones": "round",
     "total stones": "2",
@@ -6441,6 +6515,7 @@
       300,
       257
     ],
+    "center stone": "princess",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -6482,6 +6557,7 @@
       268,
       300
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "round",
     "total stones": "2",
@@ -6523,6 +6599,7 @@
       276,
       300
     ],
+    "center stone": "trillion",
     "collection": "Tension",
     "side stones": "round",
     "total stones": "1",
@@ -6563,6 +6640,7 @@
       259,
       300
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "none",
     "total stones": "0",
@@ -6604,6 +6682,7 @@
       238,
       300
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "round",
     "total stones": "20",
@@ -6645,6 +6724,7 @@
       254,
       300
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "round",
     "total stones": "8",
@@ -6686,6 +6766,7 @@
       264,
       300
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "round",
     "total stones": "22",
@@ -6727,6 +6808,7 @@
       249,
       300
     ],
+    "center stone": "round",
     "collection": "Tension",
     "side stones": "round",
     "total stones": "49",
@@ -6885,7 +6967,7 @@
     "views": [
       "antique-engagement-ring-princess-cut-diamond-designer-eternity-shank.jpg"
     ],
-    "thumb_dim": [300, 300],
+    "thumb_dim": [223, 300],
     "center stone": "princess",
     "collection": "Antique",
     "side stones": "round",
@@ -7186,7 +7268,7 @@
       "2-64ct-cushion-blue-sapphire-halo-ring.jpg"
     ],
     "thumb_dim": [300, 300],
-    "center stone": "",
+    "center stone": "cushion",
     "collection": "Colored Stone",
     "side stones": "round trillion sapphire",
     "total stones": "104",
@@ -7636,7 +7718,7 @@
       "two-tone-4-29ct-diamond-engagement-ring.jpg"
     ],
     "thumb_dim": [300, 300],
-    "center stone": "",
+    "center stone": "round",
     "collection": "Signature",
     "side stones": "round",
     "total stones": "66",
@@ -7835,7 +7917,7 @@
     "views": [
       "solitaire-engagement-ring-rectangle-shape-radiant-cut-diamond-designer-crown.jpg"
     ],
-    "thumb_dim": [300, 300],
+    "thumb_dim": [285, 300],
     "center stone": "radiant",
     "collection": "Solitaire",
     "side stones": "",
@@ -7936,7 +8018,7 @@
       "round-brilliant-three-stone-diamond-ring-with-v-shape-crown.jpg"
     ],
     "thumb_dim": [270, 300],
-    "center stone": "",
+    "center stone": "round",
     "collection": "Three Stone",
     "side stones": "round",
     "total stones": "18",

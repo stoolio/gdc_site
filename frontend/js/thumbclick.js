@@ -12,7 +12,9 @@ var thumbClick = function(e) {
     $imgContainer.attr('src', largeSrc);
     $loupe.attr('src', largeSrc);
     $imgContainer.fadeIn( function() {
-      $imgContainer.height('');
+      setTimeout(function() {
+        $imgContainer.height("");
+      }, 100);
     });
   });
 };

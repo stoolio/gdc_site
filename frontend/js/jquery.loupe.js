@@ -1,6 +1,7 @@
-/*! (c) 2010 jdbartlett, MIT license */
+/*! (c) 2014 smigliorato, (c) 2010 jdbartlett, MIT license */
 /**
  * loupe - an image magnifier for jQuery
+ * (C) 2014 smigliorato
  * (C) 2010 jdbartlett, MIT license
  * http://github.com/jdbartlett/loupe
  */

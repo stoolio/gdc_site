@@ -1,21 +1,22 @@
 {
-  "model": "RG001",
+  "model": "SH51591",
   "vendor": "Gale Diamonds Chicago",
-  "name": "Oval Diamond Halo Ring",
+  "name": "1.62ct Oval Halo Diamond Ring",
   "description": "",
   "views": [
-    "JP161.jpg"
+    "SH51591.jpg"
   ],
   "center stone": "oval",
   "collection": "Halo",
   "data": {
     "Metal": "Platinum",
-    "Carat Weight": "0.91ct",
-    "Color": "D",
+    "Carat Weight": "1.62ct",
+    "Color": "F",
     "Clarity": "S11",
     "Diamond Shape": "Oval"
   },
   "price": {
-    "Platinum": 8000
+    "Platinum": 15500
   }
 }
+
