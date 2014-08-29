@@ -22,7 +22,7 @@ module GDC
         end
       end
 
-      def page_exist?(file, ext = '.md')
+      def page_exist?(file, ext = '.haml')
         File.exist?(PATH + file + ext)
       end
     end

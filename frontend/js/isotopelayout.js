@@ -59,7 +59,6 @@ var IsotopeLayout = (function(window) {
     var state = decodeURIHash();
 
     if(Object.getOwnPropertyNames(state).length === 0) {
-      console.log("Default State!!");
       return defaultState();
     }
 
@@ -99,10 +98,13 @@ var IsotopeLayout = (function(window) {
     this.$win = $win;
     this.$container = $(el);
     this.itemSelector = itemEl;
+    this.dirty = {
+      filter: true,
+      sort: true
+    };
 
     if(window.location.hash !== '') {
       this.state = normalizeDecodedURIHash(); //$.deparam.fragment(window.location, true);
-      console.log(this.state);
     }
     this.defaults = {
       filter: '.gale-diamonds',
@@ -131,19 +133,23 @@ var IsotopeLayout = (function(window) {
   };
 
   IsotopeLayout.prototype.refresh = function() {
-    console.log('updating iso');
     this.state = normalizeDecodedURIHash();
-    console.log("onhashchange refresh:");
-    console.log(this.state);
-    console.log("onhashchange finish");
     this.update();
-    for (var i = this.updates.length - 1; i >= 0; i--) {
-      this.updates[i]();
+    if(this.dirty.filter) {
+      console.log('update filters');
+      this.updates.filter();
+      this.dirty.filter = false;
+    }
+    if(this.dirty.sort) {
+      console.log('update sorts');
+      this.updates.sort();
+      this.dirty.sort = false;
     }
   };
 
   IsotopeLayout.prototype.filter = function(filters) {
     this.state.f = filters;
+    this.dirty.filter = true;
     this.setState();
   };
 
@@ -152,6 +158,7 @@ var IsotopeLayout = (function(window) {
       'by': sortBy,
       'dir': sortDir
     };
+    this.dirty.sort = true;
     this.setState();
   };
 
@@ -166,10 +173,6 @@ var IsotopeLayout = (function(window) {
     for(var filter in this.state.f) {
       isoFilter += this.state.f[filter];
     }
-
-    console.log(isoFilter);
-    console.log(this.state.s['by']);
-    console.log(this.state.s['dir']);
 
     this.$container.isotope({
       filter: isoFilter,

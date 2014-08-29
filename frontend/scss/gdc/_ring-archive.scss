@@ -14,13 +14,23 @@
     margin: 0 auto;
   }
 
+  footer.entry-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+
   // Other breakpoints to ease future changes
   // @media #{$small-up} { }
   @media #{$small-only} {
     & {
-      height: 225px;
-      margin: 5px;
-      width: 202px;
+      height: 255px;
+      margin: 10px;
+      width: 230px;
+    }
+    img.lazy {
+      max-height: 228px;
+      //max-width: 90%
     }
   }
 

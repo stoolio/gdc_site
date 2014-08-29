@@ -14,6 +14,22 @@ $success-color: #43ac6a;
 $warning-color: #f08a24;
 $info-color: #a0d3e8;
 
+// Grid
+
+// $include-html-grid-classes: $include-html-classes;
+// $include-xl-html-grid-classes: false;
+
+$row-width: rem-calc(1000);
+// $column-gutter: rem-calc(30);
+// $total-columns: 12;
+
+// Media Query Ranges
+// $small-range: (0em, 40em);
+// $medium-range: (40.063em, 64em);
+// $large-range: (64.063em, 90em);
+// $xlarge-range: (90.063em, 120em);
+// $xxlarge-range: (120.063em);
+
 $crumb-bg: #fff;
 $crumb-font-size: rem-calc(14);
 $crumb-slash: '>';

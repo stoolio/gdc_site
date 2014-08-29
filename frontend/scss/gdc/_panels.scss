@@ -1,0 +1,61 @@
+// $notice-bg: #f9f8d6;
+// $notice-border: #d9d49e;
+// $notice-text: #a99d36;
+
+.panel {
+
+  &.notice {
+    @include panel(#f9f8d6);
+    a:not(.button) {
+      color: scale-color(#a99d36, $lightness: -50%);
+    }
+    border: 1px solid #d9d49e;
+    p {
+      color: #a99d36;
+    }
+  }
+
+  &.success {
+    @include panel(#e0f8db);
+    a:not(.button) {
+      color: scale-color(#769d6e, $lightness: -50%);
+    }
+    border: 1px solid #c6dac2;
+    p {
+      color: #769d6e;
+    }
+  }
+
+  &.warning {
+    @include panel(#fde9ea);
+    a:not(.button) {
+      color: scale-color(#c4686c, $lightness: -50%);
+    }
+    border: 1px solid #daabae;
+    p {
+      color: #c4686c;
+    }
+  }
+
+  // .notice {
+  //   background-color: #f9f8d6;
+  //   border: 1px solid #d9d49e;
+  //   p {
+  //     color: #a99d36;
+  //   }
+  // }
+  // .success {
+  //   background-color: #e0f8db;
+  //   border: 1px solid #c6dac2;
+  //   p {
+  //     color: #769d6e;
+  //   }
+  // }
+  // .warning {
+  //   background-color: #fde9ea;
+  //   border: 1px solid #daabae;
+  //   p {
+  //     color: #c4686c;
+  //   }
+  // }
+}

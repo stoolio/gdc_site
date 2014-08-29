@@ -28,7 +28,7 @@ module GDC
     use GDC::Routes::Specials
     use GDC::Routes::Blog
     use GDC::Routes::NotFound
-    # use GDC::Routes::Education
+    use GDC::Routes::Education
     not_found do
       redirect '/404/'
     end

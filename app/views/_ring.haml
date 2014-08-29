@@ -1,16 +1,19 @@
 - src = image(ring.collection, ring.main_view)
 - url = url("/engagement-rings/#{ring.model}/")
 - desc = "#{ring.get('description')} - Model #{ring.model}: From #{ring.display_price}"
-%article#post-id.engagement-ring{ class: classify([ring.diamond, ring.style, ring.collection, ring.get("vendor")]), data: { price: ring.from_price } }
+%article.engagement-ring{ class: classify([ring.diamond, ring.style, ring.collection, ring.get("vendor")]), data: { price: ring.from_price } }
 
-  .entry-summary
-    %a{ href: url, title: ring.name }
-      %img.lazy{ src: '/img/white.gif', data: { original: src }, width: ring.width, height: ring.height }
-
-  %footer.entry-footer.text-center
+  .entry-header
     %span.left.pinterest-button
       = partial :'social/pin_button', locals: { url: url,
                                               img: url(image(ring.collection, ring.main_view, :full)),
                                               desc: desc}
+
+  .entry-summary
+    %a{ href: url, title: ring.name }
+      %img.lazy{ src: '/img/white.gif', data: { original: src } }
+      -# , width: ring.width, height: ring.height
+
+  %footer.entry-footer.text-center
     %span.entry-meta
       = "From #{ring.display_price}"

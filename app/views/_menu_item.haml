@@ -9,6 +9,9 @@
       = name
     - if dropdown
       %ul.dropdown
+        -#%li.show-for-small-only
+        -#  %a{ href: url(data[:url]) }
+        -#    = name
         - dropdown.each do |subname, suburl|
           %li
             %a{ href: url(suburl) }
