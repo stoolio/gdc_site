@@ -136,12 +136,10 @@ var IsotopeLayout = (function(window) {
     this.state = normalizeDecodedURIHash();
     this.update();
     if(this.dirty.filter) {
-      console.log('update filters');
       this.updates.filter();
       this.dirty.filter = false;
     }
     if(this.dirty.sort) {
-      console.log('update sorts');
       this.updates.sort();
       this.dirty.sort = false;
     }

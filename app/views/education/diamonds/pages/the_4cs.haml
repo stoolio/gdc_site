@@ -1,92 +1,98 @@
--#.row
--#  .large-12.columns
--#    %h4 The 4 Cs are probably the most well known diamond grading characteristics.
-
 .row#education-cs
   .large-12.columns
     %ul.tabs.4cs{ data: { tab: true, options: "deep_linking:true" }, role: "tablist" }
       %li.tab-title.active{ role: "presentational" }
-        %a{ href: "#panel2-1", role: "tab", tabindex: "0", aria_selected: "true", controls: "panel2-1" }
+        %a{ href: "#Carat", role: "tab", tabindex: "0", aria_selected: "true", controls: "Carat" }
           %h4 Carat
       %li.tab-title{ role: "presentational" }
-        %a{ href: "#panel2-2", role: "tab", tabindex: "0", aria_selected: "true", controls: "panel2-2" }
+        %a{ href: "#Color", role: "tab", tabindex: "0", aria_selected: "true", controls: "Color" }
           %h4 Color
       %li.tab-title{ role: "presentational" }
-        %a{ href: "#panel2-3", role: "tab", tabindex: "0", aria_selected: "true", controls: "panel2-3" }
+        %a{ href: "#Clarity", role: "tab", tabindex: "0", aria_selected: "true", controls: "Clarity" }
           %h4 Clarity
       %li.tab-title{ role: "presentational" }
-        %a{ href: "#panel2-4", role: "tab", tabindex: "0", aria_selected: "true", controls: "panel2-4" }
+        %a{ href: "#Cut", role: "tab", tabindex: "0", aria_selected: "true", controls: "Cut" }
           %h4 Cut
 
     .tabs-content
-      %section#panel2-1{ role: "tabpanel", aria_hidden: "false", class: "content active"}
+      %section#Carat{ role: "tabpanel", aria_hidden: "false", class: "content active"}
 
         %ul
           %li
             %strong Carat weight is less a “grade” than it is a measurement.
             %blockquote
-              It is important to note that Carat is a measure of weight, not size. In most cases, diamonds get larger as they get heavier, but this is not always the case. Cut affects the appearance of the size as well.
-            %p
-              What is really means is that carat weight is determined by placing the diamond on a very accurate scale, and is not subject to interpretation.
-            .panel.callout.radius
-              We have such a scale in our office, and it is so sensitive that we have to turn off the air (and any fans) to ensure we get a stable and accurate reading.
+              It is important to note that Carat is a measure of weight, not size. Usually, diamonds get larger as they get heavier, but cut affects the appearance of the size as well.
 
           %li
-            %strong The size of a diamond is primarily related to it's millimeter measurements
-            %blockquote
-              While not a proper C, measurements and carat weight are related. So we'll talk about it here
+            %strong The true size of a diamond can be found from it's millimeter measurements
             %p
-              Every certificate has a diamond's size measurements in addition to it's carat weight, and they are worth checking out. They look something like this:
-              %pre.text-center 1.23x4.56x7.89
+              Every certificate has a diamond's measurements in addition to it's weight. They look like:
+              .text-center
+                %code 1.23 - 1.25 x 3.45 mm
+                %br
+                or
+                %br
+                %code 2.46 x 1.35 x 1.98 mm
             %p
-              The first number is the diameter of the stone, and may also be referred to as the spread. On a round diamond, this is the length across the top. Other diamonds can have both a length and width, which will be represented by the first 2 numbers. The last number is the height of the stone.
-            .panel.callout.radius
-              Round diamonds technically have a length and width as well, but they are usually the same, or very close. If they weren't, it would actually be an Oval diamond.
+              The first number is the diameter or spread of the stone. On a round diamond, this is the length across the top. The dash between the first two numbers is usually Other diamonds can have both a length and width, which will be represented by the first 2 numbers. The last number is the height of the stone.
+            %p
+              This allows you to quickly and easily compare diamond's size. It can be interesting to see how differences in weight affect size as well.
+            .panel.notice.radius
+              Round diamonds technically have a length and width as well, but they are usually the same, or very close. If they weren't, it would be an Oval diamond.
 
           %li
             %strong Carat weight has a <em>major</em> effect on price
             %blockquote
-              A diamond that is twice the weight can cost exponentially more than a smaller diamond.
+              A diamond that is twice the weight could cost 4x more than a smaller diamond.
             %p
-              This increase gets larger and larger as diamonds get bigger, but the main takeaway is that you can’t spend twice as much to get a diamond that weighs twice as much.
+              The main takeaway: you can’t spend twice as much to get a diamond that weighs twice as much. In addition, getting a smaller diamond can save you a bundle.
 
           %li
-            %strong <em>"Under Size"</em> diamonds can save you money
+            %strong Be aware of <em>"Under Size"</em> diamonds
             %blockquote
-              Under sizes are diamonds that are very close to a cut off size. The cut offs are mainly at each half carat, so 1.00ct-1.50ct-2.00ct and so on. An example of an under size would be 0.90ct or a 1.47ct.
+              Diamonds are priced based on a special price list. It consists of tables of prices, with each table representing a particular range of carat weights.
             %p
-              They are important because an under size will be priced based on a completely different and often much lower per carat price. These small weight differences can be very minute, but the difference in price can be much more noticeable.
+              For instance, a 0.95ct diamond will be priced based on the 0.90ct-0.99ct table, rather than the 1.00ct-1.25ct table. So, despite the small difference in size, that 0.95ct diamond can cost much less than a similar 1.00ct diamond.
+            %p
+              If you ask to look at 1.00ct diamonds, that is most likely what you will see. If you let your jeweler know you would be okay getting something a few points smaller (1 carat = 100 points), you might get lucky.
+            .panel.notice.radius
+              A diamond cutter is usually trying to maximize weight, which is why you'll find less under size diamonds. It makes more sense financially to cut a diamond above or at a size cut-off, rather than under.
+            %p
+              For your reference, here are the tables ranges, with example "under size" diamonds:
 
           %li
             %strong Although it is a cold calculating number, carat weight can be very visual
             %blockquote
               You might be surprised at how small the difference in <em>size</em> is compared to a difference in <em>weight</em> (and cost!).
             %p
-              This is why it's a great idea to see some live diamonds to make your decision. Some want to make sure they get at least a certain size, but you should have a look to make sure the difference in size is worth the difference in cost.
+              Many consumers may get stuck on getting at least a certain size, but you should have a look to make sure the difference in size is worth the difference in cost. This is the visual part of of carat weight. Don't think you can just browse certificates or stats, different diamonds have different looks based on their collection of grades. You might find a smaller, well cut diamond is more impressive than a larger, duller one.
 
-        %a{ href: "#panel2-2" } Move on to Color >>
-
-        %hr
+        %p
+          This won't be the last time you hear this, but nothing beats seeing a diamond in person. See some live diamonds before you make any decisions and you will have a much better idea of what you want.
+        %p
+          This is even more true for the next C, Color.
 
         .row.text-center
-          .large-8.large-centered.columns
+          .large-12.columns.text-center
+            %a{ href: "#Color" }
+              Move on to Color
+            %hr
+          .large-8.columns
             %h5 Navigate the 4 C's
 
             %dl.sub-nav{ style: 'margin: 0 auto;width: 330px' }
               %dd.active
                 %a Carat
               %dd
-                %a{ href: "#panel2-2" } Color
+                %a{ href: "#Color" } Color
               %dd
-                %a{ href: "#panel2-3" } Clarity
+                %a{ href: "#Clarity" } Clarity
               %dd
-                %a{ href: "#panel2-4" } Cut
+                %a{ href: "#Cut" } Cut
 
-      %section{ role: "tabpanel", aria_hidden: "true" , class: "content", id: "panel2-2" }
+      %section{ role: "tabpanel", aria_hidden: "true" , class: "content", id: "Color" }
         %p
-          It can be very difficult to tell the difference between diamond color grades. This makes color a flexible trait, and many are perfectly happy with a lower color diamond, especially when you can use the money you save for some extra size or clarity. Of course, having a proper look at some diamonds in person is the best way to find out your feelings on color.
-        .panel.callout.radius
-          In order to properly evaluate the color of a diamond, gemologists traditionally utilize a set of master stones that represent the standard for each diamond color grade. At GIA, for consistency, the color will be graded by multiple gemologists anonymously and a final color grade is only assigned when there are mutliple graders in agreement.
+          It can be very difficult to tell the difference between diamond color grades. This makes color a flexible trait, and many are perfectly happy with a lower color diamond, especially when you can use the money you save for some extra size or clarity.
 
         %h3 Fast Facts:
         %ul
@@ -97,7 +103,13 @@
           %li
             %strong Most diamonds you will find for sale range from D-J.
 
-        %p The diamond color grades are grouped together accordingly:
+        .panel.callout.radius
+          At GIA, the color will be graded by multiple gemologists anonymously and a final color grade is only assigned when there are multiple graders in agreement. It can be tricky to judge, even for the pros.
+
+        %p Here is a handy chart detailing the grades and their "groups":
+
+        .panel.warning.radius
+          The colors below are not accurate and are only shown for demonstration!
 
         %table#color-table{ cellspacing: 0, cellpadding: 0, role: "grid" }
           %thead
@@ -185,77 +197,66 @@
               %td{ style: "-webkit-border-top-right-radius: 6px; -moz-border-radius-topright: 6px; border-top-right-radius: 6px; background-color: #ffffd3;" }
                 Z
 
-        .panel.callout.radius
-          The colors in the above table are not accurate and are only shown for demonstration.
+        %p
+          Even when diamonds are grades apart, it can be difficult to notice color differences unless you have both diamonds side by side. So, don't be afraid of lower color diamonds. However, we generally don't recommend going lower than J color. Past that, the yellow color of a diamond can become too noticeable.
 
         %p
-          Even when diamonds are many grades apart, it can be difficult to notice color differences unless two diamonds are side by side. This is especially true when they are in the same category of diamond colors as shown in the chart.
+          The important thing is to set your center stone with color matched side stones. Set properly, the color of your diamond won't be an issue.
+
+        .panel.warning.radius
+          This is one reason why premade rings are problematic. Since they are already set with diamonds, you won't have the luxury of ensuring they match your center stone.
 
         %p
-          If you're looking to save money, it is often a great idea to get a lower color diamond. As long as your side diamonds are matched to the color of your center stone, your ring will look beautiful. This is one reason why premade rings can cause issues. Since they are already set with diamonds, you won't have the luxury of ensuring they match your center stone.
-
-        .panel.callout.radius
-          We generally don't recommend going lower than J color. Past that, the yellow color of a diamond becomes too noticeable.
+          Of course, don't get hung up on numbers and letters on a certificate and let your eyes and heart lead your decision-making.
 
         %p
-          The majority of lower color diamonds exhibit a light yellowish color, but brownish is also possible. As long as you stick with a diamond color of J or higher, you won't have to worry about this.
-
-        %p
-          As always, it's always best to have a look at some diamonds in person to come to your own conclusions about color. The big point that I think is important is to not get hung up on numbers and letters on a certificate and let your eyes and heart lead your decision-making.
-
-        %a{ href: "#panel2-3" } Move on to Clarity >>
-
-        %hr
+          This is especially true with Clarity, the next C.
 
         .row.text-center
+          .large-12.columns.text-center
+            %a{ href: "#Clarity" } Move on to Clarity &ge;&ge;
+            %hr
           .large-8.large-centered.columns
             %h5 Navigate the 4 C's
 
             %dl.sub-nav{ style: 'margin: 0 auto;width: 330px' }
               %dd
-                %a{ href: "#panel2-1" } Carat
+                %a{ href: "#Carat" } Carat
               %dd.active
                 %a Color
               %dd
-                %a{ href: "#panel2-3" } Clarity
+                %a{ href: "#Clarity" } Clarity
               %dd
-                %a{ href: "#panel2-4" } Cut
+                %a{ href: "#Cut" } Cut
 
-      %section{ role: "tabpanel", aria_hidden: "true", class: "content", id: "panel2-3" }
+      %section{ role: "tabpanel", aria_hidden: "true", class: "content", id: "Clarity" }
         %p
           Diamond clarity is a grade that is assigned based on a manual review of the diamond by mapping the type, size, and location of inclusions. All diamonds have inclusions, with the exception of flawless diamonds (which are very rare and expensive). Regardless of the actual grade, finding a diamond that is <em>eye clean</em> is the most desirable.
         %p
           An inclusion is something in the diamond that doesn’t quite belong. Diamond Inclusions are also called flaws, but don’t think that this means it is defective. Flaws give character to diamonds and make them unique.
 
-        .panel.notice.radius
-          %p
-            The type, <a>amount</a>, and location of inclusions in a diamond act like a fingerprint. No two diamonds are alike.
         .panel.success.radius
-          %p
-            The type, <a>amount</a>, and location of inclusions in a diamond act like a fingerprint. No two diamonds are alike.
-        .panel.warning.radius
           %p
             The type, <a>amount</a>, and location of inclusions in a diamond act like a fingerprint. No two diamonds are alike.
 
         %p
-          Due to the way diamond clarity is graded, it must be done by a human. Since a human grades the diamond clarity there is always room for opinion. Each lab has set rules based on the size, position, and type of inclusion, but it is up to the grader to make a final decision. This means its important to view a diamond in person and get the help of an expert to ensure that the diamond you are getting is up to your standards.
+          Due to the nature of diamond clarity, it is graded by a human. Since a human grades the diamond clarity there is always room for opinion. Each lab has set rules based on the size, position, and type of inclusion, but it is up to the grader to make a final decision. This means its important to view a diamond in person and get the help of an expert to ensure that the diamond you are getting is up to your standards.
         %p
           The diamond clarity grades meanings are explained below, going from flawless to included, along with some important points to consider when diamond shopping:
 
         %h4
-          FL&ndash;Flawless
+          FL&mdash;Flawless
         %ul
           %li
             No visible inclusions under 10x magnification
           %li
             Very rare and expensive
-
-        .panel
+        .panel.notice.radius
           %p
-            In most cases you can do better with a lower diamond clarity and larger diamond carat weight, better diamond color, or most importantly, a nicer cut diamond
+            In almost all cases you can do better with a lower diamond clarity and larger diamond carat weight, better diamond color, or most importantly, a nicer cut diamond.
 
         %h4
-          IF&ndash;Internally Flawless
+          IF&mdash;Internally Flawless
         %ul
           %li
             No visible inclusions under 10x magnification
@@ -263,14 +264,13 @@
             Flaws only on the surface of the diamond, called blemishes
           %li
             Both FL and IF are sometimes referred to as &#8220;Museum Quality&#8221;
-
-        .panel
+        .panel.notice.radius
           %p
-            Most consumers still choose a lower clarity so that other traits can be maximized for their budget
+            Most consumers still choose a lower clarity so that other traits can be maximized for their budget due to the rarity and cost of these diamonds.
 
 
         %h4
-          VVS&ndash;Very Very Slightly Included
+          VVS&mdash;Very Very Slightly Included
         %ul
         %li
           Few flaws at 10x magnification
@@ -278,28 +278,26 @@
           It takes a skilled grader to notice inclusions in a VVS diamond
         %li
           For grades with numerical levels, a higher number is better
-
-        .panel
+        .panel.notice.radius
           %p
-            VVS is still considered unnecessary for the average consumer
+            VVS is still considered unnecessary for most consumers. In addition to the price, it is nearly impossible to tell the difference between a VVS quality diamond and a nice VS (or even SI) quality diamond with the naked eye.
 
         %h4
-          VS&ndash;Very Slightly Included
+          VS&mdash;Very Slightly Included
         %ul
         %li
           Inclusions that are slightly easier to see under 10x magnification
         %li
-          VS diamonds are both great looking and more affordable
+          VS diamonds are both great looking and reasonably priced
         %li
           An average consumer looking for a &#8220;high quality&#8221; diamond will generally get a VS1
-
-        .panel
+        .panel.warning.radius
           %p
-            Very slightly can mean many things. Not every single VS diamond will be eye clean. View your diamonds in person and use a Jeweler who you trust and will help you to select a diamond with a clarity that works for you.
+            Very slightly can mean many things. Not every single VS diamond will be eye clean, although you can almost never go wrong with a VS1. View your diamonds in person and use a Jeweler who you trust and will help you to select a diamond with a clarity that works for you.
 
 
         %h4
-          SI&ndash;Slightly Included
+          SI&mdash;Slightly Included
         %ul
           %li
             Noticeable inclusions at 10x magnification
@@ -308,15 +306,14 @@
           %li
             They are a popular choice if your looking for a deal
           %li
-            Not all SI diamonds, SI2 in particular, will be eye clean
-
-        .panel
+            Finding an "eye clean" SI2 is tricky, but possible
+        .panel.radius
           %p
-            Watch out, especially in SI graded diamonds, you have to be more careful of larger more prominent inclusions in highly visible parts of the diamond. A large whitish inclusion may be acceptable to you, where a smaller darker one may not.
+            Watch out, especially in SI graded diamonds, you have to be more careful of larger more prominent inclusions in highly visible parts of the diamond. A large whitish inclusion may be acceptable to you, where a smaller darker one may not. As always, get a look at the diamond to make the best decision.
 
 
         %h4
-          I&ndash;Included
+          I&mdash;Included
         %ul
           %li
             Large, numerous, or obvious inclusions at 10x magnification
@@ -325,40 +322,40 @@
           %li
             Prices are lower, but the average consumer will go for a higher clarity
           %li
-            Certain inclusions may also affect the strength and durability of the stone
+            Certain inclusions can affect the strength and durability of the stone
           %li
             As a general rule, we don&#8217;t work with I grade diamonds
-
-        .panel
+        .panel.radius
           %p
-            You might consider moving up a clarity grade or getting a slightly off-color or smaller stone to work within your budget.
+            You might consider moving up a clarity grade or getting a slightly off-color or smaller stone to work within your budget. Most consumers choose a higher clarity, and we don't bother searching for clean stones in this grade range or below.
 
         %p
           You might notice that VS and SI clarity diamonds were emphasized. The majority of stones fall into these diamond clarity grades due to their combination of reasonable price and great look. It is also very possible to find diamonds graded VS1, VS2, SI1, or SI2 with no major inclusions.
+        .panel.warning.radius
+          EGL certificates include an SI3 clarity grade. It is somewhere in between a GIA SI2 and I1. Since GIA is known for stricter grading standards, we don’t generally carry or sell EGL certified diamonds. However, if we did, we would avoid most SI3 clarity diamonds.
         %p
-          Just a note, EGL certificates include an SI3 clarity grade. It is somewhere in between a GIA SI2 and I1. Since GIA is known for stricter grading standards, we don’t generally carry or sell EGL certified diamonds. However, if we did, we would avoid most SI3 clarity diamonds.
+          For our customers, we always allow you to view diamonds though a jeweler’s loupe at 10x (and 20x) magnification. If your Jeweler isn’t showing you diamonds up close, there may be something there they don’t want you to see.
         %p
-          We can teach you to be use a jeweler’s loupe and view potential diamonds at 10x magnification. If your Jeweler isn’t showing you diamonds up close, there may be something there they don’t want you to see.
-
-        %a{ href: "#panel2-4" } Move on to Cut >>
-
-        %hr
+          Being aware of whats going on inside the diamond is good info, and being able to see it the same way a grader does (at 10x magnifications) is smart. However, most people won't be seeing your diamond so close. Find out what your comfortable with, and find the best diamond you can that fits your personal requirements.
 
         .row.text-center
+          .large-12.columns.text-center
+            %a{ href: "#Cut" } Move on to Cut &ge;&ge;
+            %hr
           .large-8.large-centered.columns
             %h5 Navigate the 4 C's
 
             %dl.sub-nav{ style: 'margin: 0 auto;width: 330px' }
               %dd
-                %a{ href: "#panel2-1" } Carat
+                %a{ href: "#Carat" } Carat
               %dd
-                %a{ href: "#panel2-2" } Color
+                %a{ href: "#Color" } Color
               %dd.active
                 %a Clarity
               %dd
-                %a{ href: "#panel2-4" } Cut
+                %a{ href: "#Cut" } Cut
 
-      %section{ role: "tabpanel", aria_hidden: "true", class: "content", id: "panel2-4" }
+      %section{ role: "tabpanel", aria_hidden: "true", class: "content", id: "Cut" }
         %h2
           Cut
         %p
@@ -398,21 +395,19 @@
         %p
           As a guide, diamond cut can help to separate out the haves from the have nots. What it shouldn&#8217;t be is the only measurement by which you select your diamond. It may take some time, but with the help of a conscientious jeweler, you can find a diamond in the rough.
 
-        %a{ href: "#panel2-2" } Move on to Color >>
-
-        %hr
-
         .row.text-center
+          .large-12.columns.text-center
+            %a{ href: "#Color" } Move on to Color &ge;&ge;
+            %hr
           .large-8.large-centered.columns
             %h5 Navigate the 4 C's
 
             %dl.sub-nav{ style: 'margin: 0 auto;width: 330px' }
               %dd
-                %a{ href: "#panel2-1" } Carat
+                %a{ href: "#Carat" } Carat
               %dd
-                %a{ href: "#panel2-2" } Color
+                %a{ href: "#Color" } Color
               %dd
-                %a{ href: "#panel2-3" } Clarity
+                %a{ href: "#Clarity" } Clarity
               %dd.active
                 %a Cut
-
