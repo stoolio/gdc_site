@@ -1,7 +1,6 @@
 require 'sinatra/namespace'
 require 'sinatra/content_for'
 require 'sinatra/partial'
-require 'sinatra/reloader'
 
 # URI.escape used in pinterest button generation
 require 'uri'
@@ -18,10 +17,6 @@ module GDC
 
         enable :partial_underscores
         enable :logging
-      end
-      configure do
-        register Sinatra::Reloader
-        enable :reloader
       end
 
       helpers do

@@ -22,7 +22,6 @@ module GDC
       end
 
       def success(_form, msg)
-        # GDC::Jobs::Email.new.async.perform(form)
         complete(:success, msg)
       end
 

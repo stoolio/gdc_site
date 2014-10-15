@@ -6,10 +6,6 @@ gem 'sinatra-contrib'
 
 gem 'sinatra-partial'
 
-gem 'pony'
-
-gem 'sucker_punch', '~> 1.0'
-
 gem 'haml'
 
 gem 'redcarpet'
