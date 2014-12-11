@@ -1,5 +1,8 @@
 *.DS_Store
 
+db
+our_own_data.json
+
 // src map files
 *.map
 

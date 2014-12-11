@@ -17,7 +17,7 @@ var IsotopeLayout = (function(window) {
       f: {
         'gdc': '',
         'sar': '',
-        'ven': '.gale-diamonds'
+        'ven': ''
       },
       s: {
         'by': '',

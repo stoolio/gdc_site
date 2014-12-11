@@ -1,4 +1,9 @@
-var EngagementRingArchive = (function(IsotopeLayout, Filterer, Sorter) {
+var EngagementRingArchive = (function(buildPinButton, IsotopeLayout, Filterer, Sorter) {
+
+  function initPin(elements_left, settings) {
+    $parent = $(this).parents('article');
+    buildPinButton($parent);
+  }
 
   function EngagementRingArchive() {
     this.$imgs = $('img.lazy');
@@ -12,6 +17,7 @@ var EngagementRingArchive = (function(IsotopeLayout, Filterer, Sorter) {
       effect : 'fadeIn',
       failure_limit : Math.max(this.$imgs.length - 1, 0),
       threshold : 20,
+      appear: initPin
     });
 
     this.isotopeLayout.initialize({
@@ -23,4 +29,4 @@ var EngagementRingArchive = (function(IsotopeLayout, Filterer, Sorter) {
 
   return EngagementRingArchive;
 
-}(IsotopeLayout, Filterer, Sorter));
+}(window.buildPinButton, IsotopeLayout, Filterer, Sorter));
