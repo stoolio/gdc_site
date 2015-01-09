@@ -1,16 +1,5 @@
 var IsotopeLayout = (function(window) {
   var $win = $(window);
-    // defaultState = {
-    //   f: {
-    //     'gdc': '',
-    //     'sar': '',
-    //     'ven': '.gale-diamonds'
-    //   },
-    //   s: {
-    //     'by': '',
-    //     'dir': ''
-    //   }
-    // };
 
   function defaultState() {
     return {
@@ -26,50 +15,26 @@ var IsotopeLayout = (function(window) {
     };
   }
 
-  function decodeURIHash() {
-    var e,
-        d = function (s) { return decodeURIComponent(s).replace(/\+/g, " "); },
-        q = decodeURIComponent(window.location.hash.slice(1)),
-        r = /([^&=]+)=?([^&]*)/g,
-        urlParams = {};
-
-    while (e = r.exec(q)) {
-      if (e[1].indexOf("[") == "-1")
-          urlParams[d(e[1])] = d(e[2]);
-      else {
-        var b1 = e[1].indexOf("["),
-            aN = e[1].slice(b1+1, e[1].indexOf("]", b1)),
-            pN = d(e[1].slice(0, b1));
-
-        if (typeof urlParams[pN] != "object")
-          urlParams[d(pN)] = {};
-          //urlParams[d(pN)].length = 0;
-
-        if (aN)
-          urlParams[d(pN)][d(aN)] = d(e[2]);
-        else
-          Array.prototype.push.call(urlParams[d(pN)], d(e[2]));
-      }
+  function setState(state) {
+    var temp = {};
+    for(var b in state) {
+      for(var c in state[b]) temp[b+c] = state[b][c];
     }
-
-    return urlParams;
+    window.location.hash = $.param(temp);
   }
 
-  function normalizeDecodedURIHash() {
-    var state = decodeURIHash();
+  function getState() {
+    if(window.location.hash )
+    var temp = defaultState();
+    window.location.hash.split('&').forEach(function(el){
+      var parts = el.split('='),
+        a = parts[0][0],
+        b = parts[0].slice(1),
+        c = parts[1];
+      temp[a][b] = c;
+    }, this);
 
-    if(Object.getOwnPropertyNames(state).length === 0) {
-      return defaultState();
-    }
-
-    if(state.f['ven'] === '.gale-diamonds') {
-      state.f['sar'] = '';
-    } else {
-      state.f['gdc'] = '';
-    }
-    state.s['dir'] = state.s['dir'] === 'true' ? true : false;
-
-    return state;
+    return temp;
   }
 
   function layoutComplete() {
@@ -103,9 +68,10 @@ var IsotopeLayout = (function(window) {
       sort: true
     };
 
-    if(window.location.hash !== '') {
-      this.state = normalizeDecodedURIHash(); //$.deparam.fragment(window.location, true);
+    if(window.location.hash === '') {
+      setState(defaultState());
     }
+
     this.defaults = {
       filter: '.gale-diamonds',
       itemSelector: this.itemSelector,
@@ -133,7 +99,7 @@ var IsotopeLayout = (function(window) {
   };
 
   IsotopeLayout.prototype.refresh = function() {
-    this.state = normalizeDecodedURIHash();
+    this.state = getState();
     this.update();
     if(this.dirty.filter) {
       this.updates.filter();
@@ -148,7 +114,7 @@ var IsotopeLayout = (function(window) {
   IsotopeLayout.prototype.filter = function(filters) {
     this.state.f = filters;
     this.dirty.filter = true;
-    this.setState();
+    setState(this.state);
   };
 
   IsotopeLayout.prototype.sort = function(sortBy, sortDir) {
@@ -157,11 +123,7 @@ var IsotopeLayout = (function(window) {
       'dir': sortDir
     };
     this.dirty.sort = true;
-    this.setState();
-  };
-
-  IsotopeLayout.prototype.setState = function(options) {
-    window.location.hash = $.param(this.state);
+    setState(this.state);
   };
 
   IsotopeLayout.prototype.update = function() {
