@@ -24,20 +24,24 @@ var IsotopeLayout = (function(window) {
   }
 
   function getState() {
-    if(window.location.hash )
-    var temp = defaultState();
-    window.location.hash.split('&').forEach(function(el){
-      var parts = el.split('='),
-        a = parts[0][0],
-        b = parts[0].slice(1),
-        c = parts[1];
-      temp[a][b] = c;
-    }, this);
+    var temp;
+    if(window.location.hash === '') {
+      temp = defaultState();
+    } else {
+      window.location.hash.split('&').forEach(function(el){
+        var parts = el.split('='),
+          a = parts[0][0],
+          b = parts[0].slice(1),
+          c = parts[1];
+        temp[a][b] = c;
+      }, this);
+    }
 
     return temp;
   }
 
   function layoutComplete() {
+    testIfNothing();
     // Scroll event triggers lazyload check
     setTimeout(function() {
       $win.trigger('scroll');
@@ -63,6 +67,9 @@ var IsotopeLayout = (function(window) {
     this.$win = $win;
     this.$container = $(el);
     this.itemSelector = itemEl;
+    //this.state is a variable to cache the state of the ui
+    //the url is the source of truth
+    //this.updates are update functions for the ui
     this.dirty = {
       filter: true,
       sort: true
@@ -111,6 +118,23 @@ var IsotopeLayout = (function(window) {
     }
   };
 
+  // IsotopeLayout.prototype.refresh = function() {
+  //   this.state = getState();
+  //   this.update();
+  //   for(var type in this.dirty) {
+  //     if(type = true) {
+  //       this.updates[type]();
+  //       this.dirty[type] = false;
+  //     }
+  //   }
+  // };
+
+  // IsotopeLayout.prototype.update = function(type, data) {
+  //   this.state[type] = data;
+  //   this.dirty[type] = true;
+  //   setState(this.state);
+  // };
+
   IsotopeLayout.prototype.filter = function(filters) {
     this.state.f = filters;
     this.dirty.filter = true;
@@ -140,7 +164,7 @@ var IsotopeLayout = (function(window) {
       sortAscending: this.state.s['dir'],
     });
 
-    setTimeout(testIfNothing.bind(this), 500);
+    //setTimeout(testIfNothing.bind(this), 500);
   };
 
   return IsotopeLayout;

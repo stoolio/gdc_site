@@ -19,7 +19,7 @@ def heading(data)
 end
 
 def open_tag
-  '<div style='font-family: sans-serif;font-size: 20px;'>'
+  "<div style='font-family: sans-serif;font-size: 20px;'>"
 end
 
 def close_tag
@@ -31,9 +31,7 @@ def htmlify(data)
 end
 
 Net::SMTP.start('smtp.webfaction.com', 25, 'localhost', 'galediamonds', '1sh1EAKHTPves9Ur', :login) do |smtp|
-
   smtp.open_message_stream('gdc-leads@web369.webfaction.com', ['galewebform@gmail.com']) do |f|
-
     f.puts "From: #{message['e-mail']}"
     f.puts "Reply-To: #{message['e-mail']}"
     f.puts "Return-Path: #{message['e-mail']}"
@@ -71,9 +69,7 @@ Net::SMTP.start('smtp.webfaction.com', 25, 'localhost', 'galediamonds', '1sh1EAK
       f.puts htmlify(comments)
       f.puts close_tag
     end
-
   end
-
 end
 
 # <table width="99%" border="0" cellpadding="1" cellspacing="0" bgcolor="#EAEAEA">

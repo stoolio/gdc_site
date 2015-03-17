@@ -12,7 +12,7 @@ var EngagementRingArchive = (function(buildPinButton, IsotopeLayout, Filterer, S
     this.filters = new Filterer('.filters', 'dd', this.isotopeLayout);
     this.sorts = new Sorter('.sorts', 'dd', this.isotopeLayout);
 
-    // add .show() and noscript tags for no js support
+    // add .show() (here) and noscript tags (html) for no-js support
     this.$imgs.lazyload({
       effect : 'fadeIn',
       failure_limit : Math.max(this.$imgs.length - 1, 0),
@@ -24,7 +24,10 @@ var EngagementRingArchive = (function(buildPinButton, IsotopeLayout, Filterer, S
       getSortData: {
         price: '[data-price]'
       }
-    }, { filter: this.filters.update.bind(this.filters), sort: this.sorts.update.bind(this.sorts) });
+    }, {
+      filter: this.filters.update/*.bind(this.filters)*/,
+      sort: this.sorts.update/*.bind(this.sorts)*/
+    });
   }
 
   return EngagementRingArchive;

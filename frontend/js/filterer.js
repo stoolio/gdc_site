@@ -101,7 +101,7 @@ var Filterer = (function () {
       $('option[data-filter="' + activeFilters['sha'] + '"]').attr('Selected', true);
     }
 
-  };
+  }.bind(this);
 
   return Filterer;
 }());

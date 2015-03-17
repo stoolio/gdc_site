@@ -81,7 +81,7 @@ var Sorter = (function () {
       this.$.button.desc.addClass('active');
       this.$.select.desc.attr('Selected', true);
     }
-  };
+  }.bind(this);
 
   return Sorter;
 }());
