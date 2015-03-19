@@ -39,7 +39,7 @@ module GDC
         },
         policies: {
           url: '/policies/',
-          // Return, Shipping, Privacy, Terms
+          # Return, Shipping, Privacy, Terms
           policies: {
             url: ':policy/'
           }

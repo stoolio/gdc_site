@@ -1,6 +1,6 @@
 module GDC
   module Helpers
-  # Generates breadcrumbs
+    # Generates breadcrumbs
     module Breadcrumbs
       @crumb = false
 
@@ -12,7 +12,7 @@ module GDC
       private
 
       def process_path(path, last_crumb = false)
-        return {'Home' => '/'} if path == '/'
+        return { 'Home' => '/' } if path == '/'
         chunks = path.split('/')
         titles = pretty_title(chunks)
         titles.tap(&:pop).push(last_crumb) if last_crumb
@@ -22,8 +22,8 @@ module GDC
 
       def expand_urls(path_parts)
         urls = []
-        path_parts.each_with_index do |part, i|
-          url = path_parts.slice(0,i+1).join('/')
+        path_parts.each_with_index do |_, i|
+          url = path_parts.slice(0, i + 1).join('/')
           url = '/' if url.empty?
           urls << url
         end
@@ -33,7 +33,7 @@ module GDC
       def pretty_title(path_parts)
         path_parts.map do |part|
           next 'Home' if part.empty?
-          part.gsub('-',' ').capitalize
+          part.gsub('-', ' ').capitalize
         end
       end
 
@@ -42,7 +42,7 @@ module GDC
         i = 0
         crumbs.reduce("<nav class='breadcrumbs'>") do |s, (k, v)|
           i += 1
-          s + "<a href='#{v}'" + (i == l ? "class='current'" : "") +" >#{k}</a>"
+          s + "<a href='#{v}'" + (i == l ? "class='current'" : '') + " >#{k}</a>"
         end + '</nav>'
       end
     end

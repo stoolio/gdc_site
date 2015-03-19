@@ -8,11 +8,11 @@ module GDC
             get_filename(file).split('-').drop(1).join('-')
           end
           num = files.length
-          # files.sort_by do |file|
-          #   file.split('-').shift
-          # end
-          #files.reverse.slice((page-1) * POSTS_PER_PAGE, page * POSTS_PER_PAGE)
-          [files.reverse.slice((page-1) * POSTS_PER_PAGE, page * POSTS_PER_PAGE), (Float(num) / POSTS_PER_PAGE).ceil]
+          #  files.sort_by do |file|
+          #    file.split('-').shift
+          #  end
+          # files.reverse.slice((page-1) * POSTS_PER_PAGE, page * POSTS_PER_PAGE)
+          [files.reverse.slice((page - 1) * POSTS_PER_PAGE, page * POSTS_PER_PAGE), (Float(num) / POSTS_PER_PAGE).ceil]
         end
 
         def get_filename(file)

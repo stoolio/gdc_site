@@ -28,9 +28,9 @@ module GDC
           haml :"policies/index"
         end
 
-        get ":policy/" do
+        get ':policy/' do
           @policy = params[:policy]
-          haml :"policies/policy"
+          haml :'policies/policy'
         end
       end
     end
