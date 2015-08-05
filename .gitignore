@@ -21,3 +21,6 @@ our_own_data.json
 
 form-data/
 frontend/.sass-cache/
+
+sendmail.rb
+Profiling/
