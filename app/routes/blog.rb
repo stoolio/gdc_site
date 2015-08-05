@@ -1,11 +1,12 @@
 module GDC
   module Routes
     class Blog < Base
-      GDC::Models::Post::Config.per_page = 4
+      PER_PAGE = 4
+      helpers GDC::Helpers::Blog
 
       get '/blog/' do
         @page = 1
-        @posts, @pages = GDC::Models::Post.for_page(@page)
+        @posts, @pages = GDC::Models::Post.for_page(@page, PER_PAGE)
         haml :index
       end
 
@@ -15,7 +16,7 @@ module GDC
 
       get '/blog/page/:num/' do
         @page = params[:num].to_i
-        @posts, @pages = GDC::Models::Post.for_page(@page)
+        @posts, @pages = GDC::Models::Post.for_page(@page, PER_PAGE)
         haml :index
       end
 

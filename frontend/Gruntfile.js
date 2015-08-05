@@ -13,8 +13,7 @@ module.exports = function(grunt) {
   }
 
   var bowerDirs = {
-    copy: 'bower_components/',
-    uglify: '../public/src/bower_components/'
+    uglify: 'bower_components/',
   },
     bowerFiles = [
       // First, because it's jQuery
@@ -52,16 +51,14 @@ module.exports = function(grunt) {
       'foundation/js/foundation/foundation.alert.js',
       'foundation/js/foundation/foundation.magellan.js',
       'foundation/js/foundation/foundation.clearing.js',
-      'jquery.lazyload/jquery.lazyload.min.js',
+      'jquery.lazyload/jquery.lazyload.js',
       'select2/select2.js',
       'jquery-cookie/jquery.cookie.js'
     ],
     myDirs = {
-      copy: 'js/',
-      uglify: '../public/src/js/'
+      uglify: 'js/',
     },
     myFiles = [
-      // 'jquery.loupe.js',
       'doonce.js',
       'filterer.js',
       'isotopelayout.js',
@@ -77,20 +74,14 @@ module.exports = function(grunt) {
     return prependEach(bowerFiles, bowerDirs[type]).concat(prependEach(myFiles, myDirs[type]));
   }
 
-  var copySrc = makeDirs('copy');
-
   var uglifySrc = makeDirs('uglify');
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
     copy: {
-      dev: {
+      dist: {
         files: [
-          {
-            src: copySrc,
-            dest: '../public/src/'
-          },
           {
             src: 'bower_components/modernizr/modernizr.custom.min.js',
             dest: '../public/js/modernizr.js'
@@ -152,15 +143,8 @@ module.exports = function(grunt) {
       grunt: {
         files: ['Gruntfile.js']
       },
-      copy: {
-        files: [
-          'js/*',
-          'bower_components/**/*.js'
-        ],
-        tasks: ['copy:dev']
-      },
       uglify: {
-        files: '../public/src/**/*.js',
+        files: 'js/**/*.js',
         tasks: ['uglify:dev']
       },
       sass: {
@@ -179,7 +163,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('dist', ['copy:dev', 'sass:dist', 'uglify:dist']);
-  grunt.registerTask('build', ['copy:dev', 'sass:dev', 'uglify:dev']);
+  grunt.registerTask('dist', ['copy:dist', 'sass:dist', 'uglify:dist']);
+  grunt.registerTask('build', ['sass:dev', 'uglify:dev']);
   grunt.registerTask('default', ['build', 'watch']);
 };

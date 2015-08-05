@@ -9,43 +9,23 @@ var Sorter = (function () {
   function click(e) {
     e.preventDefault();
 
-    var $this = $(this),
-      $group = $this.parents('dl'),
-      sortBy = '',
-      sortDir = true;
+    var $this = $(e.target).parent('dd');
 
-    if (trueData($this, 'reset-sort') || $this.hasClass('active')) {
-      // $group.find('.active').removeClass('active');
-    } else {
-      // $group.find('.active').removeClass('active');
-      // $this.addClass('active');
-      sortBy = $group.data('sort-by');
-      sortDir = trueData($this, 'sort-desc') ? false : true;
-    }
-
-    e.data.isotopeLayout.sort(sortBy, sortDir);
-
-    // e.data.isotopeLayout.options({
-    //   sortBy: sortBy,
-    //   sortAscending: sortDir
-    // });
+    e.data.this.process($this);
   }
 
   function onSelectChange() {
-    $that = $(this).find('option:selected');
-    if(trueData($that, 'sort-desc')) {
-      $('dd[data-sort-desc]').click();
-    } else if(trueData($that, 'sort-asc')) {
-      $('dd[data-sort-asc]').click();
-    } else {
-      $('dd[data-reset-sort]').click();
-    }
+    var $that = $(this).find('option:selected');
+    this.process($that);
   }
 
-  function Sorter(el, itemEl, iso) {
+  function Sorter(el, itemEl, sortFn) {
     this.$sorts = $(el);
-    this.isotopeLayout = iso;
+    this.sort = sortFn;
     this.$select = this.$sorts.find('select');
+
+    this.asc = false;
+    this.desc = false;
 
     this.$ = {
       button: {
@@ -60,28 +40,34 @@ var Sorter = (function () {
       }
     };
 
-    this.$sorts.on('click', itemEl, {isotopeLayout: this.isotopeLayout }, click);
-    this.$select.change(onSelectChange);
+    this.$sorts.on('click', itemEl, {this: this}, click);
+    this.$select.change(onSelectChange.bind(this));
   }
 
-  Sorter.prototype.update = function () {
-
-    if(this.isotopeLayout.state.s['by'] === '' ) {
-      this.$.button.asc.removeClass('active');
-      this.$.button.desc.removeClass('active');
-      this.$.select.none.attr('Selected', true);
-      return;
-    }
-
+  Sorter.prototype.process = function(that) {
     this.$sorts.find('.active').removeClass('active');
-    if(this.isotopeLayout.state.s['dir'] === true ) {
-      this.$.button.asc.addClass('active');
-      this.$.select.asc.attr('Selected', true);
+
+    if(trueData(that, 'sort-asc') && !this.asc) {
+      this.sortBy('asc');
+    } else if (trueData(that, 'sort-desc') && !this.desc) {
+      this.sortBy('desc');
     } else {
-      this.$.button.desc.addClass('active');
-      this.$.select.desc.attr('Selected', true);
+      this.sortBy(false);
     }
-  }.bind(this);
+  }
+
+  Sorter.prototype.sortBy(dir /* 'asc', 'desc', or false */) {
+    this.asc = this.desc = false;
+    if (dir) {
+      this[dir] = true;
+      this.$.button[dir].addClass('active');
+      this.$.select[dir].attr('Selected', true);
+      this.sort('price', this.asc);
+    } else {
+      this.$.select.none.attr('Selected', true);
+      this.sort('', '');
+    }
+  }
 
   return Sorter;
 }());

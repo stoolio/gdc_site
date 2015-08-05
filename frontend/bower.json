@@ -2,12 +2,13 @@
   "name": "gdc_site",
   "dependencies": {
     "foundation": "zurb/bower-foundation",
-    "isotope": "~2.0.0",
-    "jquery.lazyload": "~1.9.3",
-    "isotope-cells-by-row": "metafizzy/isotope-cells-by-row#~0.1.2",
-    "imagesloaded": "~3.1.4",
-    "select2": "~3.4.8",
-    "jquery-cookie": "~1.4.1",
-    "jquery.bbq": "~1.2.1"
+    "isotope": "latest",
+    "jquery.lazyload": "latest",
+    "isotope-cells-by-row": "latest",
+    "imagesloaded": "latest",
+    "select2": "latest",
+    "jquery-cookie": "latest",
+    "jquery.bbq": "latest",
+    "jquery-bridget": "~1.1.0"
   }
 }

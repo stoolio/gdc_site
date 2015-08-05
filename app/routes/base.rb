@@ -1,6 +1,7 @@
 require 'sinatra/namespace'
 require 'sinatra/content_for'
 require 'sinatra/partial'
+require 'sinatra/reloader'
 
 # URI.escape used in pinterest button generation
 require 'uri'
@@ -12,21 +13,15 @@ module GDC
         set :views, 'app/views'
         set :root, File.expand_path('../../../', __FILE__)
 
-        register Sinatra::Namespace
         register Sinatra::Partial
-
         enable :partial_underscores
-        enable :logging
+
+        register Sinatra::Namespace
       end
 
-      helpers do
-        def find_template(views, name, engine, &block)
-          klass = self.class.to_s.split('::').last
-          klass[0] = klass[0].downcase
-          (klass.gsub!(/([A-Z])/, '_\1') || klass).downcase!
-          ["#{views}/#{klass}", views]
-            .each { |v| super(v, name, engine, &block) }
-        end
+      configure :development do
+        register Sinatra::Reloader
+        enable :logging
       end
 
       helpers GDC::Helpers::Base
@@ -34,13 +29,17 @@ module GDC
       helpers GDC::Helpers::Menu
       helpers Sinatra::ContentFor
 
-      # redirects any routes not ending in slashes to a slashed route
-      # Ex:
-      # /foo/bar will redirect to /foo/bar/
-      # /baz will redirect to /baz/
-      get %r{(/.*[^\/])$} do
-        redirect to("#{params[:captures].first}/"), 301
-      end
+      # get %r{(/.*[^\/])$} do
+      #   redirect to("#{params[:captures].first}/"), 301
+      # end
+
+      # not_found do
+      #   haml :'404'
+      # end
+
+      # get '/404/' do
+      #   haml :'404'
+      # end
     end
   end
 end

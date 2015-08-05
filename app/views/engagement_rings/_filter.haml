@@ -1,0 +1,11 @@
+%h4 Filter by #{name.capitalize}
+%select.show-for-small-only{ name: '', data: { filter_group: name } }
+  %option{ value: 'All', selected: true, data: { filter: '' } } All
+  - options.each do |o|
+    %option{ value: o.downcase, data: { filter: ".#{to_tag(o)}" } }= o
+%dl.sub-nav.show-for-medium-up{ data: { filter_group: name } }
+  %dd.active{ data: { filter: '' } }
+    %a{ src: '#' } All
+  - options.each do |o|
+    %dd{ data: { filter: ".#{to_tag(o)}" } }
+      %a{ src: '#' }= o

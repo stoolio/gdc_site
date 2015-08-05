@@ -1,6 +1,15 @@
 module GDC
   module Helpers
     module Base
+      # what sinatra uses to find templates
+      def find_template(views, name, engine, &block)
+        klass = self.class.to_s.split('::').last
+        klass[0] = klass[0].downcase
+        (klass.gsub!(/([A-Z])/, '_\1') || klass).downcase!
+        ["#{views}/#{klass}", views]
+          .each { |v| super(v, name, engine, &block) }
+      end
+
       # Text Formatting
       def titlecase(string)
         String(string).split(' ').map(&:capitalize).join(' ')

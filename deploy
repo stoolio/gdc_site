@@ -1,22 +1,34 @@
 #!/bin/sh
 
+FORCE="-force"
+
+echo "This is a bit broken. pass -force to run..."
+
+if [ -z $1 ] ; then
+  exit
+fi
+
+if [ $1 != $FORCE ] ; then
+  exit
+fi
+
 set -e
 
 # provide: /path/to/file.ext
 # returns: "file-$(md5sum).ext"
-cachify() {
-  CACHEBUSTER=$(md5sum $1 | cut -d ' ' -f 1)
-  FILE=$(basename $1)
-  NAME=${FILE%.*}
-  EXT=${FILE##*.}
+# cachify() {
+#   CACHEBUSTER=$(md5sum $1 | cut -d ' ' -f 1)
+#   FILE=$(basename $1)
+#   NAME=${FILE%.*}
+#   EXT=${FILE##*.}
 
-  echo "${NAME}-${CACHEBUSTER}.${EXT}"
-}
+#   echo "${NAME}-${CACHEBUSTER}.${EXT}"
+# }
 
 PUBLIC=$PWD/public
 COMPILEDIR=$PUBLIC/src/min
 GRUNTDIR=$PWD/frontend
-SELECT2DIR=$GRUNTDIR/bower_components/select2/
+# SELECT2DIR=$GRUNTDIR/bower_components/select2/
 MAINDIR=$PWD
 
 VIEWS=$PWD/app/views
@@ -26,10 +38,10 @@ echo "Compiling and copying assets..."
 CSSLICENSE=$GRUNTDIR/csslicenses.txt
 JSLICENSE=$GRUNTDIR/jslicenses.txt
 
-for IMAGE in select2.png select2x2.png select2-spinner.gif
-do
-  cp $SELECT2DIR/$IMAGE $PUBLIC/img/
-done
+# for IMAGE in select2.png select2x2.png select2-spinner.gif
+# do
+#   cp $SELECT2DIR/$IMAGE $PUBLIC/img/
+# done
 
 (cd $GRUNTDIR && grunt dist)
 
@@ -38,11 +50,11 @@ cat $JSLICENSE   $COMPILEDIR/build.js  > $COMPILEDIR/app.js
 
 echo "Inserting cachebuster in public assets and cleaning up..."
 
-INJS=$COMPILEDIR/app.js
-INCSS=$COMPILEDIR/app.css
+# INJS=$COMPILEDIR/app.js
+# INCSS=$COMPILEDIR/app.css
 
-OUTJS=$(cachify $INJS)
-OUTCSS=$(cachify $INCSS)
+# OUTJS=$(cachify $INJS)
+# OUTCSS=$(cachify $INCSS)
 
 cp $INJS  $PUBLIC/js/$OUTJS
 cp $INCSS $PUBLIC/css/$OUTCSS

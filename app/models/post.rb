@@ -3,25 +3,18 @@ module GDC
     class Post < Base
       module Config
         class << self
-          attr_reader :dir, :per_page
+          attr_reader :dir
           attr_accessor :ext
 
           def dir=(str)
             fail StandardError, 'Tried to set GDC::Models::Post::Config.dir to a non directory value' unless Dir.exist?(str)
             @dir = str
           end
-
-          def per_page=(val)
-            val = val.to_i
-            val = val == 0 ? 1 : val
-            @per_page = val
-          end
         end
 
         # defaults
         @dir = 'db/posts'
         @ext = '.md'
-        @per_page = 3
       end
 
       class << self
@@ -41,7 +34,7 @@ module GDC
           get_filename(file)
         end
 
-        def for_page(page)
+        def for_page(page, per_page)
           posts = all
           len = posts.length
           [

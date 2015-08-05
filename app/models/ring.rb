@@ -5,7 +5,7 @@ module GDC
       class << self
         public
 
-        attr_reader :model_index
+        # attr_reader :model_index
 
         def all
           rings
@@ -42,6 +42,13 @@ module GDC
       end
 
       # stupid get/fetch no logic
+      # stuff = %w(
+      #   collection
+      #   thumb_dim
+      #   name
+      #   model
+      # )
+
       def collection
         get('collection')
       end

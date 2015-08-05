@@ -1,85 +1,12 @@
 var IsotopeLayout = (function(window) {
   var $win = $(window);
 
-  function defaultState() {
-    return {
-      f: {
-        'gdc': '',
-        'sar': '',
-        'ven': ''
-      },
-      s: {
-        'by': '',
-        'dir': ''
-      }
-    };
-  }
-
-  function setState(state) {
-    var temp = {};
-    for(var b in state) {
-      for(var c in state[b]) temp[b+c] = state[b][c];
-    }
-    window.location.hash = $.param(temp);
-  }
-
-  function getState() {
-    var temp;
-    if(window.location.hash === '') {
-      temp = defaultState();
-    } else {
-      window.location.hash.split('&').forEach(function(el){
-        var parts = el.split('='),
-          a = parts[0][0],
-          b = parts[0].slice(1),
-          c = parts[1];
-        temp[a][b] = c;
-      }, this);
-    }
-
-    return temp;
-  }
-
-  function layoutComplete() {
-    testIfNothing();
-    // Scroll event triggers lazyload check
-    setTimeout(function() {
-      $win.trigger('scroll');
-    }, 100);
-  }
-
-  function testIfNothing() {
-    nothing = true;
-
-    this.$container.find(this.itemSelector).each(function(index) {
-      if($(this).css('display') !== 'none') {
-        nothing = false;
-        return false;
-      }
-    });
-
-    if(nothing) {
-      $('.no-items-available').fadeIn(500);
-    }
-  }
-
   function IsotopeLayout(el, itemEl) {
     this.$win = $win;
     this.$container = $(el);
     this.itemSelector = itemEl;
-    //this.state is a variable to cache the state of the ui
-    //the url is the source of truth
-    //this.updates are update functions for the ui
-    this.dirty = {
-      filter: true,
-      sort: true
-    };
 
-    if(window.location.hash === '') {
-      setState(defaultState());
-    }
-
-    this.defaults = {
+    var defaults = {
       filter: '.gale-diamonds',
       itemSelector: this.itemSelector,
       layoutMode: 'cellsByRow',
@@ -92,79 +19,52 @@ var IsotopeLayout = (function(window) {
       },
       visibleStyle: {
         opacity: 1
+      },
+      getSortData: {
+        price: '[data-price]'
       }
     };
+
+    this.$container.isotope(defaults);
+    this.$container.isotope('on', 'layoutComplete', this.layoutComplete.bind(this));
   }
 
-  IsotopeLayout.prototype.initialize = function(options, updates) {
-    this.updates = updates;
-    var currentOptions = $.extend(this.defaults, options);
-    this.$container.isotope(currentOptions);
-    this.$container.isotope('on', 'layoutComplete', layoutComplete);
-    this.refresh();
-    window.onhashchange = this.refresh.bind(this);
-  };
-
-  IsotopeLayout.prototype.refresh = function() {
-    this.state = getState();
-    this.update();
-    if(this.dirty.filter) {
-      this.updates.filter();
-      this.dirty.filter = false;
-    }
-    if(this.dirty.sort) {
-      this.updates.sort();
-      this.dirty.sort = false;
-    }
-  };
-
-  // IsotopeLayout.prototype.refresh = function() {
-  //   this.state = getState();
-  //   this.update();
-  //   for(var type in this.dirty) {
-  //     if(type = true) {
-  //       this.updates[type]();
-  //       this.dirty[type] = false;
-  //     }
-  //   }
-  // };
-
-  // IsotopeLayout.prototype.update = function(type, data) {
-  //   this.state[type] = data;
-  //   this.dirty[type] = true;
-  //   setState(this.state);
-  // };
-
   IsotopeLayout.prototype.filter = function(filters) {
-    this.state.f = filters;
-    this.dirty.filter = true;
-    setState(this.state);
+    $('.no-items-available').fadeOut();
+    isoFilter = '';
+    for (var filter in filters) {
+      isoFilter += filters[filter];
+    }
+    this.$container.isotope({
+      filter: isoFilter
+    });
   };
 
   IsotopeLayout.prototype.sort = function(sortBy, sortDir) {
-    this.state.s = {
-      'by': sortBy,
-      'dir': sortDir
-    };
-    this.dirty.sort = true;
-    setState(this.state);
+    this.$container.isotope({
+      sortBy: sortBy,
+      sortAscending: sortDir
+    });
+  }
+
+  IsotopeLayout.prototype.layoutComplete = function() {
+    this.testIfNothing();
+    this.$win.trigger('lazyload');
   };
 
-  IsotopeLayout.prototype.update = function() {
-    $('.no-items-available').fadeOut();
+  IsotopeLayout.prototype.testIfNothing = function() {
+    nothing = true;
 
-    isoFilter = '';
-    for(var filter in this.state.f) {
-      isoFilter += this.state.f[filter];
-    }
-
-    this.$container.isotope({
-      filter: isoFilter,
-      sortBy: this.state.s['by'],
-      sortAscending: this.state.s['dir'],
+    this.$container.find(this.itemSelector).each(function(index) {
+      if($(this).css('display') !== 'none') {
+        nothing = false;
+        return false;
+      }
     });
 
-    //setTimeout(testIfNothing.bind(this), 500);
+    if(nothing) {
+      $('.no-items-available').fadeIn(500);
+    }
   };
 
   return IsotopeLayout;

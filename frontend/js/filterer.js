@@ -1,9 +1,8 @@
 var Filterer = (function () {
 
-  var activeFilters = {
-    sar: '',
-    gdc: '',
-    ven: ''
+  var active = {
+    shape: '',
+    style: ''
   };
 
   function click(e) {
@@ -14,42 +13,29 @@ var Filterer = (function () {
       selector = $this.data('filter'),
       group = $group.data('filter-group');      // filter group name
 
+    $group.find('.active').removeClass('active');
+
     if ($this.hasClass('active')) {
-
-      if(group === 'ven') return;
-
-      activeFilters[group] = '';
-
+      active[group] = '';
     } else {
-
-      if (selector === '.gale-diamonds') {
-        activeFilters['sar'] = '';
-      }
-
-      if (selector === '.sareen') {
-        activeFilters['gdc'] = '';
-      }
-
-      activeFilters[group] = selector;
-
+      active[group] = selector;
     }
 
-    e.data.isotopeLayout.filter(activeFilters);
+    $this.addClass('active');
+    $('option[data-filter="' + selector + '"]').attr('Selected', true);
+
+    e.data.filter(active);
   }
 
   function onSelectChange() {
     $that = $(this);
     var filter = $that.find('option:selected').data('filter');
-    if(filter === 'all') {
-      $that.parent('.filters').find('.active').click();
-      return;
-    }
     $that.parent('.filters').find('dd[data-filter="' + filter + '"]').click();
   }
 
-  function Filterer(el, itemEl, iso) {
+  function Filterer(el, itemEl, filterFn) {
     this.$filters = $(el);
-    this.isotopeLayout = iso;
+    this.filter = filterFn;
     this.$select = this.$filters.find('select');
 
     this.$gdc = {
@@ -63,45 +49,9 @@ var Filterer = (function () {
       collection: $('.sareen-collections')
     };
 
-    this.$filters.on('click', itemEl, {isotopeLayout: this.isotopeLayout }, click);
+    this.$filters.on('click', itemEl, {filter: this.filter }, click);
     this.$select.change(onSelectChange);
   }
-
-  Filterer.prototype.update = function () {
-    activeFilters = this.isotopeLayout.state.f;
-
-    // $('.sareen-collections').fadeOut(100);
-    // $('.gale-diamonds-collections').fadeOut(100);
-    $('.filters dl').find('.active').removeClass('active');
-
-    if(activeFilters['ven'] === '.gale-diamonds') {
-      this.$gdc.button.addClass('active');
-      this.$gdc.select.attr('Selected', true);
-      if(this.$gdc.collection.css('display') === 'none') {
-        this.$sareen.collection.fadeOut(500, function() {
-          this.$gdc.collection.fadeIn(500);
-        }.bind(this));
-      }
-      $('dd[data-filter="' + activeFilters['gdc'] + '"]').addClass('active');
-      $('option[data-filter="' + activeFilters['gdc'] + '"]').attr('Selected', true);
-    } else {
-      this.$sareen.button.addClass('active');
-      this.$sareen.select.attr('Selected', true);
-      if(this.$sareen.collection.css('display') === 'none') {
-        this.$gdc.collection.fadeOut(500, function() {
-          this.$sareen.collection.fadeIn(500);
-        }.bind(this));
-      }
-      $('dd[data-filter="' + activeFilters['sar'] + '"]').addClass('active');
-      $('option[data-filter="' + activeFilters['sar'] + '"]').attr('Selected', true);
-    }
-
-    if(activeFilters['sha'] !== '') {
-      $('dd[data-filter="' + activeFilters['sha'] + '"]').addClass('active');
-      $('option[data-filter="' + activeFilters['sha'] + '"]').attr('Selected', true);
-    }
-
-  }.bind(this);
 
   return Filterer;
 }());

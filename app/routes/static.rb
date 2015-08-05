@@ -5,6 +5,14 @@ module GDC
         haml :home
       end
 
+      get '/set-session/:value' do
+        session[:value] = params['value']
+      end
+
+      get '/view-session/' do
+        "Value = " << session.to_s
+      end
+
       get '/about/' do
         haml :about
       end

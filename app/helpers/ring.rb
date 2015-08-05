@@ -10,7 +10,10 @@ module GDC
       end
 
       def classify(items)
-        Array(items).map(&:downcase).map(&:strip)
+        Array(items)
+          .flatten
+          .map(&:downcase)
+          .map(&:strip)
           .reduce([]) { |a, e| a << e.gsub("'", '').gsub(' ', '-') }
       end
 
@@ -21,6 +24,22 @@ module GDC
           is_thumb = ''
         end
         "/img/rings/#{to_tag(collection)}#{is_thumb}/#{name}"
+      end
+
+      def filter(name, options)
+        locals = {
+          name: name,
+          options: options
+        }
+        haml :"engagement_rings/_filter", layout: false, locals: locals
+      end
+
+      def sort(name, options)
+        locals = {
+          name: name,
+          options: options
+        }
+        haml :"engagement_rings/_sort", layout: false, locals: locals
       end
     end
   end

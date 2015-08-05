@@ -5,7 +5,7 @@ $(function() {
   var engagementRingArchive,
     shapeSelector;
 
-  $('.ring-thumbs').doOnce($.fn.on, 'click', 'a', thumbClick);
+  $('.ring-thumbs').doOnce($.fn.on, 'click', 'a', thumbClick).find('a').first().data('loaded', true);
 
   if($('#engagement-ring-archive').length) {
     engagementRingArchive = new EngagementRingArchive();

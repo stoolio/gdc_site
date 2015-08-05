@@ -7,6 +7,6 @@ module GDC
     autoload :Education, 'app/routes/education'
     autoload :Specials, 'app/routes/specials'
     autoload :Blog, 'app/routes/blog'
-    autoload :NotFound, 'app/routes/not_found'
+    autoload :Utility, 'app/routes/utility'
   end
 end

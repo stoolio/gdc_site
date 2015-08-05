@@ -1,0 +1,12 @@
+%h4 Sort by Price
+%select.show-for-small-only{ name: '', data: { sort_by: "price" } }
+  %option{ :value => "Least", "data-sort-asc" => true} Least Expensive
+  %option{ :value => "Most", "data-sort-desc" => true} Least Expensive
+  %option{ :value => "None", "data-reset-sort" => true} Least Expensive
+%dl.sub-nav.show-for-medium-up{ data: { sort_by: "price" } }
+  %dd{ "data-sort-asc" => true }
+    %a{ src: '#' } Lease Expensive
+  %dd{ "data-sort-desc" => true }
+    %a{ src: '#' } Most Expensive
+  %dd{ "data-reset-sort" => true }
+    %a{ src: '#' } Reset

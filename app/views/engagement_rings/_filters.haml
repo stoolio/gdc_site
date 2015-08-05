@@ -1,0 +1,16 @@
+- filter_data = { sorts: ['Least Expensive', 'Most Expensive', 'Reset'],
+                  collections: ["Antique", "Colored Stone", "Halo", "Signature", "Solitaire", "Three Stone", "Tension", "Bezel"],
+                  shape: %w{Round Princess Radiant Cushion Emerald Oval Asscher Marquise Heart Pear Trillion} }
+
+
+.row.text-center
+  .large-12.columns.clearfix
+    .filters.small-6.large-6.columns.left
+    .sorts.small-6.large-6.columns.right
+      = partial :sort
+    %hr{ style: 'margin-bottom: 5px;'}
+.row.text-center
+  .filters.small-6.large-6.columns
+    = filter("style", filter_data[:collections])
+  .filters.small-6.large-6.columns
+    = filter("shape", filter_data[:shape])
