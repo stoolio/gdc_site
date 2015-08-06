@@ -7,7 +7,7 @@ module GDC
       end
 
       get '/specials/:sku/' do
-        @sku = params[:sku]
+        sku = params[:sku]
         @item = GDC::Models::Special.find(sku)
         haml :detail
       end
