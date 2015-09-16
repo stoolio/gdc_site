@@ -8,17 +8,14 @@
         %a{ href: '#contact' } Send us a message
       %li.tab-title
         %a{ href: '#directions' } Maps & Directions
-    .tabs-content
-      #contact.content.active
-        %h2 Contact Us
-        %p
-          Enter your questions or request and we will get back to you as quickly as possible.
+    %h2 Location & Directions
+    = partial :map
+    %h2 Contact Us
+    %p
+      Enter your questions or request and we will get back to you as quickly as possible.
 
-        - form_data = { id: 'contact-us', action: '/contact/' }
-        = form('contact', form_data, 'Submit your Question')
-      #directions.content
-        %h2 Location & Directions
-        = partial :map
+    - form_data = { id: 'contact-us', action: '/contact/' }
+    = form('contact', form_data, 'Submit your Question')
   .large-4.columns
     %h3 Contact Info
     %hr

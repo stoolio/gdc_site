@@ -56,7 +56,7 @@ var Sorter = (function () {
     }
   }
 
-  Sorter.prototype.sortBy(dir /* 'asc', 'desc', or false */) {
+  Sorter.prototype.sortBy = function(dir /* 'asc', 'desc', or false */) {
     this.asc = this.desc = false;
     if (dir) {
       this[dir] = true;

@@ -44,7 +44,7 @@ module.exports = function(grunt) {
 
       // Depends jQuery
       'foundation/js/foundation/foundation.js',
-      'foundation/js/foundation/foundation.tab.js',
+      // 'foundation/js/foundation/foundation.tab.js',
       'foundation/js/foundation/foundation.topbar.js',
       'foundation/js/foundation/foundation.abide.js',
       'foundation/js/foundation/foundation.reveal.js',
