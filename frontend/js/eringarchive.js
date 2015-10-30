@@ -11,6 +11,7 @@ var EngagementRingArchive = (function(window, IsotopeLayout, Filterer, Sorter) {
         }
         for( i = 0; i < 3; i++ ) {
           if(cache.length === 0) break;
+          console.log("calling buildPinButton");
           window.buildPinButton(cache.shift());
         }
         if (cache.length === 0) {

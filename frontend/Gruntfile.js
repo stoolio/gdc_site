@@ -17,8 +17,7 @@ module.exports = function(grunt) {
   },
     bowerFiles = [
       // First, because it's jQuery
-      // Also, isotope should attach itself to $.fn
-      // Via bridget, so bridget is the first file included
+      // Also, so isotope can attach
       'jquery/dist/jquery.js',
 
       'fastclick/lib/fastclick.js',

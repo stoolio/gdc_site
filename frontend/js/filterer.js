@@ -38,16 +38,16 @@ var Filterer = (function () {
     this.filter = filterFn;
     this.$select = this.$filters.find('select');
 
-    this.$gdc = {
-      button: $('dd[data-filter=".gale-diamonds"]'),
-      select: $('option[data-filter=".gale-diamonds"]'),
-      collection: $('.gale-diamonds-collections')
-    };
-    this.$sareen = {
-      button: $('dd[data-filter=".sareen"]'),
-      select: $('option[data-filter=".sareen"]'),
-      collection: $('.sareen-collections')
-    };
+    // this.$gdc = {
+    //   button: $('dd[data-filter=".gale-diamonds"]'),
+    //   select: $('option[data-filter=".gale-diamonds"]'),
+    //   collection: $('.gale-diamonds-collections')
+    // };
+    // this.$sareen = {
+    //   button: $('dd[data-filter=".sareen"]'),
+    //   select: $('option[data-filter=".sareen"]'),
+    //   collection: $('.sareen-collections')
+    // };
 
     this.$filters.on('click', itemEl, {filter: this.filter }, click);
     this.$select.change(onSelectChange);
