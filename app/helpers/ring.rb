@@ -12,6 +12,7 @@ module GDC
       def classify(items)
         Array(items)
           .flatten
+          .compact
           .map(&:downcase)
           .map(&:strip)
           .reduce([]) { |a, e| a << e.gsub("'", '').gsub(' ', '-') }
