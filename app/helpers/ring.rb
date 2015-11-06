@@ -2,7 +2,7 @@ module GDC
   module Helpers
     module Ring
       def to_tag(item)
-        item.downcase.strip.gsub("'", '').gsub(' ', '-')
+        item.to_s.downcase.strip.gsub("'", '').gsub(' ', '-')
       end
 
       def to_price(number)
