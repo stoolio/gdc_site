@@ -41,13 +41,9 @@ module GDC
         @ring = ring
       end
 
-      # stupid get/fetch no logic
-      # stuff = %w(
-      #   collection
-      #   thumb_dim
-      #   name
-      #   model
-      # )
+      def categories
+        get('categories')
+      end
 
       def collection
         get('collection')
@@ -138,6 +134,7 @@ module GDC
         'width top' => 'NO_WIDTH_TOP',
         'width tapered' => 'NO_WIDTH_TAPERED',
         'price' => 'NO_PRICE',
+        'categories' => 'CATEGORY_ERROR'
         'tags' => 'NO_TAGS'
       }
     end
