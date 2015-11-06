@@ -134,7 +134,7 @@ module GDC
         'width top' => 'NO_WIDTH_TOP',
         'width tapered' => 'NO_WIDTH_TAPERED',
         'price' => 'NO_PRICE',
-        'categories' => 'CATEGORY_ERROR'
+        'categories' => 'CATEGORY_ERROR',
         'tags' => 'NO_TAGS'
       }
     end
